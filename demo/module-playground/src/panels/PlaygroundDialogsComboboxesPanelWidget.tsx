@@ -13,6 +13,8 @@ import {
   PanelButtonMode,
   PanelButtonWidget,
   ReactorPanelModel,
+  SearchEngine,
+  SearchEngineComboBoxDirective,
   SimpleComboBoxDirective,
   System,
   TableRow,
@@ -20,6 +22,8 @@ import {
   ioc,
   styled
 } from '@journeyapps-labs/reactor-mod';
+import { PaginatedCollection, PaginatedSearchResultEntry } from '@journeyapps-labs/lib-reactor-data-layer';
+import { createSearchEventMatcherBool, SearchResult } from '@journeyapps-labs/lib-reactor-search';
 import { TodoEntities, TodoModel, TodoStore } from '@journeyapps-labs/reactor-mod-todos';
 import { DemoFormModel } from '../forms/DemoFormModel';
 import { PlaygroundStore } from '../stores/PlaygroundStore';
@@ -102,6 +106,73 @@ const COMPACT_NESTED_ITEMS: ComboBoxItem[] = [
     ]
   }
 ];
+
+const PROGRESSIVE_SEARCH_PAGES: ComboBoxItem[][] = [
+  [
+    { key: 'deployment-cape-town', title: 'Cape Town production' },
+    { key: 'deployment-denver', title: 'Denver production' }
+  ],
+  [
+    { key: 'deployment-london', title: 'London staging' },
+    { key: 'deployment-sydney', title: 'Sydney staging' }
+  ],
+  [
+    { key: 'deployment-tokyo', title: 'Tokyo development' },
+    { key: 'deployment-toronto', title: 'Toronto development' }
+  ]
+];
+
+interface ProgressiveSearchPage {
+  items: ComboBoxItem[];
+  more: boolean;
+}
+
+const waitForPage = (abort: AbortSignal) => {
+  return new Promise<void>((resolve) => {
+    const timer = window.setTimeout(resolve, 900);
+    abort.addEventListener(
+      'abort',
+      () => {
+        window.clearTimeout(timer);
+        resolve();
+      },
+      { once: true }
+    );
+  });
+};
+
+async function* loadProgressiveSearchPages(abort: AbortSignal): AsyncGenerator<ProgressiveSearchPage> {
+  for (const [index, items] of PROGRESSIVE_SEARCH_PAGES.entries()) {
+    await waitForPage(abort);
+    if (abort.aborted) return;
+    yield {
+      items,
+      more: index < PROGRESSIVE_SEARCH_PAGES.length - 1
+    };
+  }
+}
+
+class ProgressiveComboBoxSearchEngine extends SearchEngine<SearchResult<PaginatedSearchResultEntry<ComboBoxItem>>> {
+  search(event) {
+    const abort = new AbortController();
+    const collection = new PaginatedCollection<ComboBoxItem, ProgressiveSearchPage>({
+      loaderIterator: () => loadProgressiveSearchPages(abort.signal),
+      transformer: (page) => page.items,
+      hasMore: (page) => page.more
+    });
+    const matcher = createSearchEventMatcherBool(event.value, { nullIsTrue: true });
+
+    void collection.loadAll(undefined, { abort });
+    const result = collection.asSearchResult({
+      idTransformer: (item) => item.key,
+      match: (item) => matcher(item.title)
+    });
+    result.registerListener({
+      dispose: () => abort.abort()
+    });
+    return result;
+  }
+}
 
 interface DialogTableRow extends TableRow {
   cells: {
@@ -213,6 +284,19 @@ export const PlaygroundDialogsComboboxesPanelWidget: React.FC<PlaygroundDialogsC
       );
     };
 
+    const runProgressiveSearchDemo = async (position: any) => {
+      await comboBoxStore2.show(
+        new SearchEngineComboBoxDirective<PaginatedSearchResultEntry<ComboBoxItem>, ComboBoxItem>({
+          title: 'Progressive deployment search',
+          event: position,
+          engine: new ProgressiveComboBoxSearchEngine(),
+          transformResult: (result) => result.item,
+          loadingMessage: 'Loading deployments...',
+          loadingMoreMessage: 'Loading more deployments...'
+        })
+      );
+    };
+
     const runEntityContextComboDemo = async (position: any) => {
       const todoStore = ioc.get<TodoStore>(TodoStore);
       const entity = todoStore.activeTodo || todoStore.todos[0];
@@ -319,6 +403,30 @@ export const PlaygroundDialogsComboboxesPanelWidget: React.FC<PlaygroundDialogsC
                         label="Open entity context menu"
                         icon="cube"
                         action={runEntityContextComboDemo}
+                      />
+                    </S.Buttons>
+                  </S.Demo>
+                );
+              }
+            },
+            {
+              key: 'progressive-search-demo',
+              content: () => {
+                return (
+                  <S.Demo>
+                    <S.DemoCopy>
+                      <strong>Progressive search results</strong>
+                      <span>
+                        <code>PaginatedCollection.asSearchResult()</code> keeps earlier pages usable while more results
+                        load.
+                      </span>
+                    </S.DemoCopy>
+                    <S.Buttons>
+                      <PanelButtonWidget
+                        label="Open progressive search"
+                        icon="spinner"
+                        action={runProgressiveSearchDemo}
+                        mode={PanelButtonMode.PRIMARY}
                       />
                     </S.Buttons>
                   </S.Demo>

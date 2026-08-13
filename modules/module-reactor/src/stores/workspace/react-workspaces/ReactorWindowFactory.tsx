@@ -21,7 +21,8 @@ export class ReactorWindowModel extends FloatingWindowModel {
   private restoreBounds: { left: number; top: number; width: number; height: number } | null;
 
   /**
-   * true = it's not coupled to a tray (aka a global window)
+   * Whether this is an independent window rather than a temporary window coupled to a tray.
+   * Standalone windows can be docked into the active workspace.
    */
   standalone: boolean;
 

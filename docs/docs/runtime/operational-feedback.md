@@ -5,16 +5,16 @@ description: Show progress, background activity, notifications, and unavailable 
 
 # Progress and status
 
-Users need to know what the application is doing, whether background work succeeded, and why an action is unavailable.
+Users need to know what the application is doing, whether background work succeeded, and why an [action](../subsystems/actions-and-validation.md) is unavailable.
 
 Reactor separates four kinds of feedback:
 
-| Need | System |
-| --- | --- |
-| Progress for an executing action | Action status directive |
-| Aggregate background activity and persistent status | Visor |
-| Transient outcome or announcement | Notification |
-| Why an action is unavailable | Action validation |
+| Need                                                | System                  |
+| --------------------------------------------------- | ----------------------- |
+| Progress for an executing action                    | Action status directive |
+| Aggregate background activity and persistent status | Visor                   |
+| Transient outcome or announcement                   | Notification            |
+| Why an action is unavailable                        | Action validation       |
 
 :::note Mental model
 Status shows what the application is doing. Validation explains what the user can do. Notifications report what just happened.
@@ -73,7 +73,7 @@ The wrapper completes unresolved directives on success and marks them failed whe
 
 ## Notifications
 
-`NotificationStore` provides transient success, information, validation, special, and error messages. Notifications may include buttons and structured validation results.
+`NotificationStore` provides transient success, information, validation, special, and error messages. Notifications may include [action-backed buttons](../subsystems/actions-and-validation.md#show-an-action-in-the-ui) and structured validation results.
 
 Use duplicate checking for repeating background conditions:
 

@@ -37,7 +37,23 @@ const sidebars: SidebarsConfig = {
         'subsystems/application-model',
         'subsystems/modules-and-stores',
         'subsystems/actions-and-validation',
-        'subsystems/entity-definitions',
+        {
+          type: 'category',
+          label: 'Entity behaviors',
+          link: {
+            type: 'doc',
+            id: 'subsystems/entity-definitions'
+          },
+          items: [
+            'subsystems/entity-definitions/descriptions',
+            'subsystems/entity-definitions/search',
+            'subsystems/entity-definitions/presentation-and-panels',
+            'subsystems/entity-definitions/handlers-and-opening',
+            'subsystems/entity-definitions/encoding',
+            'subsystems/entity-definitions/descendants',
+            'subsystems/entity-definitions/contextual-documentation'
+          ]
+        },
         'subsystems/search-selection-and-command-palette',
         'subsystems/controls',
         'subsystems/forms',
@@ -70,6 +86,7 @@ const sidebars: SidebarsConfig = {
       ]
     }
   ],
+  userSidebar: ['using-reactor/getting-around'],
   tsDocSidebar: packages.map((p) => generateTSDocSidebarEntry(p, path.join(__dirname, './docs')))
 };
 

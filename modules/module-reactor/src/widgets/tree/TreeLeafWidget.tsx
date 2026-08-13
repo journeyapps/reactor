@@ -27,6 +27,10 @@ export interface TreeLeafWidgetCommonProps {
   dropZoneHint?: boolean;
   dropZoneHover?: boolean;
   depth?: number;
+  /**
+   * Reserve indentation for a node toggle even though this row is a leaf.
+   * @defaultValue true
+   */
   reserveNodeToggleSpace?: boolean;
   label: string;
   label2?: string;

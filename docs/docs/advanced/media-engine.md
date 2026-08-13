@@ -5,7 +5,7 @@ description: Map files and other content types to application panels.
 
 # Media engine
 
-The media engine connects a file or other content to the panel that opens it. Modules can add formats without changing the workspace shell or file browser.
+The media engine connects a file or other content to the [panel](../subsystems/workspaces-and-panels.md) that opens it. [Modules](../subsystems/modules-and-stores.md) can add formats without changing the workspace shell or file browser.
 
 :::note Mental model
 An `AbstractMediaType` answers three questions: does this type match, how is its media model created, and which panel model opens it?

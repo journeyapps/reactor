@@ -5,7 +5,7 @@ description: Run one entity action across many selected items.
 
 # Batch actions
 
-`BatchStore` runs ordinary entity actions for multiple selected items. It groups references by type, finds compatible actions, loads the entities, asks for confirmation once, and reports total progress through the Visor.
+`BatchStore` runs ordinary [entity actions](../subsystems/actions-and-validation.md#entity-and-coupled-actions) for multiple selected items. It groups [encoded references](../subsystems/entity-definitions/encoding.md) by type, finds compatible actions, loads the entities, confirms once, and reports aggregate [progress](../runtime/operational-feedback.md).
 
 :::note Mental model
 A batch action is an ordinary `EntityAction` executed repeatedly. The action still contains the behavior for one item.

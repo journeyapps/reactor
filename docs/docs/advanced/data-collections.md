@@ -5,7 +5,7 @@ description: Model asynchronous, paginated, and lifecycle-aware data for Reactor
 
 # Data collections
 
-`@journeyapps-labs/lib-reactor-data-layer` provides small observable primitives for remote and long-lived collections. They are independent of Reactor panels and entities, which makes them useful inside application stores and domain models.
+`@journeyapps-labs/lib-reactor-data-layer` provides observable primitives for remote and long-lived collections. They are independent of Reactor [panels](../subsystems/workspaces-and-panels.md) and [entities](../subsystems/entity-definitions.md), making them useful inside [stores](../subsystems/modules-and-stores.md) and domain models.
 
 :::note Mental model
 Collections own asynchronous list state. Entity definitions explain what the resulting models mean. Presenters decide how those entities appear.
@@ -75,11 +75,11 @@ Every lifecycle model must implement meaningful `dispose()` behavior. A collecti
 
 A common pattern is:
 
-1. a store owns a collection or lifecycle collection;
-2. an entity search component returns its current models;
-3. descendant providers expose nested collections;
-4. presenters observe loading and model changes;
-5. actions mutate through the store and refresh the collection.
+1. a [store](../subsystems/modules-and-stores.md) owns a collection;
+2. an [entity search behavior](../subsystems/entity-definitions/search.md) returns its models;
+3. [descendant providers](../subsystems/entity-definitions/descendants.md) expose nested collections;
+4. [presenters](../subsystems/entity-definitions/presentation-and-panels.md) observe model changes;
+5. [actions](../subsystems/actions-and-validation.md) mutate through the store and refresh it.
 
 Keep network pagination out of trees and tables. Those widgets should consume collection and entity contracts rather than own transport state.
 

@@ -17,7 +17,12 @@ export interface UseButtonProps {
   forwardRef?: React.RefObject<HTMLDivElement>;
 }
 
-/** Resolve the tooltip after applying any higher-priority validation feedback. */
+/**
+ * Resolve button tooltip text after applying validation feedback.
+ *
+ * Disabled, pending, and blocked validation messages take priority. A tooltip
+ * that duplicates the visible button label is omitted.
+ */
 export const resolveButtonTooltip = (btn: Btn, validationResult: ValidationResult) => {
   let tooltip = btn.tooltip;
   // Disabled and blocked actions should explain why they cannot currently run.

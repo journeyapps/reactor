@@ -33,12 +33,12 @@ This is the normal Reactor composition model. The server loads module bundles, t
 
 Open the Playground workspace and visit these panels in order:
 
-1. **Actions** — one action represented as buttons, controls, and combo-box items, including every validation state.
-2. **Forms** — modeled inputs, validation, grouped fields, and responsive sizing.
+1. **Actions** — one [action](../subsystems/actions-and-validation.md) represented as buttons, controls, and combo-box items.
+2. **Forms** — [modeled inputs](../subsystems/forms.md), validation, grouped fields, and responsive sizing.
 3. **Cards** and **Surfaces** — shared layout and visual primitives.
-4. **Tree search** — entity presentation and search behavior.
-5. **Overlays** — anchored overlays and tooltip positioning.
-6. **Guide** — guided workflows and attention targets.
+4. **Tree search** — [entity presentation](../subsystems/entity-definitions/presentation-and-panels.md) and search behavior.
+5. **Overlays** — [anchored overlays](../runtime/interaction-layers.md#anchored-overlays-and-tooltips) and tooltip positioning.
+6. **Guide** — [guided workflows](../advanced/guided-workflows.md) and attention targets.
 7. **Dialogs + Comboboxes**, **Tabs**, **Tables**, and **Drag drop** — larger interaction systems.
 
 Open the Todos workspace to see the systems working together rather than in isolation. Todo models are owned by a store, described by entity definitions, manipulated by actions, and rendered through generated entity panels and workspaces.

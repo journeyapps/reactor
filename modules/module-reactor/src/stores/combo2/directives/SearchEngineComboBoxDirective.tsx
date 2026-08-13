@@ -11,6 +11,8 @@ import styled from '@emotion/styled';
 import { SearchResult, SearchResultEntry } from '@journeyapps-labs/lib-reactor-search';
 import { ReactorViewportMode, useReactorViewportMode } from '../../../hooks/useReactorViewportMode';
 import { isValidationHidden } from '../../../actions/validators/ActionValidator';
+import { IconWidget } from '../../../widgets/icons/IconWidget';
+import { themed } from '../../../stores/themes/reactor-theme-fragment';
 
 export interface SearchEngineComboBoxDirectiveOptions<
   E extends SearchResultEntry,
@@ -20,6 +22,10 @@ export interface SearchEngineComboBoxDirectiveOptions<
   transformResult: (item: E) => T;
   filter?: (entity: E) => boolean;
   hideSearchOnMobile?: boolean;
+  /** Message shown before the first search results arrive. Defaults to "Loading...". */
+  loadingMessage?: string;
+  /** Message shown while more results load beneath existing items. Defaults to "Loading more...". */
+  loadingMoreMessage?: string;
 }
 
 export class SearchEngineComboBoxDirective<
@@ -54,6 +60,25 @@ export class SearchEngineComboBoxDirective<
   setResult(result: SearchResult<E>) {
     this.result?.dispose();
     this.result = result;
+  }
+
+  isLoading() {
+    return this.result?.loading ?? true;
+  }
+
+  get loadingMessage() {
+    return this.options.loadingMessage || 'Loading...';
+  }
+
+  get loadingMoreMessage() {
+    return this.options.loadingMoreMessage || 'Loading more...';
+  }
+
+  getLoadingStatus(items: T[] = this.getItems()) {
+    if (!this.isLoading()) {
+      return null;
+    }
+    return items.length > 0 ? this.loadingMoreMessage : this.loadingMessage;
   }
 
   getItems() {
@@ -104,6 +129,9 @@ export const SearchEngineComboBoxDirectiveWidget: React.FC<SearchEngineComboBoxD
   (props) => {
     const viewportMode = useReactorViewportMode();
     const showSearch = props.directive.showSearch(viewportMode);
+    const loading = props.directive.isLoading();
+    const items = props.directive.getItems();
+    const loadingStatus = props.directive.getLoadingStatus(items);
 
     React.useEffect(() => {
       if (showSearch) {
@@ -128,6 +156,7 @@ export const SearchEngineComboBoxDirectiveWidget: React.FC<SearchEngineComboBoxD
             engine={props.directive.engine}
             focusOnMount={true}
             parameters={props.directive.parameters}
+            placeholder={props.directive.searchPlaceholder}
             gotSearchResult={(result) => {
               props.directive.setResult(result);
             }}
@@ -135,12 +164,18 @@ export const SearchEngineComboBoxDirectiveWidget: React.FC<SearchEngineComboBoxD
         ) : null}
         <ComboBoxWidget
           initialSelected={null}
-          placeholder={props.directive.searchPlaceholder}
-          items={props.directive.getItems()}
+          placeholder={loading && items.length === 0 ? loadingStatus : undefined}
+          items={items}
           selected={(item, event) => {
             props.directive.selectItem(item);
           }}
         />
+        {loading && items.length > 0 ? (
+          <S.LoadingMore>
+            <IconWidget icon="sync-alt" spin />
+            <span>{loadingStatus}</span>
+          </S.LoadingMore>
+        ) : null}
       </>
     );
   }
@@ -150,5 +185,15 @@ namespace S {
   export const Search = styled(SearchEngineFieldWidget)`
     margin-bottom: 5px;
     min-width: 200px;
+  `;
+
+  export const LoadingMore = themed.div`
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: ${(p) => p.theme.combobox.text};
+    opacity: 0.55;
   `;
 }

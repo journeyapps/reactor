@@ -9,7 +9,7 @@ These patterns keep large Reactor applications understandable. They appear at di
 
 ## Split features into modules
 
-A module should install one related set of features:
+A [module](../subsystems/modules-and-stores.md) should install one related set of features:
 
 - its stores and clients;
 - entity definitions;
@@ -67,11 +67,11 @@ Features should produce panel models and ask `WorkspaceStore` to add them. The a
 - open a floating window;
 - substitute fullscreen behavior on mobile.
 
-Use workspace preferred-open actions when the same entity should open differently in different workflows.
+Use [workspace preferred-open actions](../subsystems/workspaces-and-panels.md#workspace-groups-and-open-policy) when the same entity should open differently between workflows.
 
 ## Put availability rules on actions
 
-Put permission and availability checks in action validators. Buttons, menus, batch operations, the command palette, and shortcuts will then agree.
+Put permission and availability checks in [action validators](../subsystems/actions-and-validation.md#validation-states). Buttons, menus, batch operations, the command palette, and shortcuts will then agree.
 
 Use:
 
@@ -85,7 +85,7 @@ Do not repeat permission checks in individual widgets.
 
 ## Extend existing entity definitions
 
-Domain models remain application-owned. Modules can extend their Reactor behavior with:
+Domain models remain application-owned. Modules extend their [entity definitions](../subsystems/entity-definitions.md) with:
 
 - additional describers or presenters;
 - another search source;
@@ -114,13 +114,13 @@ MobX makes observation easy; it does not make observation free. An autorun creat
 
 ## Keep one implementation of each action
 
-Buttons, menus, shortcuts, guides, drag-and-drop, and command-palette entries should call actions. Tables, trees, cards, and entity pickers should use entity definitions and controls.
+Buttons, menus, shortcuts, guides, drag-and-drop, and command-palette entries should call [actions](../subsystems/actions-and-validation.md). Tables, trees, cards, and pickers should use [entity definitions](../subsystems/entity-definitions.md) and [controls](../subsystems/controls.md).
 
 Parallel execution paths eventually disagree about validation, logging, progress, or persistence.
 
 ## Version saved data
 
-Do not change panel types, encoder versions, or setting IDs casually: saved data refers to them. Add a workspace migration when its saved shape changes. If old data cannot be migrated safely, discard it deliberately and generate a working default.
+Do not casually change [panel types](../subsystems/workspaces-and-panels.md), [encoder versions](../subsystems/entity-definitions/encoding.md), or [setting IDs](../subsystems/settings-and-persistence.md): saved data refers to them. Migrate changed workspace shapes or deliberately replace unrecoverable data with a working default.
 
 Document user-visible resets in release notes.
 
