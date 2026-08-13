@@ -6,7 +6,7 @@ import { MetaBarWidget } from '../../../../../widgets/meta/MetaBarWidget';
 import { CardWidget } from '../../../../../widgets/cards/CardWidget';
 import { themed } from '../../../../../stores/themes/reactor-theme-fragment';
 import { ActionSource } from '../../../../../actions/Action';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import { EntityCardsPresenterContext } from './EntityCardsPresenterComponent';
 import { TagsSectionWidget } from './TagsSectionWidget';
 import { NestedTreesSectionWidget } from './NestedTreesSectionWidget';

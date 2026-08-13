@@ -6,7 +6,7 @@ import {
   UXStore,
   WorkspaceModel,
   WorkspaceStore
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 
 export class ReactorCustomLayout extends AbstractReactorModule {
   constructor() {

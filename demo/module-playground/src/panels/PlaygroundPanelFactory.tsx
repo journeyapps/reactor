@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ReactorPanelFactory, ReactorIcon, ReactorPanelModel } from '@journeyapps-labs/reactor-mod';
+import { ReactorPanelFactory, ReactorIcon, ReactorPanelModel } from '@journeyapps/reactor-mod';
 import { WorkspaceModelFactoryEvent } from '@projectstorm/react-workspaces-core';
 import { PlaygroundSizeSelector } from './PlaygroundSizeSelector';
 

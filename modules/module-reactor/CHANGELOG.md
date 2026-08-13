@@ -1,4 +1,4 @@
-# @journeyapps-labs/reactor-mod
+# @journeyapps/reactor-mod
 
 ## 8.1.2
 

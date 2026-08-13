@@ -10,7 +10,7 @@ import {
   EntityDefinition,
   ValidationResult
 } from '../../src';
-import { createSearchEventMatcher } from '@journeyapps-labs/lib-reactor-search';
+import { createSearchEventMatcher } from '@journeyapps/reactor-lib-search';
 import { matchesActionCommandPaletteSearch } from '../../src/entities-reactor/actions/ActionSearchEngineComponent';
 
 interface TestActionEvent extends ActionEvent {

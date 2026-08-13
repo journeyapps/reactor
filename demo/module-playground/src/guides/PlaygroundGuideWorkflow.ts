@@ -1,4 +1,4 @@
-import { ComponentSelection, GuideStep, GuideWorkflow, ReactorComponentType } from '@journeyapps-labs/reactor-mod';
+import { ComponentSelection, GuideStep, GuideWorkflow, ReactorComponentType } from '@journeyapps/reactor-mod';
 
 export const PLAYGROUND_GUIDE_ID = 'playground.sandbox-guide';
 export const PLAYGROUND_GUIDE_PANEL_TYPE = 'playground.guide';

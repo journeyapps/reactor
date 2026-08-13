@@ -1,7 +1,7 @@
 import { autorun } from 'mobx';
 import { VisorMetadata } from '../stores/visor/VisorMetadata';
 import { DateLocalSetting } from '../preferences/DateLocalSetting';
-import { computeDateTimeParts, ReactorDateFormats } from '@journeyapps-labs/lib-reactor-utils';
+import { computeDateTimeParts, ReactorDateFormats } from '@journeyapps/reactor-lib-utils';
 
 export class DateTimezoneVisorMetadata extends VisorMetadata {
   constructor() {

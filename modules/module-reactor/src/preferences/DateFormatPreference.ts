@@ -1,7 +1,7 @@
 import { ioc } from '../inversify.config';
 import { PrefsStore } from '../stores/PrefsStore';
 import { SetSetting } from '../settings/SetSetting';
-import { ReactorDateFormats } from '@journeyapps-labs/lib-reactor-utils';
+import { ReactorDateFormats } from '@journeyapps/reactor-lib-utils';
 import { computed } from 'mobx';
 import * as _ from 'lodash';
 

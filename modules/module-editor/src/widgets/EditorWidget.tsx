@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { ioc, ThemeStore } from '@journeyapps-labs/reactor-mod';
+import { ioc, ThemeStore } from '@journeyapps/reactor-mod';
 import * as monaco from 'monaco-editor';
 import { MonacoEditorType, MonacoStore } from '../stores/MonacoStore';
 import { EnableVimSetting } from '../settings/VimSupportSetting';

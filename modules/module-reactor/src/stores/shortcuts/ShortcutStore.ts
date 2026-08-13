@@ -4,7 +4,7 @@ import { inject, ioc } from '../../inversify.config';
 import { PrefsStore } from '../PrefsStore';
 import { ShortcutHandler, ShortcutHandlerAction, ShortcutHandlerSerialized } from './ShortcutHandler';
 import { observable } from 'mobx';
-import { MimeTypes, readFileAsText, selectFile } from '@journeyapps-labs/lib-reactor-utils';
+import { MimeTypes, readFileAsText, selectFile } from '@journeyapps/reactor-lib-utils';
 import { DialogStore } from '../DialogStore';
 import { AbstractStore } from '../AbstractStore';
 

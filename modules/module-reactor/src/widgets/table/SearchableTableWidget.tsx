@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { TableWidgetProps, TableWidget, TableColumn, TableRow } from './TableWidget';
 import { ControlledSearchWidget } from '../search/ControlledSearchWidget';
-import { SearchEventMatcher, createSearchEventMatcher } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEventMatcher, createSearchEventMatcher } from '@journeyapps/reactor-lib-search';
 import { themed } from '../../stores/themes/reactor-theme-fragment';
 const no_results = require('../../../media/empty-table.svg');
 

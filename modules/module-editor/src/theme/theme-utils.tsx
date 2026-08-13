@@ -1,8 +1,8 @@
 import * as monaco from 'monaco-editor';
 import * as platform from 'monaco-editor/platform/registry/common/platform';
 import { Extensions } from 'monaco-editor/platform/theme/common/colorUtils';
-import { Themes } from '@journeyapps-labs/reactor-mod';
-import { colorToAHex } from '@journeyapps-labs/lib-reactor-utils';
+import { Themes } from '@journeyapps/reactor-mod';
+import { colorToAHex } from '@journeyapps/reactor-lib-utils';
 
 const THEME_JOURNEY = require('../../media/themes/journey.json5');
 const THEME_REACTOR = require('../../media/themes/reactor.json5');

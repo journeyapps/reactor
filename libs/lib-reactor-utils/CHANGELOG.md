@@ -1,4 +1,4 @@
-# @journeyapps-labs/lib-reactor-utils
+# @journeyapps/reactor-lib-utils
 
 ## 2.0.13
 

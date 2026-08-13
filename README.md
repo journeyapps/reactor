@@ -10,7 +10,7 @@ conception we have come to see it as much more than that. Internally, we also us
 feature-rich data browsing software. If you need to build an application with serious capability, Reactor's deeply declarative
 model is almost certainly up to the task.
 
-Docs: [https://journeyapps-labs.github.io/reactor](https://journeyapps-labs.github.io/reactor)
+Docs: [https://journeyapps.github.io/reactor](https://journeyapps.github.io/reactor)
 
 News: [https://labs.journeyapps.com/blog/tags/reactor](https://labs.journeyapps.com/blog/tags/reactor)
 

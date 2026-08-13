@@ -1,7 +1,7 @@
 import { Action, ActionEvent } from '../Action';
 import { inject } from '../../inversify.config';
 import { WorkspaceStore } from '../../stores/workspace/WorkspaceStore';
-import { copyTextToClipboard } from '@journeyapps-labs/lib-reactor-utils';
+import { copyTextToClipboard } from '@journeyapps/reactor-lib-utils';
 
 export class CopyPanelURLAction extends Action {
   @inject(WorkspaceStore)

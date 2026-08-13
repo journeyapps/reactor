@@ -1,4 +1,4 @@
-import { SearchResult } from '@journeyapps-labs/lib-reactor-search';
+import { SearchResult } from '@journeyapps/reactor-lib-search';
 import { SearchEngineParameter } from './params/SearchEngineParameter';
 
 export interface SearchEngineSearchEvent<T extends object = {}> {

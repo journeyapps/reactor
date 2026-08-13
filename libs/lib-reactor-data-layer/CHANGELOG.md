@@ -1,4 +1,4 @@
-# @journeyapps-labs/lib-reactor-data-layer
+# @journeyapps/reactor-lib-data-layer
 
 ## 1.0.14
 

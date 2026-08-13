@@ -5,7 +5,7 @@ import { DateTime, Duration } from 'luxon';
 import { ioc } from '../../../inversify.config';
 import { ComboBoxItem } from '../../../stores/combo/ComboBoxDirectives';
 import { Layer, LayerManager } from '../../../stores/layer/LayerManager';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { DateTimePickerLayerWidget } from './DateTimePickerLayerWidget';
 import { ComboBoxStore2 } from '../../../stores/combo2/ComboBoxStore2';
 import { SimpleComboBoxDirective } from '../../../stores/combo2/directives/simple/SimpleComboBoxDirective';

@@ -1,4 +1,4 @@
-# @journeyapps-labs/lib-reactor-server
+# @journeyapps/reactor-lib-server
 
 ## 2.1.1
 

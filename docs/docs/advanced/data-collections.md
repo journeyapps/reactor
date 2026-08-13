@@ -5,7 +5,7 @@ description: Model asynchronous, paginated, and lifecycle-aware data for Reactor
 
 # Data collections
 
-`@journeyapps-labs/lib-reactor-data-layer` provides observable primitives for remote and long-lived collections. They are independent of Reactor [panels](../subsystems/workspaces-and-panels.md) and [entities](../subsystems/entity-definitions.md), making them useful inside [stores](../subsystems/modules-and-stores.md) and domain models.
+`@journeyapps/reactor-lib-data-layer` provides observable primitives for remote and long-lived collections. They are independent of Reactor [panels](../subsystems/workspaces-and-panels.md) and [entities](../subsystems/entity-definitions.md), making them useful inside [stores](../subsystems/modules-and-stores.md) and domain models.
 
 :::note Mental model
 Collections own asynchronous list state. Entity definitions explain what the resulting models mean. Presenters decide how those entities appear.

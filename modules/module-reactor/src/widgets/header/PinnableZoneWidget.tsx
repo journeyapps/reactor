@@ -6,7 +6,7 @@ import { styled } from '../../stores/themes/reactor-theme-fragment';
 import { ToolbarDropZone } from '../../stores/dnd/zones/ToolbarDropZone';
 import { observer } from 'mobx-react';
 import { useDroppableBetweenZone } from '../dnd3/useDroppableBetweenZone';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils/dist';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils/dist';
 import { ToolbarPreference } from '../../settings/ToolbarPreference';
 
 export interface PinnableZoneWidgetProps {

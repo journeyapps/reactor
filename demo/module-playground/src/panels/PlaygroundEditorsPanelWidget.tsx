@@ -8,8 +8,8 @@ import {
   ReactorPanelModel,
   SurfaceWidget,
   styled
-} from '@journeyapps-labs/reactor-mod';
-import { DualEditorWidget, EditorWidget, MonacoLanguages } from '@journeyapps-labs/reactor-mod-editor';
+} from '@journeyapps/reactor-mod';
+import { DualEditorWidget, EditorWidget, MonacoLanguages } from '@journeyapps/reactor-mod-editor';
 import { editor, Uri } from 'monaco-editor';
 import { v4 } from 'uuid';
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
 import { MatchesWidget } from '../../widgets/search/MatchesWidget';
-import { SearchEventMatch } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEventMatch } from '@journeyapps/reactor-lib-search';
 
 export interface IndividualSettingsWidgetProps {
   title: string;

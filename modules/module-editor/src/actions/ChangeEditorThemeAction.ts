@@ -1,4 +1,4 @@
-import { ActionStore, EntityAction, EntityActionEvent, ioc } from '@journeyapps-labs/reactor-mod';
+import { ActionStore, EntityAction, EntityActionEvent, ioc } from '@journeyapps/reactor-mod';
 import { EditorTheme, MonacoThemeStore } from '../stores/MonacoThemeStore';
 import { EditorEntities } from '../entities/EditorEntities';
 

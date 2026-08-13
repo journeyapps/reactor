@@ -1,6 +1,6 @@
 import { ReactorIcon } from '../../widgets/icons/IconWidget';
 import { MousePosition } from '../../layers/combo/SmartPositionWidget';
-import { SearchEventMatch, SearchResultEntry, SearchEngineInterface } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEventMatch, SearchResultEntry, SearchEngineInterface } from '@journeyapps/reactor-lib-search';
 import type { Validator } from '../../actions/validators/ActionValidator';
 
 export interface ComboBoxItem {

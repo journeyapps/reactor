@@ -15,7 +15,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import { ThemeStore } from '../stores/themes/ThemeStore';
 import { theme } from '../stores/themes/reactor-theme-fragment';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 
 export interface CMDPalletPreferenceSearchEntry extends CommandPalletSearchResultEntry {
   preference: BooleanSetting;

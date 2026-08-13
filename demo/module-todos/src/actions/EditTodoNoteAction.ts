@@ -1,4 +1,4 @@
-import { EntityAction, EntityActionEvent } from '@journeyapps-labs/reactor-mod';
+import { EntityAction, EntityActionEvent } from '@journeyapps/reactor-mod';
 import { TodoEntities } from '../TodoEntities';
 import { TodoNoteModel } from '../models/TodoNoteModel';
 

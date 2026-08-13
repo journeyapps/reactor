@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IconWidget } from '../icons/IconWidget';
 import { ButtonAction } from '../../definitions/common';
 import styled from '@emotion/styled';
-import { getDarkenedColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getDarkenedColor } from '@journeyapps/reactor-lib-utils';
 import { REACTOR_MOBILE_MEDIA_QUERY } from '../../hooks/useReactorViewportMode';
 import { ReactorTooltipWidget, TooltipPosition } from '../info/tooltips';
 import type { ValidationIndicator } from '../../actions/validators/ActionValidator';

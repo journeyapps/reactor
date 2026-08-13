@@ -5,7 +5,7 @@ import { SearchEngine } from '../../../search/SearchEngine';
 import { MousePosition } from '../../../layers/combo/SmartPositionWidget';
 import { SearchEngineComboBoxDirective } from '../../../stores/combo2/directives/SearchEngineComboBoxDirective';
 import { ComboBoxItem } from '../../../stores/combo/ComboBoxDirectives';
-import { SearchResult, SearchResultEntry } from '@journeyapps-labs/lib-reactor-search';
+import { SearchResult, SearchResultEntry } from '@journeyapps/reactor-lib-search';
 
 export interface EntitySearchResultEntry<T = any> extends SearchResultEntry {
   entity: T;

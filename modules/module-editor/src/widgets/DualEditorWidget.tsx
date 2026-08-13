@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { MonacoDiffEditor, MonacoDiffEditorProps } from 'react-monaco-editor';
-import { styled } from '@journeyapps-labs/reactor-mod';
+import { styled } from '@journeyapps/reactor-mod';
 import { themed } from '../theme-reactor/editor-theme-fragment';
 import { IDisposable } from 'monaco-editor';
 import { DARK_THEME } from '../theme/theme-utils';

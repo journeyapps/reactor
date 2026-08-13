@@ -1,5 +1,5 @@
 ---
-'@journeyapps-labs/reactor-mod': patch
+'@journeyapps/reactor-mod': patch
 ---
 
 - Restore entity dragging from the command palette.

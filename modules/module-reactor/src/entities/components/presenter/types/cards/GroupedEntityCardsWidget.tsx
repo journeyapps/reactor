@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import styled from '@emotion/styled';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import { EntityCardsPresenterContext } from './EntityCardsPresenterComponent';
 import { CardWidget } from '../../../../../widgets/cards/CardWidget';
 import { themed } from '../../../../../stores/themes/reactor-theme-fragment';

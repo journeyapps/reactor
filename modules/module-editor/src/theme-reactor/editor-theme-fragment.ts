@@ -1,5 +1,5 @@
-import { ThemeFragment } from '@journeyapps-labs/reactor-mod';
-import { Themes } from '@journeyapps-labs/reactor-mod';
+import { ThemeFragment } from '@journeyapps/reactor-mod';
+import { Themes } from '@journeyapps/reactor-mod';
 
 export const theme = new ThemeFragment({
   structure: {

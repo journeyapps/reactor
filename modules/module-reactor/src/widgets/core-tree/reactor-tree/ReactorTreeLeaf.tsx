@@ -1,7 +1,7 @@
 import { TreeEntity } from '@journeyapps-labs/common-tree';
 import * as React from 'react';
 import { CoreTreeWidgetProps } from '../CoreTreeWidget';
-import { SearchEvent, SearchEventMatch } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent, SearchEventMatch } from '@journeyapps/reactor-lib-search';
 import { PatchTree, ReactorTreeListener } from './PatchTree';
 import { ReactorTreeOptions, setupReactorTree } from './reactor-tree-utils';
 import { ReactorTreeLeafWidget } from './widgets/ReactorTreeLeafWidget';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { WorkspaceModelFactoryEvent } from '@projectstorm/react-workspaces-core';
-import { ReactorEntityCategories, ReactorPanelFactory } from '@journeyapps-labs/reactor-mod';
+import { ReactorEntityCategories, ReactorPanelFactory } from '@journeyapps/reactor-mod';
 import { LOGGING_DEBUG_PANEL_TYPE, LoggingDebugPanelModel } from './LoggingDebugPanelModel';
 import { LoggerDebugPanelWidget } from './LoggerDebugPanelWidget';
 

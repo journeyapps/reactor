@@ -22,7 +22,7 @@ import { styled } from '../../stores/themes/reactor-theme-fragment';
 import { ActionMetaWidget } from '../../actions/ActionMetaWidget';
 import { useMemo } from 'react';
 import { ActionStore } from '../../stores/actions/ActionStore';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 
 export const matchesActionCommandPaletteSearch = (action: Action, event: SearchEvent) => {
   return [action.options.name, ...(action.options.aliases || []), ...(action.options.tags || [])].some((term) =>

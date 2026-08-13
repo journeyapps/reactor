@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { SearchEventLocators } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEventLocators } from '@journeyapps/reactor-lib-search';
 
 export interface MatchesWidgetProps {
   locators: SearchEventLocators;

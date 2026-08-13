@@ -9,13 +9,13 @@ import {
   PanelButtonWidget,
   PANEL_CONTENT_PADDING,
   ScrollableDivCss
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { colorRegistry } from './theme-utils';
 import { UploadVSIXThemeBtnWidget } from './UploadVSIXThemeBtnWidget';
 import * as _ from 'lodash';
 import { ChangeEditorThemeAction } from '../actions/ChangeEditorThemeAction';
 import { MonacoThemeStore, EditorTheme } from '../stores/MonacoThemeStore';
-import { aHexToRgba, rgbaToAHex } from '@journeyapps-labs/lib-reactor-utils';
+import { aHexToRgba, rgbaToAHex } from '@journeyapps/reactor-lib-utils';
 
 export interface EditorThemePreferencesWidgetProps {
   save: (theme: EditorTheme) => any;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import { CardWidget, ReactorPanelModel, SurfaceWidget, styled } from '@journeyapps-labs/reactor-mod';
+import { CardWidget, ReactorPanelModel, SurfaceWidget, styled } from '@journeyapps/reactor-mod';
 
 export interface PlaygroundSurfacesPanelWidgetProps {
   model: ReactorPanelModel;

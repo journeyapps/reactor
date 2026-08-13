@@ -1,5 +1,5 @@
 {
-  "name": "@journeyapps-labs/reactor-mod-editor",
+  "name": "@journeyapps/reactor-mod-editor",
   "version": "2.3.10",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/journeyapps-labs/reactor.git"
+    "url": "https://github.com/journeyapps/reactor.git"
   },
   "author": "JOURNEYAPPS",
   "license": "Apache-2.0",
@@ -23,9 +23,9 @@
     "@journeyapps-labs/common-ioc": "^1.0.2",
     "@journeyapps-labs/common-logger": "1.1.1",
     "@journeyapps-labs/common-utils": "^1.0.2",
-    "@journeyapps-labs/lib-reactor-search": "workspace:*",
-    "@journeyapps-labs/lib-reactor-utils": "workspace:*",
-    "@journeyapps-labs/reactor-mod": "workspace:*",
+    "@journeyapps/reactor-lib-search": "workspace:*",
+    "@journeyapps/reactor-lib-utils": "workspace:*",
+    "@journeyapps/reactor-mod": "workspace:*",
     "@projectstorm/react-workspaces-core": "4.3.2",
     "json5": "^2.2.3",
     "jszip": "^3.10.1",
@@ -46,7 +46,7 @@
     "uuid": "^14.0.1"
   },
   "devDependencies": {
-    "@journeyapps-labs/lib-reactor-builder": "workspace:*",
+    "@journeyapps/reactor-lib-builder": "workspace:*",
     "@types/lodash": "^4.17.25",
     "@types/react": "19.2.18",
     "json5-loader": "^4.0.1"

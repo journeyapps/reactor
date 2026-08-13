@@ -7,7 +7,7 @@ import { useForceUpdate } from '../hooks/useForceUpdate';
 import { inject } from '../inversify.config';
 import { Btn } from '../definitions/common';
 import { ThemeStore } from '../stores/themes/ThemeStore';
-import { selectFile } from '@journeyapps-labs/lib-reactor-utils';
+import { selectFile } from '@journeyapps/reactor-lib-utils';
 import styled from '@emotion/styled';
 import { AbstractValueControl } from './AbstractValueControl';
 

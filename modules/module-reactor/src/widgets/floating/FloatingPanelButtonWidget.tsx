@@ -4,7 +4,7 @@ import { Btn } from '../../definitions/common';
 import { themed } from '../../stores/themes/reactor-theme-fragment';
 import { IconWidget } from '../icons/IconWidget';
 import styled from '@emotion/styled';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { useButton } from '../../hooks/useButton';
 import { ReactorTooltipWidget, setupTooltipProps, TooltipPosition } from '../info/tooltips';
 import { REACTOR_MOBILE_MEDIA_QUERY } from '../../hooks/useReactorViewportMode';

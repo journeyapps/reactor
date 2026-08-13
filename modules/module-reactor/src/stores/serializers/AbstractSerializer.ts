@@ -1,5 +1,5 @@
 import { BaseObserver } from '@journeyapps-labs/common-utils';
-import { Disposable } from '@journeyapps-labs/lib-reactor-utils';
+import { Disposable } from '@journeyapps/reactor-lib-utils';
 
 export interface AbstractSerializerListener {
   gotExternalChanges: () => any;

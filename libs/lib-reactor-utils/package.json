@@ -1,5 +1,5 @@
 {
-  "name": "@journeyapps-labs/lib-reactor-utils",
+  "name": "@journeyapps/reactor-lib-utils",
   "version": "2.0.13",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/journeyapps-labs/reactor.git"
+    "url": "https://github.com/journeyapps/reactor.git"
   },
   "author": "JOURNEYAPPS",
   "license": "Apache-2.0",

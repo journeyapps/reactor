@@ -1,4 +1,4 @@
-# @journeyapps-labs/reactor-mod-editor
+# @journeyapps/reactor-mod-editor
 
 ## 2.3.10
 

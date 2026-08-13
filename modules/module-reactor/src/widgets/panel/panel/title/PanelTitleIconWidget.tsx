@@ -3,7 +3,7 @@ import { ReactorIcon, IconWidget } from '../../../icons/IconWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DualIconWidget } from '../../../icons/DualIconWidget';
 import { ioc } from '../../../../inversify.config';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { styled, theme } from '../../../../stores/themes/reactor-theme-fragment';
 import { ThemeStore } from '../../../../stores/themes/ThemeStore';
 

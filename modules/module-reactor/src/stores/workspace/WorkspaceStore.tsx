@@ -15,7 +15,7 @@ import { AbstractLayoutEngine, AddModelsOptions } from './layout-engines/Abstrac
 import { AbstractPersistedStore, AbstractPersistedStoreListener } from '../AbstractPersistedStore';
 import queryString from 'query-string';
 import { DialogStore } from '../DialogStore';
-import { MimeTypes, readFileAsText, selectFile } from '@journeyapps-labs/lib-reactor-utils';
+import { MimeTypes, readFileAsText, selectFile } from '@journeyapps/reactor-lib-utils';
 import { ActionValidationState } from '../../actions/validators/ActionValidator';
 import { ReactorPanelModel } from './react-workspaces/ReactorPanelModel';
 import { ReactorPanelFactory } from './react-workspaces/ReactorPanelFactory';

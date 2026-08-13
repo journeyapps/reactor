@@ -8,7 +8,7 @@ import { ComboBoxWidget } from '../../../layers/combo/ComboBoxWidget';
 import { observer } from 'mobx-react';
 import { activateWithValidation } from '../../../hooks/useValidator';
 import styled from '@emotion/styled';
-import { SearchResult, SearchResultEntry } from '@journeyapps-labs/lib-reactor-search';
+import { SearchResult, SearchResultEntry } from '@journeyapps/reactor-lib-search';
 import { ReactorViewportMode, useReactorViewportMode } from '../../../hooks/useReactorViewportMode';
 import { isValidationHidden } from '../../../actions/validators/ActionValidator';
 import { IconWidget } from '../../../widgets/icons/IconWidget';

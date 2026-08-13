@@ -8,7 +8,7 @@ import { WorkspaceModelFactoryEvent } from '@projectstorm/react-workspaces-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { AdvancedWorkspacePreference } from '../../../preferences/AdvancedWorkspacePreference';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { SmartTrayTitleWidget } from '../../../widgets/panel/tray/SmartTrayTitleWidget';
 import { FloatingWindowFactory } from '@projectstorm/react-workspaces-model-floating-window';
 import { styled } from '../../themes/reactor-theme-fragment';

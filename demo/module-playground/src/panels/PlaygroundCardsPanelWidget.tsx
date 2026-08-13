@@ -11,7 +11,7 @@ import {
   SurfaceWidget,
   ioc,
   styled
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { PlaygroundStore } from '../stores/PlaygroundStore';
 
 export interface PlaygroundCardsPanelWidgetProps {

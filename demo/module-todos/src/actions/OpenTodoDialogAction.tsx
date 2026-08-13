@@ -7,7 +7,7 @@ import {
   inject,
   TableWidget,
   styled
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { TodoModel } from '../models/TodoModel';
 import { TodoEntities } from '../TodoEntities';
 

@@ -16,8 +16,8 @@ import {
   TextInputType,
   TextAreaInput,
   TextInput
-} from '@journeyapps-labs/reactor-mod';
-import { TodoEntities } from '@journeyapps-labs/reactor-mod-todos';
+} from '@journeyapps/reactor-mod';
+import { TodoEntities } from '@journeyapps/reactor-mod-todos';
 
 export class DemoFormModel extends ColumnsFormModel {
   constructor() {

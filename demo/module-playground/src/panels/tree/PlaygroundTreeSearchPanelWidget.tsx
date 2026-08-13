@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import { ReactorPanelModel, System, ioc, styled } from '@journeyapps-labs/reactor-mod';
-import { TodoEntities, TodoModel, TodoStore } from '@journeyapps-labs/reactor-mod-todos';
+import { ReactorPanelModel, System, ioc, styled } from '@journeyapps/reactor-mod';
+import { TodoEntities, TodoModel, TodoStore } from '@journeyapps/reactor-mod-todos';
 import { CoreTreeVariantsCard } from './CoreTreeVariantsCard';
 import { EntityTreeVariantsCard } from './EntityTreeVariantsCard';
 

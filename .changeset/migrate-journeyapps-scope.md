@@ -4,7 +4,9 @@
 '@journeyapps/reactor-lib-search': patch
 '@journeyapps/reactor-lib-server': patch
 '@journeyapps/reactor-lib-utils': patch
+'@journeyapps/reactor-mod': patch
 '@journeyapps/reactor-mod-debug': patch
+'@journeyapps/reactor-mod-editor': patch
 ---
 
-Standardize imported TypeScript helpers and declare `tslib` as a runtime dependency wherever emitted JavaScript imports it.
+Publish Reactor packages under the `@journeyapps` scope after moving the repository to the JourneyApps GitHub organization.

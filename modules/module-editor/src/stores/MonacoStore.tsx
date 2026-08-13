@@ -9,7 +9,7 @@ import { wireTmGrammars } from 'monaco-editor-textmate';
 import { GrammerMapping, GrammerMappingEntry, GrammerMappingType, MonacoLanguages } from '../languages/languages';
 import { StandaloneServices } from 'monaco-editor/editor/standalone/browser/standaloneServices';
 import { IThemeService } from 'monaco-editor/platform/theme/common/themeService';
-import { AbstractStore, AbstractStoreListener } from '@journeyapps-labs/reactor-mod';
+import { AbstractStore, AbstractStoreListener } from '@journeyapps/reactor-mod';
 
 export interface MonacoEditorType extends monaco.editor.IStandaloneCodeEditor {
   _standaloneKeybindingService: {

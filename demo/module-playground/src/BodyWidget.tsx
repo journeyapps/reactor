@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BodyWidget } from '@journeyapps-labs/reactor-mod';
+import { BodyWidget } from '@journeyapps/reactor-mod';
 
 export interface DemoBodyWidgetProps {}
 

@@ -1,4 +1,4 @@
-# @journeyapps-labs/lib-reactor-builder
+# @journeyapps/reactor-lib-builder
 
 ## 3.1.1
 

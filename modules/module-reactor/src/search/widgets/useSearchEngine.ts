@@ -1,6 +1,6 @@
 import { SearchEngine } from '../SearchEngine';
 import { useEffect, useState } from 'react';
-import { SearchResult } from '@journeyapps-labs/lib-reactor-search';
+import { SearchResult } from '@journeyapps/reactor-lib-search';
 
 export interface UseSearchEngineProps {
   searchEngine: SearchEngine;

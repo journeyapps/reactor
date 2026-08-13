@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { themed } from '../../../../../stores/themes/reactor-theme-fragment';
 import { IconWidget } from '../../../../../widgets/icons/IconWidget';
 import { MatchesWidget } from '../../../../../widgets/search/MatchesWidget';
-import { SearchEventMatch } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEventMatch } from '@journeyapps/reactor-lib-search';
 import { EntityDescription } from '../../../meta/EntityDescriberComponent';
 
 export interface EntityCardTitleWidgetProps {

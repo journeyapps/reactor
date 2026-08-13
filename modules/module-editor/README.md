@@ -1,6 +1,6 @@
 # Reactor editor module
 
-![](https://img.shields.io/npm/v/@journeyapps-labs/reactor-mod-editor)
+![](https://img.shields.io/npm/v/@journeyapps/reactor-mod-editor)
 
 This module provides editor capability to Reactor with the help of Monaco (the OSS editor found in vs-code).
 

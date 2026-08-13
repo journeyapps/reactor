@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Btn } from '../definitions/common';
-import { copyTextToClipboard } from '@journeyapps-labs/lib-reactor-utils';
+import { copyTextToClipboard } from '@journeyapps/reactor-lib-utils';
 import { TooltipState } from '../widgets/info/tooltips';
 
 export interface UseCopyButtonProps {

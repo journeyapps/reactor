@@ -1,4 +1,4 @@
-import { BooleanSetting, ioc, PrefsStore } from '@journeyapps-labs/reactor-mod';
+import { BooleanSetting, ioc, PrefsStore } from '@journeyapps/reactor-mod';
 
 export class EnableVimSetting extends BooleanSetting {
   static KEY = '/editor/vim-enabled';

@@ -11,7 +11,7 @@ import {
   TableRow,
   TablePillWidget,
   styled
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 
 export interface PlaygroundTablesPanelWidgetProps {
   model: ReactorPanelModel;

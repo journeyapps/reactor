@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ioc } from '../../inversify.config';
 import ReactSwitch from 'react-switch';
-import { getDarkenedColor, normalizeColorToHex } from '@journeyapps-labs/lib-reactor-utils';
+import { getDarkenedColor, normalizeColorToHex } from '@journeyapps/reactor-lib-utils';
 import { ThemeStore } from '../../stores/themes/ThemeStore';
 import { styled, theme } from '../../stores/themes/reactor-theme-fragment';
 import { observer } from 'mobx-react';

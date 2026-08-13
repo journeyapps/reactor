@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Switch from 'react-switch';
 import { observer } from 'mobx-react';
 import { inject } from '../../inversify.config';
-import { normalizeColorToHex } from '@journeyapps-labs/lib-reactor-utils';
+import { normalizeColorToHex } from '@journeyapps/reactor-lib-utils';
 import { ThemeStore } from '../../stores/themes/ThemeStore';
 import { theme, themed } from '../../stores/themes/reactor-theme-fragment';
 

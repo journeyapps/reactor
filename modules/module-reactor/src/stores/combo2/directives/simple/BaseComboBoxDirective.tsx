@@ -6,7 +6,7 @@ import { ComboBoxWidget } from '../../../../layers/combo/ComboBoxWidget';
 import { useForceUpdate } from '../../../../hooks/useForceUpdate';
 import { ControlledSearchWidget } from '../../../../widgets/search/ControlledSearchWidget';
 import * as _ from 'lodash';
-import { createSearchEventMatcher, SearchEventMatcher } from '@journeyapps-labs/lib-reactor-search';
+import { createSearchEventMatcher, SearchEventMatcher } from '@journeyapps/reactor-lib-search';
 import { styled } from '../../../themes/reactor-theme-fragment';
 import { ioc } from '../../../../inversify.config';
 import { ComboBoxStore2 } from '../../ComboBoxStore2';

@@ -4,7 +4,7 @@ import { ComboBoxItem } from '../../stores/combo/ComboBoxDirectives';
 import { ComboBoxItemWidget } from './ComboBoxItemWidget';
 import { ListItem, ListItemRenderEvent } from '../../widgets/list/ControlledListWidget';
 import { RawComboBoxWidget } from './RawComboBoxWidget';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { themed } from '../../stores/themes/reactor-theme-fragment';
 import { COMBOBOX_ITEM_H_PADDING } from '../../layout';
 import { Dimensions } from '../../hooks/useDimensionObserver';

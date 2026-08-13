@@ -1,4 +1,4 @@
-# @journeyapps-labs/lib-reactor-search
+# @journeyapps/reactor-lib-search
 
 ## 1.0.14
 

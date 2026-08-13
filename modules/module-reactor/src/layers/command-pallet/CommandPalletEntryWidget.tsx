@@ -3,7 +3,7 @@ import { MouseEvent, useRef } from 'react';
 import styled from '@emotion/styled';
 import { themed } from '../../stores/themes/reactor-theme-fragment';
 import { IconWidget, ReactorIcon } from '../../widgets/icons/IconWidget';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { REACTOR_MOBILE_MEDIA_QUERY } from '../../hooks/useReactorViewportMode';
 
 namespace S {

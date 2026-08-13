@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getDarkenedColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getDarkenedColor } from '@journeyapps/reactor-lib-utils';
 import type { MetadataWidgetProps } from '../meta/MetadataWidget';
 import { TreeBadgeWidget } from './TreeBadgeWidget';
 import { getTreeEntityMetadataColor, getTreeEntityMetadataKey } from './TreeEntityDetailsModel';

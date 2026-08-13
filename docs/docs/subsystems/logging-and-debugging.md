@@ -44,7 +44,7 @@ logger.info('Import complete', Log.green('success'), { imported: count });
 
 ## Reactor Debug module
 
-Install `@journeyapps-labs/reactor-mod-debug` as an application module to add the **Reactor debug: Logging** panel.
+Install `@journeyapps/reactor-mod-debug` as an application module to add the **Reactor debug: Logging** panel.
 
 The panel can:
 

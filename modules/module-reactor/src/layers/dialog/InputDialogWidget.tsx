@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { DialogWidget } from './DialogWidget';
 import { InputTransformedWidget } from './InputTransformedWidget';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { themed } from '../../stores/themes/reactor-theme-fragment';
 import { Btn } from '../../definitions/common';
 import { REACTOR_MOBILE_MEDIA_QUERY } from '../../hooks/useReactorViewportMode';

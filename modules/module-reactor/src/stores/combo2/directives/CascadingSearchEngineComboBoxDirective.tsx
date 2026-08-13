@@ -2,7 +2,7 @@ import { ComboBoxDirective, ComboBoxDirectiveOptions } from '../ComboBoxDirectiv
 import { ComboBoxItem } from '../../combo/ComboBoxDirectives';
 import * as React from 'react';
 import { styled } from '../../themes/reactor-theme-fragment';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { makeObservable, observable } from 'mobx';
 import { observer } from 'mobx-react';
 import { ioc } from '../../../inversify.config';

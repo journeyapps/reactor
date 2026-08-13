@@ -1,7 +1,7 @@
 import { TodoModel } from '../models/TodoModel';
 import { computed, observable } from 'mobx';
 import { TodoNoteModel } from '../models/TodoNoteModel';
-import { AbstractStore } from '@journeyapps-labs/reactor-mod';
+import { AbstractStore } from '@journeyapps/reactor-mod';
 
 export class TodoStore extends AbstractStore {
   @observable

@@ -1,4 +1,4 @@
-# @journeyapps-labs/reactor-mod-debug
+# @journeyapps/reactor-mod-debug
 
 ## 0.2.3
 

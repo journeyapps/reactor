@@ -21,10 +21,10 @@ import {
   TableWidget,
   ioc,
   styled
-} from '@journeyapps-labs/reactor-mod';
-import { PaginatedCollection, PaginatedSearchResultEntry } from '@journeyapps-labs/lib-reactor-data-layer';
-import { createSearchEventMatcherBool, SearchResult } from '@journeyapps-labs/lib-reactor-search';
-import { TodoEntities, TodoModel, TodoStore } from '@journeyapps-labs/reactor-mod-todos';
+} from '@journeyapps/reactor-mod';
+import { PaginatedCollection, PaginatedSearchResultEntry } from '@journeyapps/reactor-lib-data-layer';
+import { createSearchEventMatcherBool, SearchResult } from '@journeyapps/reactor-lib-search';
+import { TodoEntities, TodoModel, TodoStore } from '@journeyapps/reactor-mod-todos';
 import { DemoFormModel } from '../forms/DemoFormModel';
 import { PlaygroundStore } from '../stores/PlaygroundStore';
 

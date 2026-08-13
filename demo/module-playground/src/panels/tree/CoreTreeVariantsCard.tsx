@@ -7,7 +7,7 @@ import {
   SurfaceWidget,
   getScrollableCSS,
   styled
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { buildCoreTreeVariants } from './coreTreeBuilders';
 
 export type CoreTreeVariantsCardProps = object;

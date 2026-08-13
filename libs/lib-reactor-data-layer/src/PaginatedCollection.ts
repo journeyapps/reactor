@@ -1,6 +1,6 @@
 import { autorun, IReactionDisposer, observable } from 'mobx';
 import { Collection } from './Collection';
-import { SearchResult, SearchResultEntry } from '@journeyapps-labs/lib-reactor-search';
+import { SearchResult, SearchResultEntry } from '@journeyapps/reactor-lib-search';
 
 export interface PaginatedCollectionOptions<T, R> {
   transformer: (res: R) => T[];

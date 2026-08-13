@@ -6,7 +6,7 @@ import {
   InlineTreePresenterComponent,
   inject,
   SimpleEntitySearchEngineComponent
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { TodoEntities } from '../TodoEntities';
 import { TodoStore } from '../stores/TodoStore';
 import { TodoNoteModel } from '../models/TodoNoteModel';

@@ -8,7 +8,7 @@ import {
 } from '../../../stores/combo/ComboBoxDirectives';
 import { SmartPositionWidget } from '../SmartPositionWidget';
 import { ComboSearchBoxWidget } from '../ComboSearchBoxWidget';
-import { createSearchEventMatcher, SearchResult } from '@journeyapps-labs/lib-reactor-search';
+import { createSearchEventMatcher, SearchResult } from '@journeyapps/reactor-lib-search';
 
 export interface SearchEngineDirectiveComboWidgetProps {
   directive: UISearchEngineDirective;

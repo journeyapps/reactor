@@ -1,12 +1,5 @@
 import { DARK_THEME, normalizeVSCodeTheme, VSIXTheme } from '../theme/theme-utils';
-import {
-  AbstractStore,
-  EntitySetting,
-  EntitySettingOptions,
-  ioc,
-  Themes,
-  ThemeStore
-} from '@journeyapps-labs/reactor-mod';
+import { AbstractStore, EntitySetting, EntitySettingOptions, ioc, Themes, ThemeStore } from '@journeyapps/reactor-mod';
 import * as _ from 'lodash';
 import * as monaco from 'monaco-editor';
 import { editor } from 'monaco-editor';

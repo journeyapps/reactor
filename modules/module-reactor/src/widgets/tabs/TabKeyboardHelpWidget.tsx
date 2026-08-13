@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ActionShortcutPillsWidget } from '../../panels/settings/keys/ActionShortcutPillsWidget';
 import { TabAction } from '../../actions/builtin-actions/TabAction';
 import { styled, themed } from '../../stores/themes/reactor-theme-fragment';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 
 namespace S {
   export const Help = themed.div`

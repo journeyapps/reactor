@@ -1,4 +1,4 @@
-import { ReactorPanelModel } from '@journeyapps-labs/reactor-mod';
+import { ReactorPanelModel } from '@journeyapps/reactor-mod';
 
 export const LOGGING_DEBUG_PANEL_TYPE = 'reactor-debug';
 
