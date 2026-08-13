@@ -1,6 +1,6 @@
 {
   "name": "@journeyapps/reactor-lib-utils",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
