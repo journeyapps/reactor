@@ -62,7 +62,7 @@ export class UXStore extends AbstractStore {
   @observable
   accessor secondaryHeader: Btn;
   @observable
-  accessor additionalToolbars: { [key: string]: Toolbar };
+  accessor additionalToolbars: Map<string, Toolbar>;
   @observable
   accessor headerMetaIcons: Btn[];
   @observable
@@ -91,7 +91,7 @@ export class UXStore extends AbstractStore {
     });
     this.rootComponent = null;
     this.primaryLogo = null;
-    this.additionalToolbars = {};
+    this.additionalToolbars = new Map();
     this.headerMetaIcons = [
       {
         icon: 'cog',
@@ -188,16 +188,16 @@ export class UXStore extends AbstractStore {
   }
 
   getToolbars(allignment: Alignment): Toolbar[] {
-    return _.filter(this.additionalToolbars, (toolbar) => {
+    return Array.from(this.additionalToolbars.values()).filter((toolbar) => {
       return toolbar.allignment === allignment;
     });
   }
 
   deregisterToolbar(key: string) {
-    delete this.additionalToolbars[key];
+    this.additionalToolbars.delete(key);
   }
 
   registerToolbar(toolbar: Toolbar) {
-    this.additionalToolbars[toolbar.key] = toolbar;
+    this.additionalToolbars.set(toolbar.key, toolbar);
   }
 }
