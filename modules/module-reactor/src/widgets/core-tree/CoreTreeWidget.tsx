@@ -21,6 +21,7 @@ export interface CoreRenderTreeLeafEvent<T extends TreeEntity = TreeEntity> exte
 export interface CoreTreeWidgetProps {
   tree: TreeEntity;
   depth?: number;
+  reserveNodeToggleSpace?: boolean;
   forwardRef?: React.RefObject<HTMLDivElement>;
   renderTreeNode?: (event: CoreRenderTreeNodeEvent) => React.JSX.Element;
   renderTreeLeaf?: (event: CoreRenderTreeLeafEvent) => React.JSX.Element;

@@ -288,6 +288,6 @@ export abstract class AbstractEntityTreePresenterContext<
     if (!node) {
       return null;
     }
-    return <CoreTreeWidget tree={node}></CoreTreeWidget>;
+    return <CoreTreeWidget tree={node} reserveNodeToggleSpace={false}></CoreTreeWidget>;
   }
 }

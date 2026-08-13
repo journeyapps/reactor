@@ -2,7 +2,7 @@
   "name": "reactor",
   "main": "index.js",
   "private": true,
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@11.21.0",
   "scripts": {
     "build": "pnpm build:builder && pnpm build:ts && pnpm build:modules",
     "build:builder": "pnpm run --filter '@journeyapps-labs/lib-reactor-builder' build",
@@ -22,13 +22,13 @@
     "watch:ts": "pnpm build:ts --watch"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.31.1",
+    "@changesets/cli": "^3.0.0",
     "concurrently": "10.0.4",
     "env-cmd": "^11.0.0",
     "glob": "^13.0.6",
     "inquirer": "^14.0.2",
     "js-yaml": "^5.2.3",
-    "npm-check-updates": "^23.0.1",
+    "npm-check-updates": "^23.0.2",
     "prettier": "3.9.6",
     "typescript": "^5.9.3"
   }

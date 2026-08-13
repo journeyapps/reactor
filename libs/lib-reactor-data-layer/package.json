@@ -22,7 +22,8 @@
     "@journeyapps-labs/lib-reactor-utils": "workspace:*",
     "@journeyapps-labs/common-utils": "^1.0.2",
     "lodash": "^4.18.1",
-    "mobx": "^7.0.0"
+    "mobx": "^7.0.0",
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.25",

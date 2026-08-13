@@ -17,6 +17,6 @@
   },
   "devDependencies": {
     "@journeyapps-labs/lib-reactor-builder": "workspace:^",
-    "@types/node": "^26.1.2"
+    "@types/node": "^26.2.0"
   }
 }

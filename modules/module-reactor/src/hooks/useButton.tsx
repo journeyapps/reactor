@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActionValidationState } from '../actions/validators/ActionValidator';
+import { ActionValidationState, ValidationResult } from '../actions/validators/ActionValidator';
 import { Btn } from '../definitions/common';
 
 import { MousePosition } from '../layers/combo/SmartPositionWidget';
@@ -16,6 +16,22 @@ export interface UseButtonProps {
   btn: Btn;
   forwardRef?: React.RefObject<HTMLDivElement>;
 }
+
+/** Resolve the tooltip after applying any higher-priority validation feedback. */
+export const resolveButtonTooltip = (btn: Btn, validationResult: ValidationResult) => {
+  let tooltip = btn.tooltip;
+  // Disabled and blocked actions should explain why they cannot currently run.
+  if (
+    validationResult.type === ActionValidationState.DISABLED ||
+    validationResult.type === ActionValidationState.PENDING ||
+    validationResult.type === ActionValidationState.BLOCKED
+  ) {
+    tooltip = validationResult.message || tooltip;
+  }
+
+  // A visible label already communicates identical text, so avoid showing a redundant tooltip.
+  return tooltip === btn.label ? undefined : tooltip;
+};
 
 export const useButton = (props: UseButtonProps) => {
   const ref = props.forwardRef || useRef(null);
@@ -87,14 +103,7 @@ export const useButton = (props: UseButtonProps) => {
   }
 
   // tooltips
-  let tooltip = props.btn.tooltip;
-  if (
-    validationResult.type === ActionValidationState.DISABLED ||
-    validationResult.type === ActionValidationState.PENDING ||
-    validationResult.type === ActionValidationState.BLOCKED
-  ) {
-    tooltip = validationResult.message || tooltip;
-  }
+  const tooltip = resolveButtonTooltip(props.btn, validationResult);
 
   return {
     border: color,

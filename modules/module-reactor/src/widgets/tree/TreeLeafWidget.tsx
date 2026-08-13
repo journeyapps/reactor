@@ -27,6 +27,7 @@ export interface TreeLeafWidgetCommonProps {
   dropZoneHint?: boolean;
   dropZoneHover?: boolean;
   depth?: number;
+  reserveNodeToggleSpace?: boolean;
   label: string;
   label2?: string;
   tooltip?: string;
@@ -232,7 +233,7 @@ export const TreeLeafWidget: React.FC<TreeLeafWidgetProps> = (props) => {
   };
 
   let depth = props.depth || 0;
-  if (!props.collapse) {
+  if (!props.collapse && props.reserveNodeToggleSpace !== false) {
     depth++;
   }
 
