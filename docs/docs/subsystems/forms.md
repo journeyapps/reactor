@@ -7,7 +7,7 @@ description: Model named inputs, validation, visibility, grouped values, and for
 
 Reactor forms are modeled objects rather than collections of unrelated React input state. `FormModel` coordinates named `FormInput` instances, while each input owns its current value, validation error, visibility, and standard Reactor rendering.
 
-Forms use controls where an existing Reactor interaction should be embedded as an input, but the form system adds concerns that controls do not own: field names, labels, descriptions, required state, validation, and submission values.
+Forms embed [controls](./controls.md) when an existing Reactor interaction should become an input. Forms add field names, labels, descriptions, required state, validation, and submission values.
 
 ## Create a form model
 
@@ -63,7 +63,7 @@ Reactor includes:
 - `ArrayInput` and `ArraySetInput`
 - `GroupInput`
 
-`ControlInput` wraps an existing control when the form should use the same interaction as the rest of the application.
+`ControlInput` wraps an existing [control](./controls.md) when the form should reuse an application interaction. `EntityInput` resolves values through the entity definition's [search behavior](./entity-definitions/search.md).
 
 ## Values and validation
 

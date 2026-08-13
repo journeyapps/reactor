@@ -5,7 +5,7 @@ description: Build interactions that work on desktop, tablet, and mobile.
 
 # Responsive applications
 
-Reactor applications often begin on desktop with multiple panels, context menus, keyboard shortcuts, drag-and-drop, and saved layouts. Reactor changes how those features appear on smaller screens.
+Reactor applications often begin on desktop with multiple [panels](../subsystems/workspaces-and-panels.md), context menus, shortcuts, drag-and-drop, and saved layouts. Reactor changes how those features appear on smaller screens.
 
 :::note Mental model
 Keep the same task available, but change its layout and controls. Do not simply shrink a desktop workspace.
@@ -24,9 +24,7 @@ Use `useReactorViewportMode()` when behavior or structure must change. Use CSS m
 ```tsx
 const viewport = useReactorViewportMode();
 
-return viewport === ReactorViewportMode.MOBILE
-  ? <TodoMobileHeader />
-  : <TodoWorkspaceToolbar />;
+return viewport === ReactorViewportMode.MOBILE ? <TodoMobileHeader /> : <TodoWorkspaceToolbar />;
 ```
 
 The exported breakpoints and media-query constants keep application styles aligned with Reactor's runtime decisions.
@@ -58,15 +56,15 @@ Some adaptations happen below application code:
 
 Dense interaction should have more than one route:
 
-| Desktop interaction | Alternative |
-| --- | --- |
-| Right-click context menu | Action exposed through a visible menu |
-| Keyboard shortcut | Registered action in the command palette |
-| Drag-and-drop | Coupled action or explicit move command |
-| Floating inspector | Opened panel model |
-| Hover tooltip | Focusable or activatable information |
+| Desktop interaction      | Alternative                              |
+| ------------------------ | ---------------------------------------- |
+| Right-click context menu | Action exposed through a visible menu    |
+| Keyboard shortcut        | Registered action in the command palette |
+| Drag-and-drop            | Coupled action or explicit move command  |
+| Floating inspector       | Opened panel model                       |
+| Hover tooltip            | Focusable or activatable information     |
 
-Reactor actions and controls let these routes share one implementation.
+[Actions](../subsystems/actions-and-validation.md) and [controls](../subsystems/controls.md) let these routes share one implementation.
 
 :::tip Pro tip
 If a task exists only as a mouse gesture, make it an action first. Keep the fast desktop gesture, then expose the same action to mobile and keyboard users.

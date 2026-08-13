@@ -29,12 +29,12 @@ Read [Application model](../subsystems/application-model.md) for the boot sequen
 
 This layer describes the important things in your application:
 
-- an **action** says what the user can do;
-- an **entity definition** says how Reactor should work with one kind of object;
-- a **control** adapts one behavior or value to several interaction surfaces;
-- a **form** names and validates a group of inputs;
-- a **setting** saves one user choice under a known key;
-- a **search engine** exposes selectable or activatable results.
+- an [**action**](../subsystems/actions-and-validation.md) says what the user can do;
+- an [**entity definition**](../subsystems/entity-definitions.md) describes one kind of object;
+- a [**control**](../subsystems/controls.md) adapts behavior or a value to several surfaces;
+- a [**form**](../subsystems/forms.md) names and validates inputs;
+- a [**setting**](../subsystems/settings-and-persistence.md) saves one user choice;
+- a [**search engine**](../subsystems/search-selection-and-command-palette.md) exposes selectable or activatable results.
 
 These objects are not tied to one screen. A single entity definition can provide names, search, trees, cards, saved references, child objects, open actions, documentation, and generated panels.
 
@@ -48,13 +48,13 @@ Start with [Actions and validation](../subsystems/actions-and-validation.md) and
 
 The runtime turns registered features into an application:
 
-- workspaces decide where panels appear and persist;
+- [workspaces](../subsystems/workspaces-and-panels.md) decide where panels appear and persist;
 - layout engines adapt placement policy;
-- layers host dialogs, combo boxes, overlays, and guides;
-- shortcuts and the command palette run the same actions as buttons and menus;
-- the Visor and notifications communicate work and status;
-- the media engine maps content types to panels;
-- responsive behavior changes placement and controls for smaller screens.
+- [layers](../runtime/interaction-layers.md) host dialogs, combo boxes, overlays, and guides;
+- shortcuts and the [command palette](../subsystems/search-selection-and-command-palette.md) run registered actions;
+- the [Visor and notifications](../runtime/operational-feedback.md) communicate status;
+- the [media engine](../advanced/media-engine.md) maps content types to panels;
+- [responsive behavior](../runtime/responsive-applications.md) adapts placement and controls.
 
 Feature modules can open an entity, show a dialog, or run an action without owning the whole application shell.
 
@@ -82,19 +82,19 @@ This is why the same action works from a tree menu, toolbar, shortcut, guide, or
 
 Use these boundaries when deciding where new behavior belongs:
 
-| Concern | Owner |
-| --- | --- |
-| Observable domain or service state | Store or application model |
-| Something the user can do | Action |
-| How Reactor works with an object | Entity definition |
-| A mutable value with several representations | Control |
-| Named input and validation | Form input |
-| Persistent user choice | Setting |
-| Serializable rendered workspace state | Panel model |
-| Panel construction and rendering | Panel factory |
-| Where opened content appears | Layout engine and workspace |
-| Dialogs, menus, and overlays | Layer/directive system |
-| Long-running operation feedback | Action status or Visor |
+| Concern                                      | Owner                       |
+| -------------------------------------------- | --------------------------- |
+| Observable domain or service state           | Store or application model  |
+| Something the user can do                    | Action                      |
+| How Reactor works with an object             | Entity definition           |
+| A mutable value with several representations | Control                     |
+| Named input and validation                   | Form input                  |
+| Persistent user choice                       | Setting                     |
+| Serializable rendered workspace state        | Panel model                 |
+| Panel construction and rendering             | Panel factory               |
+| Where opened content appears                 | Layout engine and workspace |
+| Dialogs, menus, and overlays                 | Layer/directive system      |
+| Long-running operation feedback              | Action status or Visor      |
 
 :::warning Common pitfall
 Do not put application behavior in a React widget only because that widget needs it first. If it may later appear in a menu, shortcut, guide, or command palette, make it an action.

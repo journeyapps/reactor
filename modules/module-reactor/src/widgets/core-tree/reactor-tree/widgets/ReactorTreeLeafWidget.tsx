@@ -35,5 +35,12 @@ export const ReactorTreeLeafWidget: React.FC<ReactorTreeLeafWidgetProps> = obser
     return null;
   }
 
-  return <TreeLeafWidget forwardRef={event.forwardRef} {...tree.getProps(event)} depth={event.depth} />;
+  return (
+    <TreeLeafWidget
+      forwardRef={event.forwardRef}
+      {...tree.getProps(event)}
+      depth={event.depth}
+      reserveNodeToggleSpace={event.reserveNodeToggleSpace}
+    />
+  );
 });

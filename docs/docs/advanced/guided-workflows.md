@@ -5,7 +5,7 @@ description: Build multi-step guidance around real application behavior.
 
 # Guided workflows
 
-Reactor guides can walk a user through real work. A guide can find controls, focus attention, wait for application events, pass typed values between steps, and clean up listeners and locks as it advances.
+Reactor guides can walk a user through real work. A guide can find [controls](../subsystems/controls.md), focus attention, wait for [actions](../subsystems/actions-and-validation.md) or store events, pass typed values between steps, and clean up listeners and locks.
 
 :::note Mental model
 A guide should observe the application's real actions and controls, not implement a second version of the task.
@@ -28,10 +28,7 @@ export class PlaygroundGuideWorkflow extends GuideWorkflow {
       new GuideStep({
         label: 'Create the sandbox',
         activated: (step) => {
-          step
-            .select()
-            .btn({ panel: 'playground.guide', label: 'Create sandbox' })
-            .showTooltip(step.generateTooltip());
+          step.select().btn({ panel: 'playground.guide', label: 'Create sandbox' }).showTooltip(step.generateTooltip());
         }
       })
     );
@@ -79,7 +76,7 @@ activated: (step) => {
     removeListener();
     releaseLock();
   };
-}
+};
 ```
 
 The cleanup callback runs when the step deactivates.

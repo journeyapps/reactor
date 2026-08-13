@@ -6,6 +6,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "es6",
+    "importHelpers": true,
     "strict": false,
     "declaration": true,
     "esModuleInterop": true,

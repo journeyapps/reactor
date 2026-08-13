@@ -21,6 +21,12 @@ export interface CoreRenderTreeLeafEvent<T extends TreeEntity = TreeEntity> exte
 export interface CoreTreeWidgetProps {
   tree: TreeEntity;
   depth?: number;
+  /**
+   * Reserve one level of indentation for a node toggle when rendering a leaf.
+   * Disable this for inline trees whose leaves should align with their containing content.
+   * @defaultValue true
+   */
+  reserveNodeToggleSpace?: boolean;
   forwardRef?: React.RefObject<HTMLDivElement>;
   renderTreeNode?: (event: CoreRenderTreeNodeEvent) => React.JSX.Element;
   renderTreeLeaf?: (event: CoreRenderTreeLeafEvent) => React.JSX.Element;

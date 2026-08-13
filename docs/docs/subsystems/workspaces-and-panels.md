@@ -5,7 +5,7 @@ description: Create panels, place them in workspaces, and save the layout.
 
 # Workspaces and panels
 
-Panels contain application UI. Workspaces arrange panel models into tabs, splits, trays, and floating windows, then save that layout for the user.
+Panels contain application UI. Workspaces arrange panel models into tabs, splits, trays, and floating windows, then save that layout through the [persistence system](./settings-and-persistence.md).
 
 :::note Mental model
 A feature creates panel state. A panel factory renders it. The active layout engine decides where it belongs.
@@ -52,7 +52,7 @@ event.ioc.get(WorkspaceStore).registerFactory(new TodoPanelFactory());
 ```
 
 :::warning Common pitfall
-Do not put class instances or other non-serializable objects in panel state. Save an ID, or use Reactor's entity encoding helpers so the panel can find the object again after a reload.
+Do not put class instances or other non-serializable objects in panel state. Save an ID, or use [entity encoding](./entity-definitions/encoding.md) so the panel can find the object after a reload.
 :::
 
 ## Avoid duplicate panels
@@ -108,7 +108,7 @@ return new WorkspaceGroup({
 });
 ```
 
-The same entity can therefore open differently according to the user's current workflow without changing its definition.
+The same entity can therefore open differently by workspace without changing its [handlers](./entity-definitions/handlers-and-opening.md).
 
 :::tip Pro tip
 Use preferred open actions when an entity should open differently in one workspace. Use the entity handler's ordering for the application-wide default.
@@ -171,6 +171,19 @@ Immutable state is protected from destructive replacement during import.
 
 See [Responsive applications](../runtime/responsive-applications.md) for the broader interaction model.
 
+## Panel and floating-window menus
+
+Panel title context menus reflect both placement and workspace policy:
+
+- A panel inside a mutable workspace can be closed, converted to tabs, or converted to a tray.
+- A floating window can always be closed, including when the active workspace is immutable.
+- A standalone floating window can be docked into the active workspace.
+- A temporary floating window opened from a collapsed tray cannot be docked. Its panel already belongs to that tray, so docking the temporary representation would detach it from the layout that owns it.
+
+`ReactorWindowModel.standalone` distinguishes independent windows from tray-coupled windows. `WorkspaceStore.addModelInWindow()` and `ReactorWorkspaceEngine.generateStandaloneWindowModel()` create standalone windows. Keep tray-created windows coupled so their pinning and visibility lifecycle remains intact.
+
+Panel title buttons use each `Btn.tooltipPos` when provided and otherwise place their tooltip above the title bar.
+
 ## Go deeper
 
 <div className="doc-links">
@@ -178,4 +191,5 @@ See [Responsive applications](../runtime/responsive-applications.md) for the bro
   <a href="../runtime/application-shell">Application chrome</a>
   <a href="../advanced/media-engine">Media-to-panel mapping</a>
   <a href="../advanced/production-patterns">App-scoped persistence</a>
+  <a href="../using-reactor/getting-around">Arrange a Reactor workspace</a>
 </div>

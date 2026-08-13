@@ -5,7 +5,7 @@ description: Brand Reactor, choose the root experience, and extend shared applic
 
 # Application shell
 
-Reactor supplies the shared frame around installed modules. Product modules can choose the root UI, branding, headers, favicons, shared toolbars, and settings-menu items without replacing the workspace system.
+Reactor supplies the shared frame around installed [modules](../subsystems/modules-and-stores.md). Product modules can choose the root UI, branding, headers, favicons, shared toolbars, and settings-menu items without replacing [workspaces](../subsystems/workspaces-and-panels.md).
 
 :::note Mental model
 The shell owns application-wide chrome. Panels own feature content. Keep domain workflows out of the shell so they remain usable from workspaces, windows, command palettes, and mobile layouts.

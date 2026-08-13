@@ -55,6 +55,12 @@ const config: Config = {
           sidebarId: 'tsDocSidebar',
           position: 'left',
           label: 'TSDoc'
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'userSidebar',
+          position: 'left',
+          label: 'Using Reactor'
         }
       ]
     }

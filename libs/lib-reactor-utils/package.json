@@ -29,13 +29,14 @@
     "luxon": "^3.7.2",
     "minimatch": "^10.2.6",
     "mobx": "^7.0.0",
+    "tslib": "^2.8.1",
     "uuid": "^14.0.1"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.10",
     "@types/lodash": "^4.17.25",
-    "@types/luxon": "^3.7.3",
-    "@types/node": "^26.1.2",
+    "@types/luxon": "^3.7.4",
+    "@types/node": "^26.2.0",
     "vitest": "^4.1.10"
   }
 }

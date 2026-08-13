@@ -5,7 +5,7 @@ description: Adapt values and behavior to buttons, widgets, combo boxes, setting
 
 # Controls
 
-One control can appear as a button, inline widget, or combo-box item. Actions, settings, and forms use controls so these versions share the same value and behavior.
+One control can appear as a button, inline widget, or combo-box item. [Actions](./actions-and-validation.md), [settings](./settings-and-persistence.md), and [forms](./forms.md) use controls so these representations share one value and behavior.
 
 :::note Mental model
 A control owns the value or behavior. Its button, inline widget, and combo-box items are different views of the same control.
@@ -58,7 +58,7 @@ Do not create a separate control instance for every representation when those su
 
 ## Action controls
 
-`ActionButtonControl` adapts an event-bound action. The control asks the action for its current button descriptor, so its label, icon, validator, indicator, and activation callback remain consistent.
+`ActionButtonControl` adapts an event-bound [action](./actions-and-validation.md). It asks the action for its current button descriptor, keeping the label, icon, validation, indicator, and activation callback consistent.
 
 ```ts
 const control = action.representAsControl({
@@ -78,7 +78,7 @@ function ToolbarValue({ control }: { control: AbstractControl }) {
 }
 ```
 
-Settings, forms, entity selection, and actions all use this pattern. The surrounding UI chooses the layout; the control manages the value or behavior.
+[Settings](./settings-and-persistence.md), [forms](./forms.md), [entity selection](./entity-definitions/search.md), and actions all use this pattern. The surrounding UI chooses the layout; the control manages the value or behavior.
 
 ## Implementing a control
 

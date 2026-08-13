@@ -5,7 +5,7 @@ description: Define theme identities, typed fragments, values, and styled Reacto
 
 # Themes
 
-Reactor themes are composed from fragments. A theme identifies a complete visual variant such as Reactor Dark or JourneyApps. A theme fragment declares the colors owned by one subsystem and supplies values for each supported theme.
+Reactor themes are composed from fragments. A theme identifies a complete visual variant such as Reactor Dark or JourneyApps. A fragment declares the colors owned by one [module](./modules-and-stores.md) and supplies values for each theme.
 
 This lets modules extend the visual system without adding every product-specific color to Reactor core.
 
@@ -111,13 +111,13 @@ Every fragment used by the application should then supply values for that key or
 
 ## Theme selection
 
-The selected theme is an `EntitySetting<Theme>`. `ChangeThemeAction` is an entity action targeting themes, so theme selection participates in Reactor's entity search, action, control, command-palette, and settings systems.
+The selected theme is an [`EntitySetting`](./settings-and-persistence.md). `ChangeThemeAction` is an [entity action](./actions-and-validation.md#entity-and-coupled-actions), so theme selection reuses [entity search](./entity-definitions/search.md), controls, and command-palette discovery.
 
 A module can install an additional theme action or entity describer without changing `ThemeStore`.
 
 ## Entity overrides
 
-Fragments can register entity theme overrides for visual details such as entity icon colors. Use these when an entity type has a meaningful theme-specific appearance. General entity descriptions and application state still belong in the entity definition, not the theme.
+Fragments can override visual details such as entity icon colors. General descriptions and application state still belong in the [entity definition](./entity-definitions.md), not the theme.
 
 ## Product-specific fragments
 

@@ -93,11 +93,12 @@ interface BodyContentProps {
   email: string;
   footerRef: React.RefObject<HTMLDivElement>;
   getFooter: () => React.JSX.Element;
-  getToolbars: (alignment: Alignment) => React.JSX.Element[];
   headerRef: React.RefObject<HTMLDivElement>;
+  leftToolbars: React.JSX.Element[];
   locked: boolean;
   logoClicked: (event: React.MouseEvent) => any;
   name: string;
+  rightToolbars: React.JSX.Element[];
   workspaceRef: React.RefObject<HTMLDivElement>;
 }
 
@@ -122,11 +123,11 @@ const BodyContent: React.FC<BodyContentProps> = (props) => {
         rightContent={props.additionalRightHeaderContent}
       />
       <S.Content locked={props.locked}>
-        {props.getToolbars(Alignment.LEFT)}
+        {props.leftToolbars}
         <S.ChildrenInner>
           <SmartWorkspaceWidget forwardRef={props.workspaceRef} />
         </S.ChildrenInner>
-        {props.getToolbars(Alignment.RIGHT)}
+        {props.rightToolbars}
       </S.Content>
       <S.FooterWrapped locked={props.locked} ref={props.footerRef}>
         {props.getFooter()}
@@ -204,11 +205,12 @@ export class BodyWidget extends React.Component<BodyWidgetProps> {
             email={this.uxStore.account?.email}
             footerRef={this.footerRef}
             getFooter={() => this.getFooter()}
-            getToolbars={(alignment) => this.getToolbars(alignment)}
             headerRef={this.headerRef}
+            leftToolbars={this.getToolbars(Alignment.LEFT)}
             locked={this.isLocked()}
             logoClicked={this.props.logoClicked}
             name={this.uxStore.account?.name}
+            rightToolbars={this.getToolbars(Alignment.RIGHT)}
             workspaceRef={this.workspaceRef}
           />
         </S.Body>

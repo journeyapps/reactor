@@ -5,7 +5,7 @@ description: Add dialogs, combo boxes, overlays, and shortcuts.
 
 # Interaction layers
 
-Dialogs, menus, overlays, notifications, and guide callouts all appear above the workspace. Reactor's layer system gives them shared stacking, dismissal, and positioning behavior.
+Dialogs, menus, overlays, [notifications](./operational-feedback.md#notifications), and [guide](../advanced/guided-workflows.md) callouts appear above the workspace. Reactor's layer system gives them shared stacking, dismissal, and positioning.
 
 :::note Mental model
 A directive describes a temporary interaction. A store shows it, closes it, and resolves the result.
@@ -13,7 +13,7 @@ A directive describes a temporary interaction. A store shows it, closes it, and 
 
 ## Dialog directives
 
-Use `DialogStore2` with an explicit directive for new modeled dialogs. `FormDialogDirective` connects a `FormModel` to standard save, cancel, validation, and loading behavior:
+Use `DialogStore2` with an explicit directive for new modeled dialogs. `FormDialogDirective` connects a [form model](../subsystems/forms.md) to standard save, cancel, validation, and loading behavior:
 
 ```ts
 const form = new FormModel<{ name: string }>();
@@ -49,7 +49,7 @@ Combo boxes consume item descriptors rather than application-specific menu compo
 - downloads;
 - search behavior.
 
-Build items from actions and controls when possible. Their label, icon, validation, and behavior will then stay in sync.
+Build items from [actions](../subsystems/actions-and-validation.md) and [controls](../subsystems/controls.md) when possible so labels, icons, validation, and behavior stay in sync.
 
 The directive system includes simple, multi-select, nested, cascading-search, and search-engine-backed combo boxes. See [Search, selection, and command palette](../subsystems/search-selection-and-command-palette.md) to choose between them.
 

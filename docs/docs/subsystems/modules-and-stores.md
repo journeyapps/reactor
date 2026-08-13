@@ -5,7 +5,7 @@ description: Define modules, register stores, and manage asynchronous or persist
 
 # Modules and stores
 
-Modules are installation boundaries. Stores are state, service, and lifetime boundaries.
+Modules are installation boundaries. Stores own state, services, and lifetimes within the [application boot model](./application-model.md).
 
 :::note Mental model
 Registration answers “what does this module contribute?” Store initialization answers “what asynchronous state must be ready before modules finish booting?”
@@ -74,7 +74,7 @@ Do not call a store's `init()` manually after registering it with the module eve
 
 ## Persisted stores
 
-Use `AbstractPersistedStore` when a store owns serialized state:
+Use `AbstractPersistedStore` when a store owns serialized state. Use a [setting](./settings-and-persistence.md) instead for one user-configurable value.
 
 ```ts
 interface SavedState {

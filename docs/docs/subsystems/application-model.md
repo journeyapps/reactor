@@ -5,7 +5,7 @@ description: Reactor's kernel, boot lifecycle, modules, stores, and shared runti
 
 # Application model
 
-A Reactor application is a set of modules installed into one kernel. The kernel coordinates registration and initialization; the `System` tracks shared stores and entity definitions; the workspace runtime renders the resulting application.
+A Reactor application is a set of [modules](./modules-and-stores.md) installed into one kernel. The kernel coordinates registration and initialization; the `System` tracks shared stores and [entity definitions](./entity-definitions.md); the [workspace runtime](./workspaces-and-panels.md) renders the result.
 
 :::note Mental model
 Construction sets defaults. Registration tells Reactor what the modules provide. Initialization loads saved or remote data.
@@ -50,12 +50,11 @@ Ask the container for shared stores, engines, and registries. Pass request-speci
 
 ## The main concepts
 
-- A **module** is an installation boundary.
-- A **store** is a state and service boundary.
-- An **action** describes something the user can do.
-- A **panel** is a piece of UI that a workspace can place.
-- An **entity definition** teaches Reactor how to understand a domain object.
-- A **widget** renders a shared interaction pattern.
+- A [**module** and **store**](./modules-and-stores.md) define installation, state, service, and lifetime boundaries.
+- An [**action**](./actions-and-validation.md) describes something the user can do.
+- A [**panel**](./workspaces-and-panels.md) is UI that a workspace can place.
+- An [**entity definition**](./entity-definitions.md) teaches Reactor about a domain object.
+- A [**widget**](./ui-system.md) renders a shared interaction pattern.
 
 These concepts are deliberately composable. For example, an entity definition can expose actions and panel factories; an action can be represented by several widgets; the same panel can appear in different workspace layouts.
 

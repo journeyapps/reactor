@@ -11,6 +11,7 @@
     "@emotion/styled": "^11.14.1",
     "@journeyapps-labs/common-ioc": "^1.0.2",
     "@journeyapps-labs/common-utils": "^1.0.2",
+    "@journeyapps-labs/lib-reactor-data-layer": "workspace:^",
     "@journeyapps-labs/lib-reactor-search": "workspace:^",
     "@journeyapps-labs/reactor-mod": "workspace:^",
     "@journeyapps-labs/reactor-mod-editor": "workspace:^",

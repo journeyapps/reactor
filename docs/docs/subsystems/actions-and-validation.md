@@ -5,7 +5,7 @@ description: Define an action once and use it across the application.
 
 # Actions and validation
 
-An action describes something a user can do. The same action can appear in a button, menu, command palette, shortcut, batch operation, or guide.
+An action describes something a user can do. The same action can appear in a button, menu, [command palette](./search-selection-and-command-palette.md#command-palette-discovery), shortcut, [batch operation](../advanced/batch-actions.md), or [guide](../advanced/guided-workflows.md).
 
 :::note Mental model
 An action keeps the operation, its validation, and its progress in one place.
@@ -72,7 +72,7 @@ Name the operation, not the control. Prefer “Create todo” to “Create butto
 
 ## Show an action in the UI
 
-Actions generate descriptors and controls that standard Reactor widgets understand:
+Actions generate descriptors and [controls](./controls.md) that standard Reactor widgets understand:
 
 ```tsx
 <PanelButtonWidget {...action.representAsButton({ targetEntity: todo })} />
@@ -91,14 +91,14 @@ The supplied event data is passed to validation and execution. Each representati
 
 Validators return one result:
 
-| State | Meaning |
-| --- | --- |
-| `ALLOWED` | Render and execute normally. |
+| State      | Meaning                                                            |
+| ---------- | ------------------------------------------------------------------ |
+| `ALLOWED`  | Render and execute normally.                                       |
 | `DEFERRED` | More action parameters are required before a decision is possible. |
-| `PENDING` | A live asynchronous decision has not completed. |
+| `PENDING`  | A live asynchronous decision has not completed.                    |
 | `DISABLED` | Keep the action visible but unavailable, optionally with a reason. |
-| `BLOCKED` | Prevent execution but allow activation of a remediation flow. |
-| `HIDDEN` | Do not show the action here. |
+| `BLOCKED`  | Prevent execution but allow activation of a remediation flow.      |
+| `HIDDEN`   | Do not show the action here.                                       |
 
 ```ts
 class TodoLockedValidator extends ActionValidator<EntityActionEvent<TodoModel>> {
@@ -136,7 +136,7 @@ Reactor understands the generic outcome; it does not own the application's permi
 
 ## Entity and coupled actions
 
-`ParameterizedAction` collects named values before execution. `EntityAction` adds a target entity. `CoupledAction` adds a source and target, which is useful for assignments, moves, links, and drag-and-drop.
+`ParameterizedAction` collects named values before execution. `EntityAction` targets an object described by the [entity system](./entity-definitions.md). `CoupledAction` adds a source and target for assignments, moves, links, and drag-and-drop.
 
 ```ts
 export class DuplicateTodoAction extends EntityAction<TodoModel> {
@@ -156,7 +156,7 @@ export class DuplicateTodoAction extends EntityAction<TodoModel> {
 }
 ```
 
-An action opened from an entity menu already has its target. The same action opened from the command palette asks the entity definition to resolve one.
+An action opened from an entity menu already has its target. From the [command palette](./search-selection-and-command-palette.md#action-parameter-resolution), its entity definition resolves one through a registered [search behavior](./entity-definitions/search.md).
 
 :::note Hidden complexity
 Candidate entities are placed into partial action events and validated before selection. The picker can therefore hide or disable candidates that would make the final action unavailable.

@@ -5,7 +5,7 @@ title: Build your first module
 
 # Build your first module
 
-This walkthrough adds a small panel to the demo application. It introduces the four pieces most Reactor features begin with: a module, a store, a panel, and a workspace.
+This walkthrough adds a small panel to the demo application. It introduces the four pieces most Reactor features begin with: a [module and store](../subsystems/modules-and-stores.md), plus a [panel and workspace](../subsystems/workspaces-and-panels.md).
 
 Create `demo/module-hello` using the package, TypeScript, and `reactor.config.json` files in `demo/module-todos` as a template. Set the config slug to `module-hello`. The demo launcher discovers every `demo/module-*` directory containing a Reactor config.
 
@@ -167,7 +167,7 @@ You now have the basic Reactor composition:
 - the **panel factory** makes the feature renderable;
 - the **workspace generator** gives the panel a home.
 
-The next subsystem guides explain how to replace the inline button callback with an Action and how Entity Definitions let generic Reactor surfaces understand application models.
+Next, replace the inline callback with an [action](../subsystems/actions-and-validation.md), then add an [entity definition](../subsystems/entity-definitions.md) so generic Reactor surfaces understand the model.
 
 :::tip Next improvement
 This first panel uses an inline callback to keep the walkthrough focused. Make “Visit” an action when it needs to appear in another place or gain validation, logging, or progress.

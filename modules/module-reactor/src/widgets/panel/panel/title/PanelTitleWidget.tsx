@@ -116,7 +116,7 @@ const PanelIconButton: React.FC<{ btn: Btn; highlight: boolean }> = ({ btn, high
       type={ReactorComponentType.PANEL_MICRO_BUTTON}
       activated={(selected) => {
         return (
-          <ReactorTooltipWidget tooltip={btn.tooltip || btn.label} tooltipPos={TooltipPosition.LEFT}>
+          <ReactorTooltipWidget tooltip={btn.tooltip || btn.label} tooltipPos={btn.tooltipPos || TooltipPosition.TOP}>
             <S.Button
               ref={ref}
               highlight={highlight && !disabled}
@@ -211,41 +211,71 @@ export class PanelTitleWidget extends React.Component<PanelTitleWidgetProps> {
           $attention={!!model?.grabAttention}
           $rounded={rounded}
           onContextMenu={async (position) => {
-            if (model && ioc.get(WorkspaceStore).getActiveWorkspace()?.mutable) {
-              await this.comboBoxStore.show(
-                new SimpleComboBoxDirective({
-                  event: position,
-                  items: [
-                    {
-                      key: 'close',
-                      title: 'Close',
-                      action: async () => {
-                        model.delete();
-                        ioc.get(WorkspaceStore).engine.normalize();
-                      }
-                    },
-                    {
-                      key: 'tabs',
-                      title: 'Convert to tabs',
-                      action: async () => {
-                        const tabs = ioc.get(WorkspaceStore).engine.generateReactorTabModel();
-                        (model.parent as WorkspaceNodeModel).replaceModel(model, tabs);
-                        tabs.addModel(model);
-                      }
-                    },
-                    {
-                      key: 'tray',
-                      title: 'Convert to tray',
-                      action: async () => {
-                        const tray = ioc.get(WorkspaceStore).engine.generateReactorTrayModel();
-                        (model.parent as WorkspaceNodeModel).replaceModel(model, tray);
-                        tray.addModel(model);
-                      }
-                    }
-                  ]
-                })
-              );
+            if (!model) {
+              return;
             }
+
+            const workspaceStore = ioc.get(WorkspaceStore);
+            const window = model.parent instanceof FloatingWindowModel ? model.parent : null;
+            if (!window && !workspaceStore.getActiveWorkspace()?.mutable) {
+              return;
+            }
+
+            await this.comboBoxStore.show(
+              new SimpleComboBoxDirective({
+                event: position,
+                items: window
+                  ? [
+                      {
+                        key: 'close',
+                        title: 'Close',
+                        action: async () => {
+                          window.delete();
+                        }
+                      },
+                      ...(window instanceof ReactorWindowModel && window.standalone
+                        ? [
+                            {
+                              key: 'dock',
+                              title: 'Dock into workspace',
+                              action: async () => {
+                                window.delete();
+                                workspaceStore.addModel(model);
+                              }
+                            }
+                          ]
+                        : [])
+                    ]
+                  : [
+                      {
+                        key: 'close',
+                        title: 'Close',
+                        action: async () => {
+                          model.delete();
+                          workspaceStore.engine.normalize();
+                        }
+                      },
+                      {
+                        key: 'tabs',
+                        title: 'Convert to tabs',
+                        action: async () => {
+                          const tabs = workspaceStore.engine.generateReactorTabModel();
+                          (model.parent as WorkspaceNodeModel).replaceModel(model, tabs);
+                          tabs.addModel(model);
+                        }
+                      },
+                      {
+                        key: 'tray',
+                        title: 'Convert to tray',
+                        action: async () => {
+                          const tray = workspaceStore.engine.generateReactorTrayModel();
+                          (model.parent as WorkspaceNodeModel).replaceModel(model, tray);
+                          tray.addModel(model);
+                        }
+                      }
+                    ]
+              })
+            );
           }}
         >
           {this.getIconWrapped()}

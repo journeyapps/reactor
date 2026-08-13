@@ -29,6 +29,10 @@ export interface CommandPalletWidgetState {
 namespace S {
   export const FloatingContainer = themed.div<{ larger: boolean }>`
     width: ${(p) => (p.larger ? 950 : 700)}px;
+
+    // Keep the native drag source interactive when the surrounding layer becomes
+    // click-through so that entities can be dragged onto controls behind it.
+    pointer-events: all;
   `;
   export const MobileContainer = themed.div`
     position: fixed;

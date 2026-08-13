@@ -72,6 +72,7 @@ Put the operation in an action and the display rules in an entity definition. Re
 ## Choose your path
 
 - **New to the repository?** Follow [Local development](./local-development.md), then [explore the sandbox](./exploring-the-sandbox.md).
+- **Using an application built with Reactor?** Start with [Getting around a Reactor application](../using-reactor/getting-around.md).
 - **Ready to build?** [Build your first module](./first-module.md).
 - **Evaluating the architecture?** Read [How Reactor fits together](./architecture.md).
 - **Looking for a feature?** Use the Manual sidebar or start with [Application model](../subsystems/application-model.md).
