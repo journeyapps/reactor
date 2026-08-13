@@ -1,5 +1,13 @@
 # @journeyapps/reactor-lib-server
 
+## 2.1.3
+
+### Patch Changes
+
+- 80649dd: Publish Reactor packages under the `@journeyapps` scope after moving the repository to the JourneyApps GitHub organization.
+- Updated dependencies [80649dd]
+  - @journeyapps/reactor-lib-utils@2.0.15
+
 ## 2.1.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@journeyapps/reactor-mod-editor",
-  "version": "2.3.11",
+  "version": "2.3.12",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"

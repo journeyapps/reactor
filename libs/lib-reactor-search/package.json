@@ -1,6 +1,6 @@
 {
   "name": "@journeyapps/reactor-lib-search",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
