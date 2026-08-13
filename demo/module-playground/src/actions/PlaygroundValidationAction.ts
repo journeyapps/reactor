@@ -6,7 +6,7 @@ import {
   ActionValidator,
   ioc,
   ValidationResult
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 
 export interface PlaygroundValidationActionEvent extends ActionEvent {
   validationState?: ActionValidationState;

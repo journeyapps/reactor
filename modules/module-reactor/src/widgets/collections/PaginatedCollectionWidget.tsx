@@ -3,7 +3,7 @@ import { useCallback, useRef } from 'react';
 
 import * as _ from 'lodash';
 import { BarLoader } from 'react-spinners';
-import { PaginatedCollection } from '@journeyapps-labs/lib-reactor-data-layer';
+import { PaginatedCollection } from '@journeyapps/reactor-lib-data-layer';
 import { ioc } from '../../inversify.config';
 import { observer } from 'mobx-react';
 import { ThemeStore } from '../../stores/themes/ThemeStore';

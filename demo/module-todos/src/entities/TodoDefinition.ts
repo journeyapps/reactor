@@ -12,7 +12,7 @@ import {
   MetadataDisplayMode,
   SimpleEntitySearchEngineComponent,
   TagDisplayMode
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { TodoEntities } from '../TodoEntities';
 import { TodoStore } from '../stores/TodoStore';
 import { TodoModel } from '../models/TodoModel';

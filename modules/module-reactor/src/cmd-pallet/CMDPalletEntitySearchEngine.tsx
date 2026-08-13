@@ -14,7 +14,7 @@ import {
 import { EntityDefinition } from '../entities/EntityDefinition';
 import { ActionSource } from '../actions/Action';
 import { useDraggableEntity } from '../widgets/dnd3/entities/useDraggableEntity';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import { CommandPalletEntryWidget } from '../layers/command-pallet/CommandPalletEntryWidget';
 
 export interface CMDPalletEntitySearchEngineOptions<E> extends Omit<CommandPalletSearchEngineOptions, 'displayName'> {

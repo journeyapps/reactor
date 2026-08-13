@@ -5,7 +5,7 @@ title: Reactor server and environment
 
 # Reactor server and environment
 
-Reactor modules are browser bundles, but they need a small server to select the modules for an application, serve their bundles, and generate the HTML that boots Reactor. `@journeyapps-labs/lib-reactor-server` provides those building blocks for Express applications.
+Reactor modules are browser bundles, but they need a small server to select the modules for an application, serve their bundles, and generate the HTML that boots Reactor. `@journeyapps/reactor-lib-server` provides those building blocks for Express applications.
 
 :::note Mental model
 The server chooses and serves module bundles. The browser installs them. `reactor.config.json` tells both sides how to load a module.
@@ -48,7 +48,7 @@ import {
   createModuleLoaderContentTransformer,
   loadModules,
   serveModules
-} from '@journeyapps-labs/lib-reactor-server';
+} from '@journeyapps/reactor-lib-server';
 
 const app = express();
 const server = createServer(app);
@@ -67,7 +67,7 @@ serveModules({ app, modules });
 
 const index = await createBaseIndexMiddleware({
   title: 'My Reactor application',
-  indexFile: join(require.resolve('@journeyapps-labs/lib-reactor-server'), '../../media/index.html'),
+  indexFile: join(require.resolve('@journeyapps/reactor-lib-server'), '../../media/index.html'),
   getEnv: () => moduleEnv,
   domTransform: ($) => createModuleLoaderContentTransformer($, modules),
   templateVars: {

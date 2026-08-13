@@ -1,10 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import {
-  computeDateTimeParts,
-  ComputeDateTimePartsOptions,
-  ReactorDateType
-} from '@journeyapps-labs/lib-reactor-utils';
+import { computeDateTimeParts, ComputeDateTimePartsOptions, ReactorDateType } from '@journeyapps/reactor-lib-utils';
 import { useDisplayDateOptions } from '../../hooks/useDisplayDateOptions';
 
 export interface DateDisplayWidgetProps extends ComputeDateTimePartsOptions {

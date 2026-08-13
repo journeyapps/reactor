@@ -3,7 +3,7 @@ import { TableRow, TableColumn } from './TableWidget';
 import { TableRowsWidget } from './TableRowsWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { MousePosition } from '../../layers/combo/SmartPositionWidget';
 import { size, Size } from '../../hooks/useReactorSize';
 

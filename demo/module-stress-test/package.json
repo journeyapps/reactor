@@ -1,5 +1,5 @@
 {
-  "name": "@journeyapps-labs/reactor-stress-test-demo",
+  "name": "@journeyapps/reactor-stress-test-demo",
   "main": "./dist/index.js",
   "typings": "./dist/@types/index",
   "private": true,
@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@journeyapps-labs/common-ioc": "^1.0.2",
-    "@journeyapps-labs/reactor-mod": "workspace:^",
+    "@journeyapps/reactor-mod": "workspace:^",
     "@faker-js/faker": "^10.5.0",
     "lodash": "^4.18.1"
   },
   "devDependencies": {
-    "@journeyapps-labs/lib-reactor-builder": "workspace:^",
+    "@journeyapps/reactor-lib-builder": "workspace:^",
     "@types/lodash": "^4.17.25"
   }
 }

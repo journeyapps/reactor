@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ComboBoxStore, inject } from '@journeyapps-labs/reactor-mod';
+import { ComboBoxStore, inject } from '@journeyapps/reactor-mod';
 import { observer } from 'mobx-react';
 import { MonacoThemeStore } from '../stores/MonacoThemeStore';
 import { EditorThemePreferencesWidget } from './EditorThemePreferencesWidget';

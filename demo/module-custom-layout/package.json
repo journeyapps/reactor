@@ -1,5 +1,5 @@
 {
-  "name": "@journeyapps-labs/reactor-mod-custom-layout",
+  "name": "@journeyapps/reactor-mod-custom-layout",
   "main": "./dist/index.js",
   "typings": "./dist/@types/index",
   "private": true,
@@ -8,12 +8,12 @@
     "watch:module": "pnpm build:module --watch"
   },
   "dependencies": {
-    "@journeyapps-labs/reactor-mod": "workspace:^",
+    "@journeyapps/reactor-mod": "workspace:^",
     "@journeyapps-labs/common-ioc": "^1.0.2",
     "react": "19.2.8",
     "@emotion/styled": "^11.14.1"
   },
   "devDependencies": {
-    "@journeyapps-labs/lib-reactor-builder": "workspace:^"
+    "@journeyapps/reactor-lib-builder": "workspace:^"
   }
 }

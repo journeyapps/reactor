@@ -9,11 +9,11 @@ import {
   CommandPalletSearchResultEntry,
   KeyboardShortcutPillsWidget,
   MousePosition
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import * as monaco from 'monaco-editor';
 import { MonacoShortcutHandler } from './shortcuts/MonacoShortcutHandler';
 import { MonacoKeybindingStore } from './stores/keybindings/MonacoKeybindingStore';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 
 export interface CMDPalletMonacoActionSearchEntry extends CommandPalletSearchResultEntry {
   action: monaco.editor.IEditorAction;

@@ -10,7 +10,7 @@ import {
   styled,
   useDraggableRaw,
   useDroppableBetweenZone
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 
 const VERTICAL_DEMO_MIME = 'playground/demo-item-vertical';
 const HORIZONTAL_DEMO_MIME = 'playground/demo-item-horizontal';

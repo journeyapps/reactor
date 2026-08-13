@@ -6,7 +6,7 @@ import {
   InlineTreePresenterComponent,
   SearchableTreeSearchScope,
   SimpleEntitySearchEngineComponent
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { StressTestModel } from '../models/StressTestModel';
 import { StressTestEntities } from '../StressTestEntities';
 import * as _ from 'lodash';

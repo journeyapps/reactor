@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { SearchResult } from '@journeyapps-labs/lib-reactor-search';
+import { SearchResult } from '@journeyapps/reactor-lib-search';
 import { SearchEngine } from '../../src/search/SearchEngine';
 import { SearchEngineComboBoxDirective } from '../../src/stores/combo2/directives/SearchEngineComboBoxDirective';
 

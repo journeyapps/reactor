@@ -1,5 +1,5 @@
 {
-  "name": "@journeyapps-labs/reactor-mod",
+  "name": "@journeyapps/reactor-mod",
   "version": "8.1.3",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/journeyapps-labs/reactor.git"
+    "url": "https://github.com/journeyapps/reactor.git"
   },
   "author": "JOURNEYAPPS",
   "license": "Apache-2.0",
@@ -31,9 +31,9 @@
     "@journeyapps-labs/common-logger": "1.1.1",
     "@journeyapps-labs/common-tree": "^3.0.1",
     "@journeyapps-labs/common-utils": "^1.0.2",
-    "@journeyapps-labs/lib-reactor-data-layer": "workspace:*",
-    "@journeyapps-labs/lib-reactor-search": "workspace:*",
-    "@journeyapps-labs/lib-reactor-utils": "workspace:*",
+    "@journeyapps/reactor-lib-data-layer": "workspace:*",
+    "@journeyapps/reactor-lib-search": "workspace:*",
+    "@journeyapps/reactor-lib-utils": "workspace:*",
     "@projectstorm/react-workspaces-behavior-divider-dropzone": "2.4.15",
     "@projectstorm/react-workspaces-behavior-panel-dropzone": "2.4.2",
     "@projectstorm/react-workspaces-behavior-resize": "2.3.14",
@@ -79,7 +79,7 @@
   },
   "devDependencies": {
     "@babel/runtime": "^8.0.0",
-    "@journeyapps-labs/lib-reactor-builder": "workspace:*",
+    "@journeyapps/reactor-lib-builder": "workspace:*",
     "@types/color": "^4.2.1",
     "@types/lodash": "^4.17.25",
     "@types/luxon": "^3.7.4",

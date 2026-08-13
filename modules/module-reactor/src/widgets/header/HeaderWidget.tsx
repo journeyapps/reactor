@@ -11,7 +11,7 @@ import { PanelButtonMode, PanelButtonWidget } from '../forms/PanelButtonWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MetaButton } from './HeaderMetaButtonWidget';
 import { HeaderWorkspaceMenuWidget } from './HeaderWorkspaceMenuWidget';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { styled, themed } from '../../stores/themes/reactor-theme-fragment';
 import { ToolbarPreference } from '../../settings/ToolbarPreference';
 import Avatar from 'react-avatar';

@@ -10,6 +10,7 @@ allowBuilds:
   esbuild: true
 shamefullyHoist: true
 minimumReleaseAgeExclude:
+  - '@journeyapps/*'
   - '@journeyapps-labs/*'
   - '@journeyapps-platform/*'
   - '@types/node@26.1.0'

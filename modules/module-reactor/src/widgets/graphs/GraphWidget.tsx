@@ -15,7 +15,7 @@ import {
 } from 'recharts';
 import { DateTime } from 'luxon';
 import * as _ from 'lodash';
-import { formatNumber } from '@journeyapps-labs/lib-reactor-utils';
+import { formatNumber } from '@journeyapps/reactor-lib-utils';
 import { PanelPlaceholderWidget } from '../panel/panel/PanelPlaceholderWidget';
 import { FloatingPanelWidget } from '../floating/FloatingPanelWidget';
 import { ioc } from '../../inversify.config';

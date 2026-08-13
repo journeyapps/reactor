@@ -1,4 +1,4 @@
-import { AbstractStore } from '@journeyapps-labs/reactor-mod';
+import { AbstractStore } from '@journeyapps/reactor-mod';
 
 export class PlaygroundStore extends AbstractStore {
   constructor() {

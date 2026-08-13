@@ -9,7 +9,7 @@ import {
   ReactorPanelModel,
   ioc,
   styled
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { DemoFormModel } from '../forms/DemoFormModel';
 import { PlaygroundStore } from '../stores/PlaygroundStore';
 

@@ -1,4 +1,4 @@
-import { Action, ActionEvent, ActionStore, inject, ioc } from '@journeyapps-labs/reactor-mod';
+import { Action, ActionEvent, ActionStore, inject, ioc } from '@journeyapps/reactor-mod';
 import { TodoModel } from '../models/TodoModel';
 import { TodoStore } from '../stores/TodoStore';
 

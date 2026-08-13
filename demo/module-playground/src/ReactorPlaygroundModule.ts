@@ -6,7 +6,7 @@ import {
   ReactorModuleRegisterEvent,
   UXStore,
   WorkspaceStore
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { DemoBodyWidget } from './BodyWidget';
 import { setupWorkspaces } from './setupWorkspaces';
 import { PlaygroundPanelFactory } from './panels/PlaygroundPanelFactory';

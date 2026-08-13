@@ -1,4 +1,4 @@
-# @journeyapps-labs/reactor-mod-editor
+# @journeyapps/reactor-mod-editor
 
 ## 2.3.11
 
@@ -6,9 +6,9 @@
 
 - Updated dependencies [d84d25d]
 - Updated dependencies [242f14d]
-  - @journeyapps-labs/reactor-mod@8.1.3
-  - @journeyapps-labs/lib-reactor-search@1.0.15
-  - @journeyapps-labs/lib-reactor-utils@2.0.14
+  - @journeyapps/reactor-mod@8.1.3
+  - @journeyapps/reactor-lib-search@1.0.15
+  - @journeyapps/reactor-lib-utils@2.0.14
 
 ## 2.3.10
 

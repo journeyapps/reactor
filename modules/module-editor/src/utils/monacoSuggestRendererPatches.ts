@@ -1,5 +1,5 @@
 import { ItemRenderer as MonacoSuggestItemRenderer } from 'monaco-editor/editor/contrib/suggest/browser/suggestWidgetRenderer';
-import { ReactorIcon } from '@journeyapps-labs/reactor-mod';
+import { ReactorIcon } from '@journeyapps/reactor-mod';
 
 export interface MonacoSuggestRendererPatchEvent {
   element: any;

@@ -1,4 +1,4 @@
-import { AbstractSetting } from '@journeyapps-labs/reactor-mod';
+import { AbstractSetting } from '@journeyapps/reactor-mod';
 import { observable, toJS, IObservableArray, makeObservable } from 'mobx';
 import { EditorTheme } from '../stores/MonacoThemeStore';
 

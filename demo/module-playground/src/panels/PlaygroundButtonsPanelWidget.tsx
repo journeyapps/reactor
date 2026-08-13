@@ -1,12 +1,6 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import {
-  CardWidget,
-  PanelButtonMode,
-  PanelButtonWidget,
-  ReactorPanelModel,
-  styled
-} from '@journeyapps-labs/reactor-mod';
+import { CardWidget, PanelButtonMode, PanelButtonWidget, ReactorPanelModel, styled } from '@journeyapps/reactor-mod';
 
 export interface PlaygroundButtonsPanelWidgetProps {
   model: ReactorPanelModel;

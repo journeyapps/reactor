@@ -1,4 +1,4 @@
-import { keyType, Shortcut, ShortcutChord } from '@journeyapps-labs/reactor-mod';
+import { keyType, Shortcut, ShortcutChord } from '@journeyapps/reactor-mod';
 import { MonacoShortcutHandler } from './MonacoShortcutHandler';
 import { MonacoMap } from './MonacoShortcutMap';
 import { KeyCodeChord } from 'monaco-editor/base/common/keybindings';

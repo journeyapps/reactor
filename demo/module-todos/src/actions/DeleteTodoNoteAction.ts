@@ -1,4 +1,4 @@
-import { ActionMacroBehavior, EntityAction, EntityActionEvent, inject } from '@journeyapps-labs/reactor-mod';
+import { ActionMacroBehavior, EntityAction, EntityActionEvent, inject } from '@journeyapps/reactor-mod';
 import { TodoEntities } from '../TodoEntities';
 import { TodoNoteModel } from '../models/TodoNoteModel';
 import { TodoStore } from '../stores/TodoStore';

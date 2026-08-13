@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { copyTextToClipboard } from '@journeyapps-labs/lib-reactor-utils';
+import { copyTextToClipboard } from '@journeyapps/reactor-lib-utils';
 import { ioc } from '../inversify.config';
 import { DialogStore } from './DialogStore';
 import { styled } from './themes/reactor-theme-fragment';

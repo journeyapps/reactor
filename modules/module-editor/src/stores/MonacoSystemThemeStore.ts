@@ -1,4 +1,4 @@
-import { AbstractStore, Themes } from '@journeyapps-labs/reactor-mod';
+import { AbstractStore, Themes } from '@journeyapps/reactor-mod';
 import { COUPLED_IDE_THEMES } from '../theme/theme-utils';
 import * as _ from 'lodash';
 import type { EditorTheme } from './MonacoThemeStore';

@@ -3,7 +3,7 @@ import {
   ReactorModuleInitEvent,
   ReactorModuleRegisterEvent,
   System
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { StressTestEntityDefinition } from './entities/StressTestEntityDefinition';
 
 export class ReactorStressTestModule extends AbstractReactorModule {

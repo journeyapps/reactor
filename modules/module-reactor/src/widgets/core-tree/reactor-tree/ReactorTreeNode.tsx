@@ -10,7 +10,7 @@ import * as React from 'react';
 import { CoreTreeWidgetProps } from '../CoreTreeWidget';
 import { PatchTree, ReactorTreeListener } from './PatchTree';
 import { isBaseReactorTree, ReactorTreeOptions, setupReactorTree } from './reactor-tree-utils';
-import { SearchEvent, SearchEventMatch } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent, SearchEventMatch } from '@journeyapps/reactor-lib-search';
 import { ReactorTreeNodeWidget } from './widgets/ReactorTreeNodeWidget';
 import { RenderTreeChild } from './widgets/useTreeChildren';
 

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ControlledSearchWidget } from './ControlledSearchWidget';
 import { getScrollableCSS, PANEL_CONTENT_PADDING } from '../panel/panel/PanelWidget';
 import { observer } from 'mobx-react';
-import { createSearchEventMatcher, SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { createSearchEventMatcher, SearchEvent } from '@journeyapps/reactor-lib-search';
 import { BorderLayoutWidget } from '../layout/BorderLayoutWidget';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
 

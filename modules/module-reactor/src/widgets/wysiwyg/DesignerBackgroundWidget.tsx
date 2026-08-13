@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { themed } from '../../stores/themes/reactor-theme-fragment';
 
 namespace S {

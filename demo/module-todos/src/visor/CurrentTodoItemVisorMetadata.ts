@@ -1,4 +1,4 @@
-import { ActionSource, inject, VisorMetadata } from '@journeyapps-labs/reactor-mod';
+import { ActionSource, inject, VisorMetadata } from '@journeyapps/reactor-mod';
 import { TodoStore } from '../stores/TodoStore';
 import { SetCurrentTodoItemAction } from '../actions/SetCurrentTodoItemAction';
 import { autorun } from 'mobx';

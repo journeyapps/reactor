@@ -9,7 +9,7 @@ import {
   WorkspaceStore,
   ReactorModuleInitEvent,
   ReactorModuleRegisterEvent
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { TodoStore } from './stores/TodoStore';
 import { TodoModel } from './models/TodoModel';
 import { TodoDefinition } from './entities/TodoDefinition';

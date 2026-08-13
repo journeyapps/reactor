@@ -1,4 +1,4 @@
-import { ReactorTreeLeaf, ReactorTreeNode, SearchableTreeSearchScope } from '@journeyapps-labs/reactor-mod';
+import { ReactorTreeLeaf, ReactorTreeNode, SearchableTreeSearchScope } from '@journeyapps/reactor-mod';
 
 type CoreTreeVariant = {
   key: string;

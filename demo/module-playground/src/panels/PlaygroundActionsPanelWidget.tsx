@@ -17,7 +17,7 @@ import {
   SimpleComboBoxDirective,
   ioc,
   styled
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { PlaygroundValidationAction, PlaygroundValidationActionEvent } from '../actions/PlaygroundValidationAction';
 
 export interface PlaygroundActionsPanelWidgetProps {

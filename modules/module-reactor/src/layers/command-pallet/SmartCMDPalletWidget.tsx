@@ -5,7 +5,7 @@ import { CommandPalletSearchResultEntry } from '../../cmd-pallet/CMDPalletSearch
 import { ControlledCommandPalletWidget } from './ControlledCommandPalletWidget';
 import * as _ from 'lodash';
 import { MousePosition } from '../combo/SmartPositionWidget';
-import { createSearchEventMatcher } from '@journeyapps-labs/lib-reactor-search';
+import { createSearchEventMatcher } from '@journeyapps/reactor-lib-search';
 import { ReactorViewportMode, useReactorViewportMode } from '../../hooks/useReactorViewportMode';
 
 export interface SmartCMDPalletWidgetProps {

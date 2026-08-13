@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useRef, useState } from 'react';
 import { useDroppableRaw } from './useDroppableRaw';
 import { AbstractDropZone } from '../../stores/dnd/zones/AbstractDropZone';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils/dist';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils/dist';
 import { useDraggingElement } from './useDraggingElement';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
 

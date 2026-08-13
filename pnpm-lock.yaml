@@ -48,14 +48,14 @@ importers:
       '@journeyapps-labs/common-ioc':
         specifier: ^1.0.2
         version: 1.0.2
-      '@journeyapps-labs/reactor-mod':
+      '@journeyapps/reactor-mod':
         specifier: workspace:^
         version: link:../../modules/module-reactor
       react:
         specifier: 19.2.8
         version: 19.2.8
     devDependencies:
-      '@journeyapps-labs/lib-reactor-builder':
+      '@journeyapps/reactor-lib-builder':
         specifier: workspace:^
         version: link:../../libs/lib-reactor-builder
 
@@ -70,19 +70,19 @@ importers:
       '@journeyapps-labs/common-utils':
         specifier: ^1.0.2
         version: 1.0.2
-      '@journeyapps-labs/lib-reactor-data-layer':
+      '@journeyapps/reactor-lib-data-layer':
         specifier: workspace:^
         version: link:../../libs/lib-reactor-data-layer
-      '@journeyapps-labs/lib-reactor-search':
+      '@journeyapps/reactor-lib-search':
         specifier: workspace:^
         version: link:../../libs/lib-reactor-search
-      '@journeyapps-labs/reactor-mod':
+      '@journeyapps/reactor-mod':
         specifier: workspace:^
         version: link:../../modules/module-reactor
-      '@journeyapps-labs/reactor-mod-editor':
+      '@journeyapps/reactor-mod-editor':
         specifier: workspace:^
         version: link:../../modules/module-editor
-      '@journeyapps-labs/reactor-mod-todos':
+      '@journeyapps/reactor-mod-todos':
         specifier: workspace:^
         version: link:../module-todos
       '@projectstorm/react-workspaces-core':
@@ -104,7 +104,7 @@ importers:
         specifier: ^14.0.1
         version: 14.0.1
     devDependencies:
-      '@journeyapps-labs/lib-reactor-builder':
+      '@journeyapps/reactor-lib-builder':
         specifier: workspace:^
         version: link:../../libs/lib-reactor-builder
 
@@ -116,14 +116,14 @@ importers:
       '@journeyapps-labs/common-ioc':
         specifier: ^1.0.2
         version: 1.0.2
-      '@journeyapps-labs/reactor-mod':
+      '@journeyapps/reactor-mod':
         specifier: workspace:^
         version: link:../../modules/module-reactor
       lodash:
         specifier: ^4.18.1
         version: 4.18.1
     devDependencies:
-      '@journeyapps-labs/lib-reactor-builder':
+      '@journeyapps/reactor-lib-builder':
         specifier: workspace:^
         version: link:../../libs/lib-reactor-builder
       '@types/lodash':
@@ -138,7 +138,7 @@ importers:
       '@journeyapps-labs/common-utils':
         specifier: ^1.0.2
         version: 1.0.2
-      '@journeyapps-labs/reactor-mod':
+      '@journeyapps/reactor-mod':
         specifier: workspace:^
         version: link:../../modules/module-reactor
       mobx:
@@ -151,7 +151,7 @@ importers:
         specifier: ^14.0.1
         version: 14.0.1
     devDependencies:
-      '@journeyapps-labs/lib-reactor-builder':
+      '@journeyapps/reactor-lib-builder':
         specifier: workspace:^
         version: link:../../libs/lib-reactor-builder
       '@types/node':
@@ -163,16 +163,16 @@ importers:
       '@journeyapps-labs/common-logger':
         specifier: 1.1.1
         version: 1.1.1
-      '@journeyapps-labs/lib-reactor-server':
+      '@journeyapps/reactor-lib-server':
         specifier: workspace:^
         version: link:../../libs/lib-reactor-server
-      '@journeyapps-labs/reactor-mod':
+      '@journeyapps/reactor-mod':
         specifier: workspace:^
         version: link:../../modules/module-reactor
-      '@journeyapps-labs/reactor-mod-debug':
+      '@journeyapps/reactor-mod-debug':
         specifier: workspace:^
         version: link:../../modules/module-reactor-debug
-      '@journeyapps-labs/reactor-mod-editor':
+      '@journeyapps/reactor-mod-editor':
         specifier: workspace:^
         version: link:../../modules/module-editor
       compression:
@@ -315,10 +315,10 @@ importers:
       '@journeyapps-labs/common-utils':
         specifier: ^1.0.2
         version: 1.0.2
-      '@journeyapps-labs/lib-reactor-search':
+      '@journeyapps/reactor-lib-search':
         specifier: workspace:*
         version: link:../lib-reactor-search
-      '@journeyapps-labs/lib-reactor-utils':
+      '@journeyapps/reactor-lib-utils':
         specifier: workspace:*
         version: link:../lib-reactor-utils
       lodash:
@@ -343,7 +343,7 @@ importers:
       '@journeyapps-labs/common-utils':
         specifier: ^1.0.2
         version: 1.0.2
-      '@journeyapps-labs/lib-reactor-utils':
+      '@journeyapps/reactor-lib-utils':
         specifier: workspace:*
         version: link:../lib-reactor-utils
       fastest-levenshtein:
@@ -364,7 +364,7 @@ importers:
       '@journeyapps-labs/common-logger':
         specifier: 1.1.1
         version: 1.1.1
-      '@journeyapps-labs/lib-reactor-utils':
+      '@journeyapps/reactor-lib-utils':
         specifier: workspace:*
         version: link:../lib-reactor-utils
       cheerio:
@@ -459,13 +459,13 @@ importers:
       '@journeyapps-labs/common-utils':
         specifier: ^1.0.2
         version: 1.0.2
-      '@journeyapps-labs/lib-reactor-search':
+      '@journeyapps/reactor-lib-search':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-search
-      '@journeyapps-labs/lib-reactor-utils':
+      '@journeyapps/reactor-lib-utils':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-utils
-      '@journeyapps-labs/reactor-mod':
+      '@journeyapps/reactor-mod':
         specifier: workspace:*
         version: link:../module-reactor
       '@projectstorm/react-workspaces-core':
@@ -523,7 +523,7 @@ importers:
         specifier: ^14.0.1
         version: 14.0.1
     devDependencies:
-      '@journeyapps-labs/lib-reactor-builder':
+      '@journeyapps/reactor-lib-builder':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-builder
       '@types/lodash':
@@ -574,13 +574,13 @@ importers:
       '@journeyapps-labs/common-utils':
         specifier: ^1.0.2
         version: 1.0.2
-      '@journeyapps-labs/lib-reactor-data-layer':
+      '@journeyapps/reactor-lib-data-layer':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-data-layer
-      '@journeyapps-labs/lib-reactor-search':
+      '@journeyapps/reactor-lib-search':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-search
-      '@journeyapps-labs/lib-reactor-utils':
+      '@journeyapps/reactor-lib-utils':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-utils
       '@projectstorm/react-workspaces-behavior-divider-dropzone':
@@ -713,7 +713,7 @@ importers:
       '@babel/runtime':
         specifier: ^8.0.0
         version: 8.0.0
-      '@journeyapps-labs/lib-reactor-builder':
+      '@journeyapps/reactor-lib-builder':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-builder
       '@types/color':
@@ -749,10 +749,10 @@ importers:
       '@journeyapps-labs/common-logger':
         specifier: 1.1.1
         version: 1.1.1
-      '@journeyapps-labs/lib-reactor-search':
+      '@journeyapps/reactor-lib-search':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-search
-      '@journeyapps-labs/reactor-mod':
+      '@journeyapps/reactor-mod':
         specifier: workspace:*
         version: link:../module-reactor
       '@projectstorm/react-workspaces-core':
@@ -768,7 +768,7 @@ importers:
         specifier: ^2.8.1
         version: 2.8.1
     devDependencies:
-      '@journeyapps-labs/lib-reactor-builder':
+      '@journeyapps/reactor-lib-builder':
         specifier: workspace:*
         version: link:../../libs/lib-reactor-builder
       '@types/react':

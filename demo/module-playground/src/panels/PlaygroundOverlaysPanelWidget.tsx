@@ -13,7 +13,7 @@ import {
   ReactorPanelModel,
   styled,
   useDimensionObserver
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 
 export interface PlaygroundOverlaysPanelWidgetProps {
   model: ReactorPanelModel;

@@ -3,7 +3,7 @@ import { TreeEntity, TreeEntityInterface, TreeNode } from '@journeyapps-labs/com
 import { TreeWidgetProps } from '../tree/TreeWidget';
 import { observer } from 'mobx-react';
 import { UniversalNodeWidget } from './reactor-tree/widgets/UniversalNodeWidget';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import { SearchableTreeSearchScope } from './SearchableTreeSearchScope';
 
 export interface CoreRenderTreeEvent<T extends TreeEntityInterface = TreeEntityInterface> {

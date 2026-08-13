@@ -7,7 +7,7 @@ import {
   ShortcutHandlerSerialized,
   ShortcutKey,
   System
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { MonacoShortcut } from './MonacoShortcut';
 import { MonacoMapInverted } from './MonacoShortcutMap';
 import { MonacoKeybindingStore } from '../stores/keybindings/MonacoKeybindingStore';

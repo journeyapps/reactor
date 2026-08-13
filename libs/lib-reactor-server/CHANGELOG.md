@@ -1,4 +1,4 @@
-# @journeyapps-labs/lib-reactor-server
+# @journeyapps/reactor-lib-server
 
 ## 2.1.2
 
@@ -6,7 +6,7 @@
 
 - 242f14d: Standardize imported TypeScript helpers and declare `tslib` as a runtime dependency wherever emitted JavaScript imports it.
 - Updated dependencies [242f14d]
-  - @journeyapps-labs/lib-reactor-utils@2.0.14
+  - @journeyapps/reactor-lib-utils@2.0.14
 
 ## 2.1.1
 

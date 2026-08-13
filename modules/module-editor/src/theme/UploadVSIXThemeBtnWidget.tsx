@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { PanelButtonWidget, ComboBoxStore, inject, MousePosition } from '@journeyapps-labs/reactor-mod';
-import { selectFile, readFileAsArrayBuffer, MimeTypes } from '@journeyapps-labs/lib-reactor-utils';
+import { PanelButtonWidget, ComboBoxStore, inject, MousePosition } from '@journeyapps/reactor-mod';
+import { selectFile, readFileAsArrayBuffer, MimeTypes } from '@journeyapps/reactor-lib-utils';
 import * as path from 'path';
 import JSZip from 'jszip';
 import * as json5 from 'json5';

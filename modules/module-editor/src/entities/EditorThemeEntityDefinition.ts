@@ -6,7 +6,7 @@ import {
   ioc,
   ReactorEntityCategories,
   SimpleEntitySearchEngineComponent
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { ChangeEditorThemeAction } from '../actions/ChangeEditorThemeAction';
 import { EditorTheme, MonacoThemeStore } from '../stores/MonacoThemeStore';
 import { EditorEntities } from './EditorEntities';

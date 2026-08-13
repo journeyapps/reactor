@@ -1,5 +1,5 @@
 const path = require('path');
-const { patchExportedLibrary } = require('@journeyapps-labs/lib-reactor-builder');
+const { patchExportedLibrary } = require('@journeyapps/reactor-lib-builder');
 module.exports = (webpack) => {
   const monacoCompatibilityAliases = {
     'monaco-editor/esm/vs/editor/editor.worker.ts': path.join(

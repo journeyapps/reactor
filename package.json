@@ -5,7 +5,7 @@
   "packageManager": "pnpm@11.21.0",
   "scripts": {
     "build": "pnpm build:builder && pnpm build:ts && pnpm build:modules",
-    "build:builder": "pnpm run --filter '@journeyapps-labs/lib-reactor-builder' build",
+    "build:builder": "pnpm run --filter '@journeyapps/reactor-lib-builder' build",
     "build:modules": "pnpm run -r build:module",
     "build:prod": "NODE_ENV=production pnpm build",
     "build:ts": "./node_modules/.bin/tsc --build",

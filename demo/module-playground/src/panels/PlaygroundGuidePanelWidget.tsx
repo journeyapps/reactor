@@ -11,7 +11,7 @@ import {
   ioc,
   styled,
   useTheme
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import {
   PLAYGROUND_GUIDE_ID,
   PLAYGROUND_GUIDE_TARGETS,

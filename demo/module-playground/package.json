@@ -1,5 +1,5 @@
 {
-  "name": "@journeyapps-labs/reactor-mod-playground",
+  "name": "@journeyapps/reactor-mod-playground",
   "main": "./dist/index.js",
   "typings": "./dist/@types/index",
   "private": true,
@@ -11,11 +11,11 @@
     "@emotion/styled": "^11.14.1",
     "@journeyapps-labs/common-ioc": "^1.0.2",
     "@journeyapps-labs/common-utils": "^1.0.2",
-    "@journeyapps-labs/lib-reactor-data-layer": "workspace:^",
-    "@journeyapps-labs/lib-reactor-search": "workspace:^",
-    "@journeyapps-labs/reactor-mod": "workspace:^",
-    "@journeyapps-labs/reactor-mod-editor": "workspace:^",
-    "@journeyapps-labs/reactor-mod-todos": "workspace:^",
+    "@journeyapps/reactor-lib-data-layer": "workspace:^",
+    "@journeyapps/reactor-lib-search": "workspace:^",
+    "@journeyapps/reactor-mod": "workspace:^",
+    "@journeyapps/reactor-mod-editor": "workspace:^",
+    "@journeyapps/reactor-mod-todos": "workspace:^",
     "@projectstorm/react-workspaces-core": "^4.3.2",
     "mobx": "^7.0.0",
     "mobx-react": "^10.0.0",
@@ -24,6 +24,6 @@
     "uuid": "^14.0.1"
   },
   "devDependencies": {
-    "@journeyapps-labs/lib-reactor-builder": "workspace:^"
+    "@journeyapps/reactor-lib-builder": "workspace:^"
   }
 }

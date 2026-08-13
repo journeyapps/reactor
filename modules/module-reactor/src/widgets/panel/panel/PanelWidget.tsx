@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ioc } from '../../../inversify.config';
 import { WorkspaceStore } from '../../../stores/workspace/WorkspaceStore';
 import { AttentionWrapperWidget } from '../../guide/AttentionWrapperWidget';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { ReactorComponentType } from '../../../stores/guide/selections/common';
 import { ReactorPanelModel } from '../../../stores/workspace/react-workspaces/ReactorPanelModel';
 import { css } from '@emotion/react';

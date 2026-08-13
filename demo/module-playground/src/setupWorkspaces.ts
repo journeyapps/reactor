@@ -1,5 +1,5 @@
-import { WorkspaceGroup, WorkspaceModel, WorkspaceStore } from '@journeyapps-labs/reactor-mod';
-import { ioc } from '@journeyapps-labs/reactor-mod';
+import { WorkspaceGroup, WorkspaceModel, WorkspaceStore } from '@journeyapps/reactor-mod';
+import { ioc } from '@journeyapps/reactor-mod';
 import { PlaygroundPanelModel } from './panels/PlaygroundPanelFactory';
 
 export const setupWorkspaces = () => {

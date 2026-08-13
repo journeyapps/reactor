@@ -4,7 +4,7 @@ import {
   EntitySearchResultEntry
 } from './EntitySearchEngineComponent';
 import { SearchEngine, SearchEngineSearchEvent } from '../../../search/SearchEngine';
-import { createSearchEventMatcherBool, SearchResult } from '@journeyapps-labs/lib-reactor-search';
+import { createSearchEventMatcherBool, SearchResult } from '@journeyapps/reactor-lib-search';
 
 export interface SimpleEntitySearchEngineComponentOptions<T> extends EntitySearchEngineComponentOptions {
   getEntities: (event: SearchEngineSearchEvent) => Promise<T[]>;

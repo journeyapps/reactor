@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Btn } from '../../../../definitions/common';
 import { setupTooltipProps, TooltipPosition } from '../../../info/tooltips';
 import { IconWidget } from '../../../icons/IconWidget';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { styled, theme } from '../../../../stores/themes/reactor-theme-fragment';
 import { css } from '@emotion/react';
 import { useButton } from '../../../../hooks/useButton';

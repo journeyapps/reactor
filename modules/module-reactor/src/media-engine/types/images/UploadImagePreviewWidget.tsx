@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { v4 } from 'uuid';
-import { selectFile } from '@journeyapps-labs/lib-reactor-utils';
+import { selectFile } from '@journeyapps/reactor-lib-utils';
 import { ImageMedia } from './ImageMedia';
 import { MediaEngine } from '../../MediaEngine';
 import { ioc } from '../../../inversify.config';

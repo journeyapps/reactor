@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import { themed } from '../../stores/themes/reactor-theme-fragment';
 const no_results = require('../../../media/panel-search-empty.svg');
 

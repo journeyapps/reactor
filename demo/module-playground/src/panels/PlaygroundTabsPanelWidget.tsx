@@ -8,7 +8,7 @@ import {
   TabDirective,
   TabSelectionWidget,
   styled
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 
 export interface PlaygroundTabsPanelWidgetProps {
   model: ReactorPanelModel;

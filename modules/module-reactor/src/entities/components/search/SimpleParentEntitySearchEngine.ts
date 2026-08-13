@@ -13,7 +13,7 @@ import {
 import { SearchEngine, SearchEngineSearchEvent } from '../../../search/SearchEngine';
 import { EntitySearchEngineParameter } from '../../../search/params/EntitySearchEngineParameter';
 import { CMDPalletSearchEngine } from '../../../cmd-pallet/CMDPalletSearchEngine';
-import { SearchResult } from '@journeyapps-labs/lib-reactor-search';
+import { SearchResult } from '@journeyapps/reactor-lib-search';
 import { ComboBoxDirective } from '../../../stores/combo2/ComboBoxDirective';
 
 export const PARENT_VARIABLE = 'parent';

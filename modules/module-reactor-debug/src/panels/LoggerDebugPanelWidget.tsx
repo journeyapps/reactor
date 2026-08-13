@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { LogLevel } from '@journeyapps-labs/common-logger';
 import { observer } from 'mobx-react';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import {
   inject,
   LoggerStore,
@@ -12,7 +12,7 @@ import {
   styled,
   TreeLeafWidget,
   TreeWidget
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { LoggingDebugPanelModel } from './LoggingDebugPanelModel';
 
 const INHERIT_LEVEL = 'INHERIT';

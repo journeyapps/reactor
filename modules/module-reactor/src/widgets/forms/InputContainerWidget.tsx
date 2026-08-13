@@ -1,4 +1,4 @@
-import { getDarkenedColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getDarkenedColor } from '@journeyapps/reactor-lib-utils';
 import * as React from 'react';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

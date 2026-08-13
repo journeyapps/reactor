@@ -9,7 +9,7 @@ import { CardWidget } from '../../../widgets/cards/CardWidget';
 import { styled } from '../../../stores/themes/reactor-theme-fragment';
 import { SearchablePanelWidget } from '../../../widgets/search/SearchablePanelWidget';
 import { EntityControl } from '../../../controls/EntityControl';
-import { SearchEvent, SearchEventMatch } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent, SearchEventMatch } from '@journeyapps/reactor-lib-search';
 
 namespace S {
   export const Card = styled(CardWidget)`

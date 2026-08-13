@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import { createSearchEventMatcher, SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { createSearchEventMatcher, SearchEvent } from '@journeyapps/reactor-lib-search';
 import {
   CardWidget,
   CheckboxLabelWidget,
@@ -9,8 +9,8 @@ import {
   SurfaceWidget,
   getScrollableCSS,
   styled
-} from '@journeyapps-labs/reactor-mod';
-import { TodoModel, TodoStore } from '@journeyapps-labs/reactor-mod-todos';
+} from '@journeyapps/reactor-mod';
+import { TodoModel, TodoStore } from '@journeyapps/reactor-mod-todos';
 
 export interface EntityTreeVariantsCardProps {
   definition: any;

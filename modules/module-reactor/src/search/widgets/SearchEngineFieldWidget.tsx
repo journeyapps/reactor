@@ -3,7 +3,7 @@ import { SearchEngine } from '../SearchEngine';
 import { SearchWidget } from '../../widgets/search/SearchWidget';
 import { useSearchEngine } from './useSearchEngine';
 import { useEffect, useState } from 'react';
-import { SearchResult } from '@journeyapps-labs/lib-reactor-search';
+import { SearchResult } from '@journeyapps/reactor-lib-search';
 import { observer } from 'mobx-react';
 
 export interface SearchEngineFieldWidgetProps {

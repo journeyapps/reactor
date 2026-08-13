@@ -27,7 +27,7 @@ The module installs the feature. The store owns its state. The panel model lets 
 Stores own observable application state and services:
 
 ```ts title="src/HelloStore.ts"
-import { AbstractStore } from '@journeyapps-labs/reactor-mod';
+import { AbstractStore } from '@journeyapps/reactor-mod';
 import { observable } from 'mobx';
 
 export class HelloStore extends AbstractStore {
@@ -64,7 +64,7 @@ import {
   PanelButtonWidget,
   ReactorPanelFactory,
   ReactorPanelModel
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { HelloStore } from './HelloStore';
 
 export class HelloPanelModel extends ReactorPanelModel {
@@ -121,7 +121,7 @@ import {
   ReactorModuleRegisterEvent,
   WorkspaceModel,
   WorkspaceStore
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { HelloStore } from './HelloStore';
 import { HelloPanelFactory } from './HelloPanel';
 

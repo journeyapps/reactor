@@ -5,7 +5,7 @@ import { DateTimePickerLayerWidget } from './DateTimePickerLayerWidget';
 import { ioc } from '../../../inversify.config';
 import { Layer, LayerManager } from '../../../stores/layer/LayerManager';
 import { useDisplayDateOptions } from '../../../hooks/useDisplayDateOptions';
-import { computeDateTimeParts } from '@journeyapps-labs/lib-reactor-utils';
+import { computeDateTimeParts } from '@journeyapps/reactor-lib-utils';
 
 export const DateTimeButtonWidget: React.FC<DateTimePickerWidgetProps> = (props) => {
   let options = useDisplayDateOptions();

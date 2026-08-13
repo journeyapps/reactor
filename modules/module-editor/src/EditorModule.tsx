@@ -9,7 +9,7 @@ import {
   WorkspaceStore,
   ReactorModuleInitEvent,
   ReactorModuleRegisterEvent
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { MonacoStore } from './stores/MonacoStore';
 import { MonacoShortcutHandler } from './shortcuts/MonacoShortcutHandler';
 import { MonacoCommandPalletSearchEngine } from './MonacoCommandPalletSearchEngine';

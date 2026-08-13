@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { MouseEventHandler } from 'react';
 import { IconWidget } from '../icons/IconWidget';
-import { getColorWithAlphaOptions } from '@journeyapps-labs/lib-reactor-utils';
+import { getColorWithAlphaOptions } from '@journeyapps/reactor-lib-utils';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
 import { ReactorTooltipWidget, setupTooltipProps, TooltipPosition } from '../info/tooltips';
 import type { EntityLabel } from '../../entities/components/meta/EntityDescriberComponent';

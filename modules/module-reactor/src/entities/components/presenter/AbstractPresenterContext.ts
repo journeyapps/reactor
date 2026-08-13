@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { SearchEvent } from '@journeyapps-labs/lib-reactor-search';
+import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import { EntityPresenterComponent, SelectEntityListener } from './EntityPresenterComponent';
 import { observable } from 'mobx';
 import { ReactorIcon } from '../../../widgets/icons/IconWidget';

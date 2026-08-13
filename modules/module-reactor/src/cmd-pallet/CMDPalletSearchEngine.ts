@@ -2,12 +2,7 @@ import { MouseEvent } from 'react';
 import { MousePosition } from '../layers/combo/SmartPositionWidget';
 import * as _ from 'lodash';
 import { Btn } from '../definitions/common';
-import {
-  SearchEngineInterface,
-  SearchEvent,
-  SearchResult,
-  SearchResultEntry
-} from '@journeyapps-labs/lib-reactor-search';
+import { SearchEngineInterface, SearchEvent, SearchResult, SearchResultEntry } from '@journeyapps/reactor-lib-search';
 import { v4 } from 'uuid';
 
 export interface CMDPalletGenerateResultWidgetEvent {

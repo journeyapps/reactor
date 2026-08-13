@@ -12,6 +12,9 @@ const config: Config = {
   tagline: 'Ambitious app building framework',
   favicon: 'img/favicon.ico',
   ...base_config,
+  url: 'https://journeyapps.github.io',
+  organizationName: 'journeyapps',
+  projectName: 'reactor',
   headTags: [
     ...(base_config.headTags ?? []),
     {

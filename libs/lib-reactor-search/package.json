@@ -1,5 +1,5 @@
 {
-  "name": "@journeyapps-labs/lib-reactor-search",
+  "name": "@journeyapps/reactor-lib-search",
   "version": "1.0.15",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/journeyapps-labs/reactor.git"
+    "url": "https://github.com/journeyapps/reactor.git"
   },
   "author": "JOURNEYAPPS",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@journeyapps-labs/common-utils": "^1.0.2",
-    "@journeyapps-labs/lib-reactor-utils": "workspace:*",
+    "@journeyapps/reactor-lib-utils": "workspace:*",
     "fastest-levenshtein": "^1.0.16",
     "lodash": "^4.18.1",
     "mobx": "^7.0.0",

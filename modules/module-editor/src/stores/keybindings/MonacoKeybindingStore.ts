@@ -2,7 +2,7 @@ import * as _ from 'lodash';
 import { MenuRegistry } from 'monaco-editor/platform/actions/common/actions';
 import { KeyCodeChord, MonacoStoreAction } from './definitions';
 import { MonacoEditorType, MonacoStore } from '../MonacoStore';
-import { AbstractStore, CMDPalletStore } from '@journeyapps-labs/reactor-mod';
+import { AbstractStore, CMDPalletStore } from '@journeyapps/reactor-mod';
 import { KeybindingsRegistry } from './KeybindingsRegistry';
 import { autorun, IReactionDisposer } from 'mobx';
 

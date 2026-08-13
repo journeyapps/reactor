@@ -8,7 +8,7 @@ import { inject } from '../../inversify.config';
 import { SimpleComboBoxDirective } from '../../stores/combo2/directives/simple/SimpleComboBoxDirective';
 import { SearchStore } from '../../stores/SearchStore';
 import { ComboBoxItem } from '../../stores/combo/ComboBoxDirectives';
-import { getTransparentColor } from '@journeyapps-labs/lib-reactor-utils';
+import { getTransparentColor } from '@journeyapps/reactor-lib-utils';
 import { size, getReactorControlBorderRadius, Size, useReactorSize } from '../../hooks/useReactorSize';
 
 export interface SearchWidgetProps {

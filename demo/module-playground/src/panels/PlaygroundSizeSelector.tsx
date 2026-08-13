@@ -6,7 +6,7 @@ import {
   TabSelectionWidget,
   TabDirective,
   styled
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 
 const sizeTabs: TabDirective[] = [
   { key: Size.SMALL, name: 'Small' },

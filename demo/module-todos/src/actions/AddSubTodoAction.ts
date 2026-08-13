@@ -1,7 +1,7 @@
-import { EntityAction, EntityActionEvent } from '@journeyapps-labs/reactor-mod';
+import { EntityAction, EntityActionEvent } from '@journeyapps/reactor-mod';
 import { TodoModel } from '../models/TodoModel';
 import { TodoEntities } from '../TodoEntities';
-import { inject } from '@journeyapps-labs/reactor-mod';
+import { inject } from '@journeyapps/reactor-mod';
 import { TodoStore } from '../stores/TodoStore';
 
 export class AddSubTodoAction extends EntityAction<TodoModel> {

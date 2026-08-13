@@ -3,7 +3,7 @@ import {
   ReactorModuleInitEvent,
   ReactorModuleRegisterEvent,
   WorkspaceStore
-} from '@journeyapps-labs/reactor-mod';
+} from '@journeyapps/reactor-mod';
 import { LoggingDebugPanelFactory } from './panels/LoggingDebugPanelFactory';
 
 export class ReactorDebugModule extends AbstractReactorModule {
