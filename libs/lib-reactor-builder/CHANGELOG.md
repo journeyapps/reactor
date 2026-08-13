@@ -1,5 +1,11 @@
 # @journeyapps/reactor-lib-builder
 
+## 3.1.3
+
+### Patch Changes
+
+- 80649dd: Publish Reactor packages under the `@journeyapps` scope after moving the repository to the JourneyApps GitHub organization.
+
 ## 3.1.2
 
 ### Patch Changes

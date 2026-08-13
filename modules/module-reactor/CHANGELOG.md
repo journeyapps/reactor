@@ -1,5 +1,15 @@
 # @journeyapps/reactor-mod
 
+## 8.1.4
+
+### Patch Changes
+
+- 80649dd: Publish Reactor packages under the `@journeyapps` scope after moving the repository to the JourneyApps GitHub organization.
+- Updated dependencies [80649dd]
+  - @journeyapps/reactor-lib-data-layer@1.0.16
+  - @journeyapps/reactor-lib-search@1.0.16
+  - @journeyapps/reactor-lib-utils@2.0.15
+
 ## 8.1.3
 
 ### Patch Changes
