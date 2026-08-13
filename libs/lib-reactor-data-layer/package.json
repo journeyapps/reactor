@@ -1,6 +1,6 @@
 {
   "name": "@journeyapps-labs/lib-reactor-data-layer",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"

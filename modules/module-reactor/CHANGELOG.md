@@ -1,5 +1,20 @@
 # @journeyapps-labs/reactor-mod
 
+## 8.1.3
+
+### Patch Changes
+
+- d84d25d: - Restore entity dragging from the command palette.
+  - Surface search-result loading in search-backed combo boxes, with customizable initial and subsequent-page messages and themed progress feedback.
+  - Correct entity-tree leaf alignment and button tooltips.
+  - Provide appropriate close and workspace-docking actions for floating windows.
+  - Repaint workspace chrome when side toolbars are shown or hidden.
+  - Document the new interaction and tree APIs, with an initial guide for people using Reactor applications.
+- Updated dependencies [242f14d]
+  - @journeyapps-labs/lib-reactor-data-layer@1.0.15
+  - @journeyapps-labs/lib-reactor-search@1.0.15
+  - @journeyapps-labs/lib-reactor-utils@2.0.14
+
 ## 8.1.2
 
 ### Patch Changes
