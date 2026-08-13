@@ -18,11 +18,10 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          version: 11.21.0
-          run_install: false
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack install
 
       - name: Get pnpm store directory
         shell: bash
