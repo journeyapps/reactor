@@ -1,0 +1,15 @@
+name: Setup Node and pnpm
+description: Setup Node, pnpm, cache dependencies, and install.
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v6
+      with:
+        node-version-file: '.nvmrc'
+        registry-url: 'https://registry.npmjs.org'
+
+    - uses: pnpm/setup@v1
+      with:
+        cache: true
+        cache-dependency-path: '**/pnpm-lock.yaml'
