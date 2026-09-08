@@ -9,7 +9,7 @@ import { AbstractEntityTreePresenterContext } from './presenter-contexts/Abstrac
 import { EntityTreePresenterComponent } from './EntityTreePresenterComponent';
 import { System } from '../../../../../core/System';
 import { inject } from '../../../../../inversify.config';
-import { BaseObserverInterface } from '@journeyapps-labs/common-utils';
+import { BaseObserverInterface } from '@journeyapps/common-utils';
 import { AbstractDescendentContext } from './descendent/AbstractDescendentContext';
 import { RenderTreeChild } from '../../../../../widgets/core-tree/reactor-tree/widgets/useTreeChildren';
 

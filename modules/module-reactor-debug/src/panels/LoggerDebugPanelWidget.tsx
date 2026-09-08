@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { LogLevel } from '@journeyapps-labs/common-logger';
+import { LogLevel } from '@journeyapps/common-logger';
 import { observer } from 'mobx-react';
 import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import {

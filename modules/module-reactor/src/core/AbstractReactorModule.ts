@@ -1,5 +1,5 @@
-import { Container, Newable } from '@journeyapps-labs/common-ioc';
-import { Logger } from '@journeyapps-labs/common-logger';
+import { Container, Newable } from '@journeyapps/common-ioc';
+import { Logger } from '@journeyapps/common-logger';
 import { AbstractStore } from '../stores/AbstractStore';
 import { createLogger } from './logging';
 

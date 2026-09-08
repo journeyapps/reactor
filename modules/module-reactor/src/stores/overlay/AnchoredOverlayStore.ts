@@ -1,7 +1,7 @@
 import { computed, observable } from 'mobx';
 import { v4 } from 'uuid';
 import * as React from 'react';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 import { AbstractStore } from '../AbstractStore';
 
 export enum AnchoredOverlayPlacement {

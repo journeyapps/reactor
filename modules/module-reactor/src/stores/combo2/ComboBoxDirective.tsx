@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MousePosition } from '../../layers/combo/SmartPositionWidget';
 import { ComboBoxItem } from '../combo/ComboBoxDirectives';
 import { Btn } from '../../definitions/common';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 import { v4 } from 'uuid';
 
 export interface ComboBoxDirectiveListener {

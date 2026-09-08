@@ -2,7 +2,7 @@ import { ReactorModuleConfig } from './ReactorConfig';
 import * as fs from 'fs';
 import * as path from 'path';
 import { reactorServerLogger } from './logging';
-import { Log } from '@journeyapps-labs/common-logger';
+import { Log } from '@journeyapps/common-logger';
 
 export interface ReactorModuleOptions {
   directory: string;

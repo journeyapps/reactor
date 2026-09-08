@@ -1,4 +1,4 @@
-import { Logger } from '@journeyapps-labs/common-logger';
+import { Logger } from '@journeyapps/common-logger';
 
 const logger = new Logger({ name: 'Reactor utils' });
 

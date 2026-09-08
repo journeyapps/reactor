@@ -1,4 +1,4 @@
-import { TreeNode } from '@journeyapps-labs/common-tree';
+import { TreeNode } from '@journeyapps/common-tree';
 import { useEffect } from 'react';
 import { useForceUpdate } from '../../../../hooks/useForceUpdate';
 

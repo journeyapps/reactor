@@ -1,7 +1,7 @@
 import { FormInput } from './FormInput';
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface FormEvent {
   input: FormInput;

@@ -28,7 +28,7 @@
     "babel-loader": "^10.1.1",
     "browserify-zlib": "^0.2.0",
     "crypto-browserify": "^3.12.1",
-    "css-loader": "^7.1.4",
+    "css-loader": "^7.1.5",
     "expose-loader": "^5.0.1",
     "https-browserify": "^1.0.0",
     "lodash": "^4.18.1",
@@ -46,13 +46,13 @@
     "tslib": "^2.8.1",
     "util": "^0.12.5",
     "val-loader": "^6.0.0",
-    "webpack": "5.109.2",
-    "webpack-cli": "^7.2.2",
+    "webpack": "5.110.3",
+    "webpack-cli": "^7.2.3",
     "yargs": "^18.1.0"
   },
   "devDependencies": {
     "@types/yargs": "^17.0.35",
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.5.0",
     "@types/debug": "^4.1.13",
     "@types/lodash": "^4.17.25",
     "@types/webpack": "^5.28.5"

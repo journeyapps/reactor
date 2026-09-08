@@ -1,5 +1,5 @@
 import { EntityDefinition } from './EntityDefinition';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export abstract class EntityDefinitionComponent<T = any> extends BaseObserver<T> {
   definition: EntityDefinition;

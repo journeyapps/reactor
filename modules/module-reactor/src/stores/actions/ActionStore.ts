@@ -8,7 +8,7 @@ import { ComboBoxStore2 } from '../combo2/ComboBoxStore2';
 import { MousePosition } from '../../layers/combo/SmartPositionWidget';
 import { ActionSource } from '../../actions/ActionSource';
 import { AbstractStore, AbstractStoreListener } from '../AbstractStore';
-import { Log } from '@journeyapps-labs/common-logger';
+import { Log } from '@journeyapps/common-logger';
 
 export interface BaseActionSelectionParameters {
   event?: MousePosition;

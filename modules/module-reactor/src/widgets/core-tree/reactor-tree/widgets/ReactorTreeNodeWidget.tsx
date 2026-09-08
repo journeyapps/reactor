@@ -1,4 +1,4 @@
-import { TreeNode } from '@journeyapps-labs/common-tree';
+import { TreeNode } from '@journeyapps/common-tree';
 import * as React from 'react';
 import { useEffect } from 'react';
 import { observer } from 'mobx-react';

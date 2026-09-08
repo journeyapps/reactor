@@ -5,7 +5,7 @@ import { observable } from 'mobx';
 import { ReactorIcon } from '../../../widgets/icons/IconWidget';
 import { AbstractValueControl } from '../../../controls/AbstractValueControl';
 import { ButtonControl } from '../../../controls/ButtonControl';
-import { BaseObserver, BaseObserverInterface } from '@journeyapps-labs/common-utils';
+import { BaseObserver, BaseObserverInterface } from '@journeyapps/common-utils';
 import { SetControl, SetControlOption } from '../../../controls/SetControl';
 import type { EntityLabel } from '../meta/EntityDescriberComponent';
 

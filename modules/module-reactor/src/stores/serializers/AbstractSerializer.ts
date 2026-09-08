@@ -1,4 +1,4 @@
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 import { Disposable } from '@journeyapps/reactor-lib-utils';
 
 export interface AbstractSerializerListener {

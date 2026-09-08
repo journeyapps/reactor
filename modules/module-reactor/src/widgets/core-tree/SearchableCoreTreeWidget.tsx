@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { CoreTreeWidget, CoreTreeWidgetProps } from './CoreTreeWidget';
-import { TreeNode } from '@journeyapps-labs/common-tree';
+import { TreeNode } from '@journeyapps/common-tree';
 import { createSearchEventMatcher, SearchEvent } from '@journeyapps/reactor-lib-search';
 import { UniversalNodeWidget } from './reactor-tree/widgets/UniversalNodeWidget';
 import * as _ from 'lodash';

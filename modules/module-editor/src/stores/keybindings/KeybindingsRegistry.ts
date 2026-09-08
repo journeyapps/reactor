@@ -3,7 +3,7 @@ import { EditorContextKeys } from 'monaco-editor/editor/common/editorContextKeys
 import { ContextKey, Keybinding } from './definitions';
 import * as _ from 'lodash';
 import { compareChords } from './utils';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface ResolvedKeybindingItem {
   command: string;

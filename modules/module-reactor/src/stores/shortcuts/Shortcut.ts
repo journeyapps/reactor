@@ -1,7 +1,7 @@
 import { ShortcutHandler, ShortcutHandlerAction } from './ShortcutHandler';
 import { observable, toJS } from 'mobx';
 import * as _ from 'lodash';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export enum keyType {
   SHIFT = 'shift',

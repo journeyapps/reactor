@@ -1,4 +1,4 @@
-import { Package } from '@journeyapps-labs/common-docs';
+import { Package } from '@journeyapps/common-docs';
 
 export const packages = [
   {

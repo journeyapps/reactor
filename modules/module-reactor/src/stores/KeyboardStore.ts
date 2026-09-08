@@ -1,7 +1,7 @@
 import { AbstractStore } from './AbstractStore';
 import { v4 } from 'uuid';
 import * as _ from 'lodash';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export enum CommonKeys {
   ENTER = 'Enter',

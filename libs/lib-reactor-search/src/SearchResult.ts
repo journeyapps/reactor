@@ -1,5 +1,5 @@
 import { action, autorun, IObservableArray, observable } from 'mobx';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface SearchResultEntry {
   key: string;

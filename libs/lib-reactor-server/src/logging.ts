@@ -1,4 +1,4 @@
-import { LogLevel, Logger, NodeConsoleLoggerTransport } from '@journeyapps-labs/common-logger';
+import { LogLevel, Logger, NodeConsoleLoggerTransport } from '@journeyapps/common-logger';
 
 export const reactorServerLogger = new Logger({
   name: 'Reactor server',

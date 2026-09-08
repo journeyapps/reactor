@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { InputContainerWidget } from '../widgets/forms/InputContainerWidget';
 import styled from '@emotion/styled';
 import { useForceUpdate } from '../hooks/useForceUpdate';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 import { Size } from '../hooks/useReactorSize';
 
 export interface FormInputOptions<T = any> {

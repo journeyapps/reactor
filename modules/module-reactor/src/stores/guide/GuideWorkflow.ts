@@ -8,7 +8,7 @@ import {
 } from './selections/common';
 import { inject } from '../../inversify.config';
 import { System } from '../../core/System';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface GuideWorkflowListener {
   activated?: () => any;

@@ -1,6 +1,6 @@
 import { AbstractStore, AbstractStoreListener, AbstractStoreOptions } from './AbstractStore';
 import { AbstractSerializer } from './serializers/AbstractSerializer';
-import { Log } from '@journeyapps-labs/common-logger';
+import { Log } from '@journeyapps/common-logger';
 
 export interface AbstractPersistedStoreOptions<T> extends AbstractStoreOptions {
   serializer: AbstractSerializer<T>;

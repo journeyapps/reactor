@@ -3,7 +3,7 @@ import { WorkspaceStore } from '../WorkspaceStore';
 import * as _ from 'lodash';
 import { ReactorPanelFactory } from '../react-workspaces/ReactorPanelFactory';
 import { ReactorPanelModel } from '../react-workspaces/ReactorPanelModel';
-import { Logger } from '@journeyapps-labs/common-logger';
+import { Logger } from '@journeyapps/common-logger';
 
 export enum WorkspaceHint {
   COUPLED = 'COUPLED',

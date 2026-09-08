@@ -1,4 +1,4 @@
-import { TreeEntity, TreeEntityInterface, TreeEntityListener } from '@journeyapps-labs/common-tree';
+import { TreeEntity, TreeEntityInterface, TreeEntityListener } from '@journeyapps/common-tree';
 import { TreeWidgetProps } from '../../tree/TreeWidget';
 import * as React from 'react';
 import { CoreTreeWidgetProps } from '../CoreTreeWidget';

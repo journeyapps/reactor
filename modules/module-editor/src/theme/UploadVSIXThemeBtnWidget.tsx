@@ -6,7 +6,7 @@ import JSZip from 'jszip';
 import * as json5 from 'json5';
 import { VSIXTheme, VSIXPackage } from './theme-utils';
 import { MonacoThemeStore } from '../stores/MonacoThemeStore';
-import { Log } from '@journeyapps-labs/common-logger';
+import { Log } from '@journeyapps/common-logger';
 
 export interface EditorThemePreferencesWidgetProps {
   gotTheme: (theme: VSIXTheme) => any;

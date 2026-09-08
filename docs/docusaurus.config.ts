@@ -1,7 +1,7 @@
 import type { Config } from '@docusaurus/types';
 import { packages } from './utils/packages';
 
-import { generateConfig, generateTSDocPlugin } from '@journeyapps-labs/common-docs';
+import { generateConfig, generateTSDocPlugin } from '@journeyapps/common-docs';
 
 const base_config = generateConfig({
   project_name: 'reactor'

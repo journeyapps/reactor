@@ -1,4 +1,4 @@
-import { LogLevel, Logger } from '@journeyapps-labs/common-logger';
+import { LogLevel, Logger } from '@journeyapps/common-logger';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { Action, ActionEvent } from '../../src/actions/Action';
 import { LoggerStore } from '../../src/stores/logging/LoggerStore';
