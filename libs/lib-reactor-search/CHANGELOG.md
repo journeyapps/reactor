@@ -1,5 +1,13 @@
 # @journeyapps/reactor-lib-search
 
+## 1.0.17
+
+### Patch Changes
+
+- d941ef6: Use the public @journeyapps common packages in dependency declarations, imports, and shared bundle externals.
+- Updated dependencies [d941ef6]
+  - @journeyapps/reactor-lib-utils@2.0.16
+
 ## 1.0.16
 
 ### Patch Changes

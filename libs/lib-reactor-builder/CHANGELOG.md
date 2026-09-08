@@ -1,5 +1,11 @@
 # @journeyapps/reactor-lib-builder
 
+## 3.1.4
+
+### Patch Changes
+
+- d941ef6: Use the public @journeyapps common packages in dependency declarations, imports, and shared bundle externals.
+
 ## 3.1.3
 
 ### Patch Changes
