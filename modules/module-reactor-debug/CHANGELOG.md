@@ -1,5 +1,14 @@
 # @journeyapps/reactor-mod-debug
 
+## 0.2.6
+
+### Patch Changes
+
+- d941ef6: Use the public @journeyapps common packages in dependency declarations, imports, and shared bundle externals.
+- Updated dependencies [d941ef6]
+  - @journeyapps/reactor-lib-search@1.0.17
+  - @journeyapps/reactor-mod@8.1.5
+
 ## 0.2.5
 
 ### Patch Changes
