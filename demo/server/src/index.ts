@@ -9,7 +9,7 @@ import {
   serveModules
 } from '@journeyapps/reactor-lib-server';
 import { join } from 'path';
-import { Log } from '@journeyapps-labs/common-logger';
+import { Log } from '@journeyapps/common-logger';
 
 const app = express();
 const server = http.createServer(app);

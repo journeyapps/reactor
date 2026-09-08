@@ -1,4 +1,4 @@
-import { LogLevel, Logger } from '@journeyapps-labs/common-logger';
+import { LogLevel, Logger } from '@journeyapps/common-logger';
 import { ENV } from '../env';
 
 export const resolveReactorLogLevel = (level = ENV.REACTOR_LOG_LEVEL): LogLevel => {

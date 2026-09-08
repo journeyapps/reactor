@@ -1,3 +1,3 @@
-import { Logger } from '@journeyapps-labs/common-logger';
+import { Logger } from '@journeyapps/common-logger';
 
 export const dataLayerLogger = new Logger({ name: 'Reactor data layer' });

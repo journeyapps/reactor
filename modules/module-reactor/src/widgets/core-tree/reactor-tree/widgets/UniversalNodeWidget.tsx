@@ -1,4 +1,4 @@
-import { TreeEntity, TreeNode } from '@journeyapps-labs/common-tree';
+import { TreeEntity, TreeNode } from '@journeyapps/common-tree';
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import { CoreTreeWidgetProps } from '../../CoreTreeWidget';

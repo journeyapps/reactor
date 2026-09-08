@@ -5,7 +5,7 @@ import { observer } from 'mobx-react';
 import { observable } from 'mobx';
 import styled from '@emotion/styled';
 import { v4 } from 'uuid';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface AbstractDialogDirectiveListener {
   disposed: (event: { canceled: boolean }) => any;

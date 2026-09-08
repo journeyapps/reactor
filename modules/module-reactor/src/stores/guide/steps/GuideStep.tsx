@@ -3,7 +3,7 @@ import { GuideWorkflow, GuideWorkflowOptions } from '../GuideWorkflow';
 import { ReactorComponentSelections } from '../selections/common';
 import { StepTooltipWidget } from '../../../widgets/guide/StepTooltipWidget';
 import * as React from 'react';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface GuideStepOptions<E extends ReactorComponentSelections = ReactorComponentSelections> {
   label: string;

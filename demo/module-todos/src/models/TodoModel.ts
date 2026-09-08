@@ -1,4 +1,4 @@
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 import { v4 } from 'uuid';
 import { computed, observable } from 'mobx';
 import { TodoNoteModel } from './TodoNoteModel';

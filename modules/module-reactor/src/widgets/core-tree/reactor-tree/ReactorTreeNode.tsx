@@ -1,10 +1,4 @@
-import {
-  TreeEntity,
-  TreeNode,
-  TreeNodeListener,
-  TreeSerialized,
-  TreeSerializedV2
-} from '@journeyapps-labs/common-tree';
+import { TreeEntity, TreeNode, TreeNodeListener, TreeSerialized, TreeSerializedV2 } from '@journeyapps/common-tree';
 import * as _ from 'lodash';
 import * as React from 'react';
 import { CoreTreeWidgetProps } from '../CoreTreeWidget';

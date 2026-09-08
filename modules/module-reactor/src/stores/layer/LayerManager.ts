@@ -1,7 +1,7 @@
 import { v4 } from 'uuid';
 import { observable } from 'mobx';
 import * as _ from 'lodash';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface LayerRenderEvent {
   index: number;

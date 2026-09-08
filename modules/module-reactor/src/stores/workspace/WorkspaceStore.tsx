@@ -8,7 +8,7 @@ import {
   WorkspaceNodeModel
 } from '@projectstorm/react-workspaces-core';
 import { action, autorun, IReactionDisposer, observable } from 'mobx';
-import { Log } from '@journeyapps-labs/common-logger';
+import { Log } from '@journeyapps/common-logger';
 
 import { inject, ioc } from '../../inversify.config';
 import { AbstractLayoutEngine, AddModelsOptions } from './layout-engines/AbstractLayoutEngine';

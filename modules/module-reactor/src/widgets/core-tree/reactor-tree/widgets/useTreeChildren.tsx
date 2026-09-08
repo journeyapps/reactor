@@ -1,4 +1,4 @@
-import { TreeNode } from '@journeyapps-labs/common-tree';
+import { TreeNode } from '@journeyapps/common-tree';
 import * as React from 'react';
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { SearchableTreeSearchScope } from '../../SearchableTreeSearchScope';

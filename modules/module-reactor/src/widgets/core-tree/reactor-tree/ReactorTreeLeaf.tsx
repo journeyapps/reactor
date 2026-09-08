@@ -1,4 +1,4 @@
-import { TreeEntity } from '@journeyapps-labs/common-tree';
+import { TreeEntity } from '@journeyapps/common-tree';
 import * as React from 'react';
 import { CoreTreeWidgetProps } from '../CoreTreeWidget';
 import { SearchEvent, SearchEventMatch } from '@journeyapps/reactor-lib-search';

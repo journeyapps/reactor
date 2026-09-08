@@ -8,15 +8,15 @@
     "watch:module": "pnpm build:module --watch"
   },
   "dependencies": {
-    "@journeyapps-labs/common-ioc": "^1.0.2",
-    "@journeyapps-labs/common-utils": "^1.0.2",
+    "@journeyapps/common-ioc": "^1.0.3",
+    "@journeyapps/common-utils": "^1.0.3",
     "@journeyapps/reactor-mod": "workspace:^",
-    "mobx": "^7.0.0",
+    "mobx": "^7.0.3",
     "tslib": "^2.8.1",
-    "uuid": "^14.0.1"
+    "uuid": "^14.0.2"
   },
   "devDependencies": {
     "@journeyapps/reactor-lib-builder": "workspace:^",
-    "@types/node": "^26.2.0"
+    "@types/node": "^26.5.0"
   }
 }

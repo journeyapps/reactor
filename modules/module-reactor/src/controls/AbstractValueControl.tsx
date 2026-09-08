@@ -2,7 +2,7 @@ import { ComboBoxItem } from '../stores/combo/ComboBoxDirectives';
 import { Btn } from '../definitions/common';
 import { computed, observable } from 'mobx';
 import { AbstractControl, RepresentAsComboBoxItemsEvent, RepresentAsControlOptions } from './AbstractControl';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface AbstractValueControlListener<Value> {
   valueChanged: (value: Value) => any;

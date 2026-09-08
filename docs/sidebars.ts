@@ -1,6 +1,6 @@
 import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 import { packages } from './utils/packages';
-import { generateTSDocSidebarEntry } from '@journeyapps-labs/common-docs';
+import { generateTSDocSidebarEntry } from '@journeyapps/common-docs';
 import * as path from 'path';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)

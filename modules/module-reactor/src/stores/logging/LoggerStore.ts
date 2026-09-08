@@ -1,5 +1,5 @@
 import { observable } from 'mobx';
-import { LogLevel, Logger } from '@journeyapps-labs/common-logger';
+import { LogLevel, Logger } from '@journeyapps/common-logger';
 import { AbstractStore } from '../AbstractStore';
 import { REACTOR_DEFAULT_LOG_LEVEL } from '../../core/logging';
 

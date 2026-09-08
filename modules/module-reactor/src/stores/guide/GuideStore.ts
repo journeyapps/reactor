@@ -7,7 +7,7 @@ import { AbstractStore, AbstractStoreListener } from '../AbstractStore';
 import * as React from 'react';
 import { AnchoredOverlayPlacement, AnchoredOverlayRecord, AnchoredOverlayStore } from '../overlay/AnchoredOverlayStore';
 import { GuideTooltipContentWidget } from '../../layers/guide/GuideTooltipWidget';
-import { Log } from '@journeyapps-labs/common-logger';
+import { Log } from '@journeyapps/common-logger';
 
 export interface SelectIdentifier {
   panelFactoryType?: string;

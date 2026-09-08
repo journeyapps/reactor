@@ -1,4 +1,4 @@
-import { TreeNode } from '@journeyapps-labs/common-tree';
+import { TreeNode } from '@journeyapps/common-tree';
 import { EntityReactorNode } from '../EntityReactorNode';
 import { ReactorTreeEntity } from '../../../../../../widgets/core-tree/reactor-tree/reactor-tree-utils';
 import { AbstractEntityTreePresenterContext } from '../presenter-contexts/AbstractEntityTreePresenterContext';

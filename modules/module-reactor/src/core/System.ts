@@ -3,12 +3,12 @@ import { observable } from 'mobx';
 import { EntityDefinition } from '../entities/EntityDefinition';
 import { EncodedEntity } from '../entities/components/encoder/EntityEncoderComponent';
 import { AbstractStore } from '../stores/AbstractStore';
-import { Newable } from '@journeyapps-labs/common-ioc';
+import { Newable } from '@journeyapps/common-ioc';
 import { ActionStore } from '../stores/actions/ActionStore';
 import { ComboBoxStore2 } from '../stores/combo2/ComboBoxStore2';
 import { Action } from '../actions/Action';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
-import { Logger } from '@journeyapps-labs/common-logger';
+import { BaseObserver } from '@journeyapps/common-utils';
+import { Logger } from '@journeyapps/common-logger';
 import { createLogger } from './logging';
 
 export interface SystemOptions {

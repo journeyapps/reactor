@@ -2,7 +2,7 @@ import { makeObservable, observable } from 'mobx';
 import { v4 } from 'uuid';
 import { VisibleComponentIdentifier } from '../GuideStore';
 import * as _ from 'lodash';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { BaseObserver } from '@journeyapps/common-utils';
 
 export interface ComponentSelectionListener {
   deactivated: () => any;

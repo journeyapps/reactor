@@ -1,4 +1,4 @@
-import { Container, createDecorator } from '@journeyapps-labs/common-ioc';
+import { Container, createDecorator } from '@journeyapps/common-ioc';
 
 if (!(window as any).container) {
   const container = new Container();

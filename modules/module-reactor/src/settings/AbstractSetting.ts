@@ -1,8 +1,8 @@
 import { observable } from 'mobx';
 import * as uuid from 'uuid';
 import * as _ from 'lodash';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
-import { Logger } from '@journeyapps-labs/common-logger';
+import { BaseObserver } from '@journeyapps/common-utils';
+import { Logger } from '@journeyapps/common-logger';
 import { createLogger } from '../core/logging';
 
 export interface AbstractSettingOptions {

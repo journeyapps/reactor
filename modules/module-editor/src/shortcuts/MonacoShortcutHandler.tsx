@@ -13,7 +13,7 @@ import { MonacoMapInverted } from './MonacoShortcutMap';
 import { MonacoKeybindingStore } from '../stores/keybindings/MonacoKeybindingStore';
 import { Keybinding } from '../stores/keybindings/definitions';
 import { action } from 'mobx';
-import { Log } from '@journeyapps-labs/common-logger';
+import { Log } from '@journeyapps/common-logger';
 
 export interface MonacoShortcutHandlerOptions {
   keybindingStore: MonacoKeybindingStore;

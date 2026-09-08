@@ -1,11 +1,11 @@
 import { configure } from 'mobx';
 import { AbstractReactorModule, ReactorModuleRegisterEvent } from './AbstractReactorModule';
 import { ioc } from '../inversify.config';
-import { Log, Logger } from '@journeyapps-labs/common-logger';
+import { Log, Logger } from '@journeyapps/common-logger';
 import { createLogger, formatLoggerName } from './logging';
 import { System } from './System';
 import { AbstractStore } from '../stores/AbstractStore';
-import { Newable } from '@journeyapps-labs/common-ioc';
+import { Newable } from '@journeyapps/common-ioc';
 import { LoggerStore } from '../stores/logging/LoggerStore';
 
 configure({

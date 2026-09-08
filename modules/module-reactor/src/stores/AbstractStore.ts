@@ -1,7 +1,7 @@
 import { AbstractSetting } from '../settings/AbstractSetting';
 import { observable } from 'mobx';
-import { Log, Logger } from '@journeyapps-labs/common-logger';
-import { BaseObserver } from '@journeyapps-labs/common-utils';
+import { Log, Logger } from '@journeyapps/common-logger';
+import { BaseObserver } from '@journeyapps/common-utils';
 import { createLogger } from '../core/logging';
 
 export interface AbstractStoreOptions {
