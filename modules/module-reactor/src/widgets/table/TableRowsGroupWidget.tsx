@@ -21,10 +21,15 @@ export interface TableRowsGroupWidgetState {
 }
 
 namespace S {
-  export const Row = styled.tr``;
+  export const Row = styled.tr`
+    &:first-of-type > td {
+      border-top: 0;
+    }
+  `;
 
   export const Cell = styled.td`
     padding: 0;
+    border-top: 1px solid ${(p) => p.theme.table.groupBorder};
   `;
 
   export const Container = styled.div<{ $size: Size }>`
@@ -33,7 +38,6 @@ namespace S {
     cursor: pointer;
     background: ${(p) => p.theme.table.groupBackground || p.theme.table.columnBackground};
     color: ${(p) => p.theme.table.columnForeground};
-    border-top: 1px solid ${(p) => p.theme.table.groupBorder};
   `;
 
   export const Icon = styled(FontAwesomeIcon)`

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { EmptyTableWidget } from './EmptyTableWidget';
 import * as _ from 'lodash';
 import { TableColumnWidget } from './TableColumnWidget';
 import { observer } from 'mobx-react';
@@ -27,6 +28,7 @@ export interface TableRow {
 export interface TableWidgetProps<T extends TableRow = TableRow> {
   columns: TableColumn[];
   rows: T[];
+  emptyLabel?: string;
   renderGroup?: (event: { rows: T[]; groupKey: string }) => Partial<TableRowsGroupWidgetProps>;
   onContextMenu?: (event: MousePosition, row: T) => any;
   size?: Size;
@@ -101,6 +103,13 @@ export const TableWidget = observer(<T extends TableRow = TableRow>(props: Table
         </S.ColumnsRow>
       </thead>
       <tbody>
+        {props.rows.length === 0 && (
+          <tr>
+            <td colSpan={Math.max(1, cols.length)}>
+              <EmptyTableWidget label={props.emptyLabel} />
+            </td>
+          </tr>
+        )}
         {/* Ungrouped */}
         <TableRowsWidget
           rows={props.rows.filter((f) => !f.groupKey)}

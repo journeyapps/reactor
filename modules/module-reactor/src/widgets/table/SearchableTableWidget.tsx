@@ -3,8 +3,6 @@ import styled from '@emotion/styled';
 import { TableWidgetProps, TableWidget, TableColumn, TableRow } from './TableWidget';
 import { ControlledSearchWidget } from '../search/ControlledSearchWidget';
 import { SearchEventMatcher, createSearchEventMatcher } from '@journeyapps/reactor-lib-search';
-import { themed } from '../../stores/themes/reactor-theme-fragment';
-const no_results = require('../../../media/empty-table.svg');
 
 export interface SearchableTableColumn extends TableColumn {
   accessorSearch?: (cell: any, row: any) => string | null;
@@ -12,7 +10,6 @@ export interface SearchableTableColumn extends TableColumn {
 
 export interface SearchableTableWidgetProps<T extends TableRow = TableRow> extends TableWidgetProps<T> {
   columns: SearchableTableColumn[];
-  emptyLabel?: string;
   onSearch?: (searchValue: string | null) => any;
   tableFactory?: React.ComponentType<any>;
   tableFactoryProps?: Record<string, any>;
@@ -51,15 +48,6 @@ export class SearchableTableWidget<T extends TableRow = TableRow> extends React.
     });
   };
 
-  getEmptyMessage = () => {
-    return (
-      <S.EmptyContainer>
-        <S.Image src={no_results} />
-        <S.EmptyDesc>{this.props.emptyLabel || 'No items to display'}</S.EmptyDesc>
-      </S.EmptyContainer>
-    );
-  };
-
   render() {
     const rows = this.getRows();
     const TableFactory = this.props.tableFactory || TableWidget;
@@ -88,7 +76,6 @@ export class SearchableTableWidget<T extends TableRow = TableRow> extends React.
           tableFactoryProps={undefined}
           rows={rows}
         />
-        {rows.length === 0 ? this.getEmptyMessage() : null}
       </S.Container>
     );
   }
@@ -106,22 +93,5 @@ namespace S {
     justify-content: flex-end;
     align-items: center;
     padding-bottom: 5px;
-  `;
-
-  export const EmptyContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  `;
-
-  export const Image = styled.img`
-    width: 50px;
-    margin-bottom: 10px;
-  `;
-
-  export const EmptyDesc = themed.div`
-      color: ${(p) => p.theme.text.primary};
-      font-size: 14px;
   `;
 }

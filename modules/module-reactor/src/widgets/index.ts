@@ -62,6 +62,7 @@ export * from './table/SearchableTableWidget';
 export * from './table/TableWidget';
 export * from './table/TableButtonWidget';
 export * from './table/TablePillWidget';
+export * from './table/EmptyTableWidget';
 export * from './table/MultiSelectTableWidget';
 export * from './table/MultiSelectSearchableTableWidget';
 
