@@ -1,5 +1,14 @@
 # @journeyapps/reactor-mod
 
+## 8.1.7
+
+### Patch Changes
+
+- 70a6ef7: Dismiss forced tooltips when their feedback ends and the pointer has already left the trigger.
+- 70a6ef7: Export EmptyTableWidget and display the empty state inside the base table border, including searchable and multiselect tables.
+
+  Avoid doubling the border between the table header and the first group row.
+
 ## 8.1.6
 
 ### Patch Changes
