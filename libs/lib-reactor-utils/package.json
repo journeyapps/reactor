@@ -38,5 +38,9 @@
     "@types/luxon": "^3.7.5",
     "@types/node": "^26.5.0",
     "vitest": "^5.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo"
+  ]
 }

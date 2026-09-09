@@ -56,5 +56,12 @@
     "@types/debug": "^4.1.13",
     "@types/lodash": "^4.17.25",
     "@types/webpack": "^5.28.5"
-  }
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo",
+    "index.js",
+    "scripts",
+    "val-loader.js"
+  ]
 }

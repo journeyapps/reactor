@@ -50,5 +50,12 @@
     "@types/lodash": "^4.17.25",
     "@types/react": "19.2.18",
     "json5-loader": "^4.0.1"
-  }
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo",
+    "dist-module",
+    "media",
+    "reactor.config.json"
+  ]
 }
