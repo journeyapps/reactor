@@ -1,5 +1,13 @@
 # @journeyapps/reactor-lib-search
 
+## 1.0.18
+
+### Patch Changes
+
+- 93dc52c: Explicitly include compiled JavaScript, TypeScript declarations, and runtime assets in published packages. This fixes missing build files when packing with pnpm 12.
+- Updated dependencies [93dc52c]
+  - @journeyapps/reactor-lib-utils@2.0.17
+
 ## 1.0.17
 
 ### Patch Changes
