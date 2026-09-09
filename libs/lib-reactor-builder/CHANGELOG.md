@@ -1,5 +1,11 @@
 # @journeyapps/reactor-lib-builder
 
+## 3.1.5
+
+### Patch Changes
+
+- 93dc52c: Explicitly include compiled JavaScript, TypeScript declarations, and runtime assets in published packages. This fixes missing build files when packing with pnpm 12.
+
 ## 3.1.4
 
 ### Patch Changes
