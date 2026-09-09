@@ -89,5 +89,12 @@
     "@types/resize-observer-browser": "^0.1.11",
     "jsdom": "^30.0.1",
     "vitest": "^5.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo",
+    "dist-module",
+    "media",
+    "reactor.config.json"
+  ]
 }

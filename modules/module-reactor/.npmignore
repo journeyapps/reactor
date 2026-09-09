@@ -1,7 +1,0 @@
-*
-!media/**/*
-!dist/**/*
-!dist-module/**/*
-!package.json
-!reactor.config.json
-dist/tsconfig.tsbuildinfo

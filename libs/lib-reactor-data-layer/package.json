@@ -28,5 +28,9 @@
   "devDependencies": {
     "@types/lodash": "^4.17.25",
     "vitest": "^5.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo"
+  ]
 }

@@ -29,5 +29,11 @@
   "devDependencies": {
     "@journeyapps/reactor-lib-builder": "workspace:*",
     "@types/react": "19.2.18"
-  }
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo",
+    "dist-module",
+    "reactor.config.json"
+  ]
 }
