@@ -13,7 +13,7 @@
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "demo:start": "node ./scripts/run-demo.js start",
     "demo:watch": "node ./scripts/run-demo.js watch",
-    "ncu": "ncu -u && pnpm recursive exec -- ncu -u && ./scripts/update-overrides.js",
+    "ncu": "ncu -u && pnpm -r exec ncu -u && ./scripts/update-overrides.js",
     "preinstall": "npx only-allow pnpm",
     "release": "pnpm build:prod && pnpm changeset publish",
     "test": "pnpm run -r test",

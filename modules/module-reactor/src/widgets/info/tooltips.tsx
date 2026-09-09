@@ -63,7 +63,8 @@ export interface ReactorTooltipWidgetProps extends TooltipProps {
 }
 
 export const ReactorTooltipWidget: React.FC<ReactorTooltipWidgetProps> = (props) => {
-  const [active, setActive] = useState(props.tooltipState === TooltipState.SHOW);
+  const [hovered, setHovered] = useState(false);
+  const active = hovered || props.tooltipState === TooltipState.SHOW;
   const position = props.tooltipPos || TooltipPosition.TOP;
   const render = React.useCallback(() => <S.Content>{props.tooltip}</S.Content>, [props.tooltip]);
   const overlay = useAnchoredOverlay({
@@ -74,26 +75,12 @@ export const ReactorTooltipWidget: React.FC<ReactorTooltipWidgetProps> = (props)
     render
   });
 
-  useEffect(() => {
-    if (props.tooltipState === TooltipState.SHOW) {
-      setActive(true);
-    }
-  }, [props.tooltip, props.tooltipState]);
-
   if (!props.tooltip) {
     return <>{props.children}</>;
   }
 
   return (
-    <S.Anchor
-      ref={overlay.ref}
-      onMouseEnter={() => setActive(true)}
-      onMouseLeave={() => {
-        if (props.tooltipState !== TooltipState.SHOW) {
-          setActive(false);
-        }
-      }}
-    >
+    <S.Anchor ref={overlay.ref} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       {props.children}
     </S.Anchor>
   );
