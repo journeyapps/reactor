@@ -10,7 +10,7 @@
   "dependencies": {
     "@journeyapps/reactor-mod": "workspace:^",
     "@journeyapps/common-ioc": "^1.0.3",
-    "react": "19.2.8",
+    "react": "19.3.0",
     "@emotion/styled": "^11.14.1"
   },
   "devDependencies": {
