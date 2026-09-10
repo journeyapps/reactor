@@ -16,7 +16,7 @@ Reactor separates four kinds of feedback:
 | Transient outcome or announcement                   | Notification            |
 | Why an action is unavailable                        | Action validation       |
 
-:::note Mental model
+:::note[Mental model]
 Status shows what the application is doing. Validation explains what the user can do. Notifications report what just happened.
 :::
 
@@ -38,7 +38,7 @@ protected async fireEvent(event: ActionEvent) {
 
 The directive holds messages, optional percentage progress, and a final success or error state. It appears in the Visor only after the action calls `getStatus()`.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Call `getStatus()` when the operation lasts long enough for progress to be meaningful. Fast actions do not need ceremonial loading state.
 :::
 
@@ -54,7 +54,7 @@ ioc.get(VisorStore).registerActiveMetadata(new CurrentTodoItemVisorMetadata());
 
 Metadata can include a value, icon, color, and click behavior. Its `init()` method connects it to the relevant store.
 
-:::note Lifecycle note
+:::note[Lifecycle note]
 `VisorStore` initializes the metadata. If metadata subscribes to a store, dispose that subscription when the metadata is no longer needed.
 :::
 
@@ -93,7 +93,7 @@ Put the reason an action is unavailable in its validator. A validator can hide, 
 
 See [Actions and validation](../subsystems/actions-and-validation.md) for the state definitions and execution order.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not show an error notification every time a disabled action is rendered. Validation is live application state; notifications are discrete events.
 :::
 

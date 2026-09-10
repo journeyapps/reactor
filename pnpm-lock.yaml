@@ -145,7 +145,7 @@ importers:
     dependencies:
       '@emotion/styled':
         specifier: ^11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2)
       '@journeyapps/common-ioc':
         specifier: ^1.0.3
         version: 1.0.3
@@ -153,8 +153,8 @@ importers:
         specifier: workspace:^
         version: link:../../modules/module-reactor
       react:
-        specifier: 19.2.8
-        version: 19.2.8
+        specifier: 19.3.0
+        version: 19.3.0
     devDependencies:
       '@journeyapps/reactor-lib-builder':
         specifier: workspace:^
@@ -164,7 +164,7 @@ importers:
     dependencies:
       '@emotion/styled':
         specifier: ^11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2)
       '@journeyapps/common-ioc':
         specifier: ^1.0.3
         version: 1.0.3
@@ -194,13 +194,13 @@ importers:
         version: 7.0.3
       mobx-react:
         specifier: ^10.0.2
-        version: 10.0.2(mobx@7.0.3)(react@19.2.8)
+        version: 10.0.2(mobx@7.0.3)(react@19.3.0)
       monaco-editor:
         specifier: ^0.56.0
         version: 0.56.0
       react:
-        specifier: 19.2.8
-        version: 19.2.8
+        specifier: 19.3.0
+        version: 19.3.0
       uuid:
         specifier: ^14.0.2
         version: 14.0.2
@@ -550,7 +550,7 @@ importers:
     dependencies:
       '@emotion/styled':
         specifier: ^11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
       '@journeyapps/common-ioc':
         specifier: ^1.0.3
         version: 1.0.3
@@ -571,13 +571,13 @@ importers:
         version: link:../module-reactor
       '@projectstorm/react-workspaces-core':
         specifier: 4.3.2
-        version: 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
       json5:
         specifier: ^2.2.3
         version: 2.2.3
       jszip:
-        specifier: ^3.10.1
-        version: 3.10.1
+        specifier: ^3.10.2
+        version: 3.10.2
       lodash:
         specifier: ^4.18.1
         version: 4.18.1
@@ -589,7 +589,7 @@ importers:
         version: 7.0.3
       mobx-react:
         specifier: ^10.0.2
-        version: 10.0.2(mobx@7.0.3)(react@19.2.8)
+        version: 10.0.2(mobx@7.0.3)(react@19.3.0)
       monaco-editor:
         specifier: ^0.56.0
         version: 0.56.0
@@ -609,14 +609,14 @@ importers:
         specifier: ^2.2.5
         version: 2.2.5
       react:
-        specifier: 19.2.8
-        version: 19.2.8
+        specifier: 19.3.0
+        version: 19.3.0
       react-dom:
-        specifier: 19.2.8
-        version: 19.2.8(react@19.2.8)
+        specifier: 19.3.0
+        version: 19.3.0(react@19.3.0)
       react-monaco-editor:
         specifier: ^0.59.0
-        version: 0.59.0(monaco-editor@0.56.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 0.59.0(monaco-editor@0.56.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -631,8 +631,8 @@ importers:
         specifier: ^4.17.25
         version: 4.17.25
       '@types/react':
-        specifier: 19.2.18
-        version: 19.2.18
+        specifier: 19.3.0
+        version: 19.3.0
       json5-loader:
         specifier: ^4.0.1
         version: 4.0.1(webpack@5.110.3)
@@ -644,13 +644,13 @@ importers:
         version: 1.4.0
       '@emotion/react':
         specifier: ^11.14.0
-        version: 11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+        version: 11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
       '@emotion/serialize':
         specifier: ^1.3.3
         version: 1.3.3
       '@emotion/styled':
         specifier: ^11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
       '@emotion/utils':
         specifier: ^1.4.2
         version: 1.4.2
@@ -662,7 +662,7 @@ importers:
         version: 7.3.1
       '@fortawesome/react-fontawesome':
         specifier: ^3.5.0
-        version: 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.2.8)
+        version: 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.0)
       '@journeyapps/common-ioc':
         specifier: ^1.0.3
         version: 1.0.3
@@ -686,31 +686,31 @@ importers:
         version: link:../../libs/lib-reactor-utils
       '@projectstorm/react-workspaces-behavior-divider-dropzone':
         specifier: 2.4.15
-        version: 2.4.15(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 2.4.15(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
       '@projectstorm/react-workspaces-behavior-panel-dropzone':
         specifier: 2.4.2
-        version: 2.4.2(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 2.4.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
       '@projectstorm/react-workspaces-behavior-resize':
         specifier: 2.3.14
-        version: 2.3.14(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 2.3.14(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
       '@projectstorm/react-workspaces-core':
         specifier: 4.3.2
-        version: 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
       '@projectstorm/react-workspaces-dropzone-plugin-tabs':
         specifier: 2.3.2
-        version: 2.3.2(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 2.3.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
       '@projectstorm/react-workspaces-dropzone-plugin-tray':
         specifier: 2.3.2
-        version: 2.3.2(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 2.3.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
       '@projectstorm/react-workspaces-model-floating-window':
         specifier: 2.2.17
-        version: 2.2.17(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 2.2.17(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
       '@projectstorm/react-workspaces-model-tabs':
         specifier: ^2.3.14
-        version: 2.3.14(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 2.3.14(@types/react@19.3.0)(supports-color@10.2.2)
       '@projectstorm/react-workspaces-model-tray':
         specifier: ^2.5.15
-        version: 2.5.15(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 2.5.15(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
       async:
         specifier: ^3.2.6
         version: 3.2.6
@@ -721,8 +721,8 @@ importers:
         specifier: ^4.4.0
         version: 4.4.0
       cronstrue:
-        specifier: ^3.25.0
-        version: 3.25.0
+        specifier: ^3.26.0
+        version: 3.26.0
       emoji-dictionary:
         specifier: ^1.0.12
         version: 1.0.12
@@ -743,7 +743,7 @@ importers:
         version: 7.0.3
       mobx-react:
         specifier: ^10.0.2
-        version: 10.0.2(mobx@7.0.3)(react@19.2.8)
+        version: 10.0.2(mobx@7.0.3)(react@19.3.0)
       mobx-utils:
         specifier: ^6.1.1
         version: 6.1.1(mobx@7.0.3)
@@ -757,38 +757,38 @@ importers:
         specifier: ^9.5.1
         version: 9.5.1
       react:
-        specifier: ^19.2.8
-        version: 19.2.8
+        specifier: ^19.3.0
+        version: 19.3.0
       react-avatar:
         specifier: ^5.0.4
-        version: 5.0.4(@babel/runtime@8.0.0)(core-js-pure@3.44.0)(prop-types@15.8.1)(react@19.2.8)
+        version: 5.0.4(@babel/runtime@8.0.0)(core-js-pure@3.44.0)(prop-types@15.8.1)(react@19.3.0)
       react-color:
         specifier: ^2.19.3
-        version: 2.19.3(react@19.2.8)
+        version: 2.19.3(react@19.3.0)
       react-day-picker:
         specifier: ^10.0.1
-        version: 10.0.1(@types/react@19.2.18)(react@19.2.8)
+        version: 10.0.1(@types/react@19.3.0)(react@19.3.0)
       react-dom:
-        specifier: ^19.2.8
-        version: 19.2.8(react@19.2.8)
+        specifier: ^19.3.0
+        version: 19.3.0(react@19.3.0)
       react-markdown:
         specifier: ^10.1.0
-        version: 10.1.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+        version: 10.1.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
       react-slick:
         specifier: ^0.31.0
-        version: 0.31.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 0.31.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       react-spinners:
         specifier: ^0.17.1
-        version: 0.17.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 0.17.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       react-switch:
         specifier: ^7.1.0
-        version: 7.1.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 7.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       readable-stream:
         specifier: ^4.7.0
         version: 4.7.0
       recharts:
         specifier: ^3.10.1
-        version: 3.10.1(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react-is@18.3.1)(react@19.2.8)(redux@5.0.1)
+        version: 3.10.1(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react-is@18.3.1)(react@19.3.0)(redux@5.0.1)
       rehype-external-links:
         specifier: ^3.0.0
         version: 3.0.0
@@ -830,11 +830,11 @@ importers:
         specifier: ^26.5.0
         version: 26.5.0
       '@types/react':
-        specifier: 19.2.18
-        version: 19.2.18
+        specifier: 19.3.0
+        version: 19.3.0
       '@types/react-dom':
-        specifier: 19.2.7
-        version: 19.2.7(@types/react@19.2.18)
+        specifier: 19.3.0
+        version: 19.3.0(@types/react@19.3.0)
       '@types/resize-observer-browser':
         specifier: ^0.1.11
         version: 0.1.11
@@ -858,13 +858,13 @@ importers:
         version: link:../module-reactor
       '@projectstorm/react-workspaces-core':
         specifier: 4.3.2
-        version: 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
+        version: 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
       mobx-react:
         specifier: ^10.0.2
-        version: 10.0.2(mobx@7.0.3)(react@19.2.8)
+        version: 10.0.2(mobx@7.0.3)(react@19.3.0)
       react:
-        specifier: 19.2.8
-        version: 19.2.8
+        specifier: 19.3.0
+        version: 19.3.0
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -873,8 +873,8 @@ importers:
         specifier: workspace:*
         version: link:../../libs/lib-reactor-builder
       '@types/react':
-        specifier: 19.2.18
-        version: 19.2.18
+        specifier: 19.3.0
+        version: 19.3.0
 
 packages:
 
@@ -2425,13 +2425,16 @@ packages:
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
 
-  '@types/react-dom@19.2.7':
-    resolution: {integrity: sha512-I8bPpDLcHBv1qiIiXDCy71Rt8eQDKJP0sMSWJphDdAcdqiJ1sGpZamavoEIRZmYzjia9LuEb2HlYdDpmoENpvQ==}
+  '@types/react-dom@19.3.0':
+    resolution: {integrity: sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==}
     peerDependencies:
-      '@types/react': ^19.2.0
+      '@types/react': ^19.3.0
 
   '@types/react@19.2.18':
     resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
+
+  '@types/react@19.3.0':
+    resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
 
   '@types/resize-observer-browser@0.1.11':
     resolution: {integrity: sha512-cNw5iH8JkMkb3QkCoe7DaZiawbDQEUX8t7iuQaRTyLOyQCR2h+ibBD4GJt7p5yhUHrlOeL7ZtbxNHeipqNsBzQ==}
@@ -2927,8 +2930,8 @@ packages:
     resolution: {integrity: sha512-fkdfq+b+AHI4cKdhZlppHveI/mgz2qpiYxcm+t5E5TsxX7QrLS1VE0+7GENEk9z0EeGPcpSciGv6ez24duWhwQ==}
     engines: {node: '>=18.x'}
 
-  cronstrue@3.25.0:
-    resolution: {integrity: sha512-PAPaioNXHMLiUSM8V5sC0bIx5MALUQjjtuDZZWBir5Tau8D676Aoj3Oju/SCaggi4eLG+QPC3IU+dCo30AzDIA==}
+  cronstrue@3.26.0:
+    resolution: {integrity: sha512-PEXTHEir/KllAWMsOQOsv3ZXjI6Y1PA1eVAEM/WhCaesAcCYHldra9pr2jkFH6r/ynbEOAPOGoWYz9NkjP0huA==}
     hasBin: true
 
   cross-spawn@7.0.6:
@@ -3723,8 +3726,8 @@ packages:
     resolution: {integrity: sha512-MT/xP0CrubFRNLNKvxJ2BYfy53Zkm++5bX9dtuPbqAeQpTVe0MQTFhao8+Cp//EmJp244xt6Drw/GVEGCUj40g==}
     engines: {node: '>=12', npm: '>=6'}
 
-  jszip@3.10.1:
-    resolution: {integrity: sha512-xXDvecyTpGLrqFrvkrUSoxxfJI5AH7U8zxxtVclpsUtMCq4JQ290LY8AW5c7Ggnr/Y/oK+bQMbqK2qmtk3pN4g==}
+  jszip@3.10.2:
+    resolution: {integrity: sha512-3l+rb15IOWtUhU0H5MFqES/T6Kh7abYwjosBey/vD6hDt8zoEffkSC5Ws5SGtgVw3gBx2NEbhTeSW1+kWkpyTQ==}
 
   jwa@2.0.1:
     resolution: {integrity: sha512-hRF04fqJIP8Abbkq5NKGN0Bbr3JxlQ+qhZufXVr0DvujKy93ZCbXZMHDL4EOtodSbCWxOqR8MS1tXA5hwqCXDg==}
@@ -4459,6 +4462,11 @@ packages:
     peerDependencies:
       react: ^19.2.8
 
+  react-dom@19.3.0:
+    resolution: {integrity: sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==}
+    peerDependencies:
+      react: ^19.3.0
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -4508,8 +4516,8 @@ packages:
       react: ^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  react@19.2.8:
-    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
+  react@19.3.0:
+    resolution: {integrity: sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==}
     engines: {node: '>=0.10.0'}
 
   reactcss@1.2.3:
@@ -4650,6 +4658,9 @@ packages:
 
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
+
+  scheduler@0.28.0:
+    resolution: {integrity: sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==}
 
   schema-utils@3.3.0:
     resolution: {integrity: sha512-pN/yOAvcC+5rQ5nERGuwrjLlYvLTbCibnZ1I7B1LaiAz9BRBlE9GMgE/eqV30P7aJQUf7Ddimy/RsbYO/GrVGg==}
@@ -6254,19 +6265,35 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)':
+  '@emotion/react@11.14.0(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2)':
     dependencies:
       '@babel/runtime': 7.29.2
       '@emotion/babel-plugin': 11.13.5(supports-color@10.2.2)
       '@emotion/cache': 11.14.0
       '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.8)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.3.0)
       '@emotion/utils': 1.4.2
       '@emotion/weak-memoize': 0.4.0
       hoist-non-react-statics: 3.3.2
-      react: 19.2.8
+      react: 19.3.0
     optionalDependencies:
       '@types/react': 19.2.18
+    transitivePeerDependencies:
+      - supports-color
+
+  '@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)':
+    dependencies:
+      '@babel/runtime': 7.29.2
+      '@emotion/babel-plugin': 11.13.5(supports-color@10.2.2)
+      '@emotion/cache': 11.14.0
+      '@emotion/serialize': 1.3.3
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.3.0)
+      '@emotion/utils': 1.4.2
+      '@emotion/weak-memoize': 0.4.0
+      hoist-non-react-statics: 3.3.2
+      react: 19.3.0
+    optionalDependencies:
+      '@types/react': 19.3.0
     transitivePeerDependencies:
       - supports-color
 
@@ -6280,26 +6307,41 @@ snapshots:
 
   '@emotion/sheet@1.4.0': {}
 
-  '@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)':
+  '@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2)':
     dependencies:
       '@babel/runtime': 7.28.2
       '@emotion/babel-plugin': 11.13.5(supports-color@10.2.2)
       '@emotion/is-prop-valid': 1.3.1
-      '@emotion/react': 11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+      '@emotion/react': 11.14.0(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2)
       '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.8)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.3.0)
       '@emotion/utils': 1.4.2
-      react: 19.2.8
+      react: 19.3.0
     optionalDependencies:
       '@types/react': 19.2.18
     transitivePeerDependencies:
       - supports-color
 
+  '@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@emotion/babel-plugin': 11.13.5(supports-color@10.2.2)
+      '@emotion/is-prop-valid': 1.3.1
+      '@emotion/react': 11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      '@emotion/serialize': 1.3.3
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.3.0)
+      '@emotion/utils': 1.4.2
+      react: 19.3.0
+    optionalDependencies:
+      '@types/react': 19.3.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@emotion/unitless@0.10.0': {}
 
-  '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@19.2.8)':
+  '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@19.3.0)':
     dependencies:
-      react: 19.2.8
+      react: 19.3.0
 
   '@emotion/utils@1.4.2': {}
 
@@ -6399,14 +6441,14 @@ snapshots:
     dependencies:
       '@fortawesome/fontawesome-common-types': 7.3.1
 
-  '@fortawesome/react-fontawesome@3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.2.8)':
+  '@fortawesome/react-fontawesome@3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.0)':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 7.3.1
-      react: 19.2.8
+      react: 19.3.0
 
-  '@icons/material@0.2.4(react@19.2.8)':
+  '@icons/material@0.2.4(react@19.3.0)':
     dependencies:
-      react: 19.2.8
+      react: 19.3.0
 
   '@inquirer/ansi@2.0.8': {}
 
@@ -6803,35 +6845,35 @@ snapshots:
 
   '@pnpm/deps.graph-sequencer@1100.0.1': {}
 
-  '@projectstorm/react-workspaces-behavior-divider-dropzone@2.4.15(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)':
+  '@projectstorm/react-workspaces-behavior-divider-dropzone@2.4.15(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)':
     dependencies:
-      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
-      react: 19.2.8
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
+      react: 19.3.0
     transitivePeerDependencies:
       - '@emotion/react'
       - '@types/react'
       - supports-color
 
-  '@projectstorm/react-workspaces-behavior-panel-dropzone@2.4.2(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)':
+  '@projectstorm/react-workspaces-behavior-panel-dropzone@2.4.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)':
     dependencies:
-      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
       '@fortawesome/fontawesome-svg-core': 7.3.1
       '@fortawesome/free-solid-svg-icons': 7.3.1
-      '@fortawesome/react-fontawesome': 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.2.8)
-      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
+      '@fortawesome/react-fontawesome': 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.0)
+      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
       lodash: 4.18.1
-      react: 19.2.8
+      react: 19.3.0
     transitivePeerDependencies:
       - '@emotion/react'
       - '@types/react'
       - supports-color
 
-  '@projectstorm/react-workspaces-behavior-resize@2.3.14(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)':
+  '@projectstorm/react-workspaces-behavior-resize@2.3.14(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)':
     dependencies:
-      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
-      react: 19.2.8
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
+      react: 19.3.0
     transitivePeerDependencies:
       - '@emotion/react'
       - '@types/react'
@@ -6839,74 +6881,87 @@ snapshots:
 
   '@projectstorm/react-workspaces-core@4.3.2(@types/react@19.2.18)(supports-color@10.2.2)':
     dependencies:
-      '@emotion/react': 11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
-      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
+      '@emotion/react': 11.14.0(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2)
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.3.0)(supports-color@10.2.2)
       color: 5.0.3
       lodash: 4.18.1
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.0
+      react-dom: 19.2.8(react@19.3.0)
       uuid: 14.0.2
     transitivePeerDependencies:
       - '@types/react'
       - supports-color
 
-  '@projectstorm/react-workspaces-dropzone-plugin-tabs@2.3.2(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)':
+  '@projectstorm/react-workspaces-core@4.3.2(@types/react@19.3.0)(supports-color@10.2.2)':
     dependencies:
-      '@fortawesome/fontawesome-svg-core': 7.3.1
-      '@fortawesome/free-solid-svg-icons': 7.3.1
-      '@projectstorm/react-workspaces-behavior-panel-dropzone': 2.4.2(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-model-tabs': 2.3.14(@types/react@19.2.18)(supports-color@10.2.2)
-      react: 19.2.8
-    transitivePeerDependencies:
-      - '@emotion/react'
-      - '@types/react'
-      - supports-color
-
-  '@projectstorm/react-workspaces-dropzone-plugin-tray@2.3.2(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)':
-    dependencies:
-      '@fortawesome/fontawesome-svg-core': 7.3.1
-      '@fortawesome/free-solid-svg-icons': 7.3.1
-      '@projectstorm/react-workspaces-behavior-panel-dropzone': 2.4.2(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-model-tray': 2.5.15(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
-      react: 19.2.8
-    transitivePeerDependencies:
-      - '@emotion/react'
-      - '@types/react'
-      - supports-color
-
-  '@projectstorm/react-workspaces-model-floating-window@2.2.17(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)':
-    dependencies:
-      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
-      '@fortawesome/fontawesome-svg-core': 7.3.1
-      '@fortawesome/free-solid-svg-icons': 7.3.1
-      '@fortawesome/react-fontawesome': 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.2.8)
-      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
-      react: 19.2.8
-    transitivePeerDependencies:
-      - '@emotion/react'
-      - '@types/react'
-      - supports-color
-
-  '@projectstorm/react-workspaces-model-tabs@2.3.14(@types/react@19.2.18)(supports-color@10.2.2)':
-    dependencies:
-      '@emotion/react': 11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
-      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
+      '@emotion/react': 11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      color: 5.0.3
       lodash: 4.18.1
-      react: 19.2.8
+      react: 19.3.0
+      react-dom: 19.2.8(react@19.3.0)
+      uuid: 14.0.2
     transitivePeerDependencies:
       - '@types/react'
       - supports-color
 
-  '@projectstorm/react-workspaces-model-tray@2.5.15(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)':
+  '@projectstorm/react-workspaces-dropzone-plugin-tabs@2.3.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)':
     dependencies:
-      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.2.18)(supports-color@10.2.2)
-      '@projectstorm/react-workspaces-model-floating-window': 2.2.17(@emotion/react@11.14.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2))(@types/react@19.2.18)(supports-color@10.2.2)
+      '@fortawesome/fontawesome-svg-core': 7.3.1
+      '@fortawesome/free-solid-svg-icons': 7.3.1
+      '@projectstorm/react-workspaces-behavior-panel-dropzone': 2.4.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-model-tabs': 2.3.14(@types/react@19.3.0)(supports-color@10.2.2)
+      react: 19.3.0
+    transitivePeerDependencies:
+      - '@emotion/react'
+      - '@types/react'
+      - supports-color
+
+  '@projectstorm/react-workspaces-dropzone-plugin-tray@2.3.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)':
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 7.3.1
+      '@fortawesome/free-solid-svg-icons': 7.3.1
+      '@projectstorm/react-workspaces-behavior-panel-dropzone': 2.4.2(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-model-tray': 2.5.15(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
+      react: 19.3.0
+    transitivePeerDependencies:
+      - '@emotion/react'
+      - '@types/react'
+      - supports-color
+
+  '@projectstorm/react-workspaces-model-floating-window@2.2.17(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)':
+    dependencies:
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      '@fortawesome/fontawesome-svg-core': 7.3.1
+      '@fortawesome/free-solid-svg-icons': 7.3.1
+      '@fortawesome/react-fontawesome': 3.5.0(@fortawesome/fontawesome-svg-core@7.3.1)(react@19.3.0)
+      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
+      react: 19.3.0
+    transitivePeerDependencies:
+      - '@emotion/react'
+      - '@types/react'
+      - supports-color
+
+  '@projectstorm/react-workspaces-model-tabs@2.3.14(@types/react@19.3.0)(supports-color@10.2.2)':
+    dependencies:
+      '@emotion/react': 11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
       lodash: 4.18.1
-      react: 19.2.8
+      react: 19.3.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - supports-color
+
+  '@projectstorm/react-workspaces-model-tray@2.5.15(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)':
+    dependencies:
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-core': 4.3.2(@types/react@19.3.0)(supports-color@10.2.2)
+      '@projectstorm/react-workspaces-model-floating-window': 2.2.17(@emotion/react@11.14.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2))(@types/react@19.3.0)(supports-color@10.2.2)
+      lodash: 4.18.1
+      react: 19.3.0
     transitivePeerDependencies:
       - '@emotion/react'
       - '@types/react'
@@ -6935,7 +6990,7 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@reduxjs/toolkit@2.8.2(react-redux@9.2.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)':
+  '@reduxjs/toolkit@2.8.2(react-redux@9.2.0(@types/react@19.3.0)(react@19.3.0)(redux@5.0.1))(react@19.3.0)':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@standard-schema/utils': 0.3.0
@@ -6944,8 +6999,8 @@ snapshots:
       redux-thunk: 3.1.0(redux@5.0.1)
       reselect: 5.2.0
     optionalDependencies:
-      react: 19.2.8
-      react-redux: 9.2.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
+      react: 19.3.0
+      react-redux: 9.2.0(@types/react@19.3.0)(react@19.3.0)(redux@5.0.1)
 
   '@rollup/rollup-android-arm-eabi@4.46.1':
     optional: true
@@ -7153,11 +7208,16 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.2.7(@types/react@19.2.18)':
+  '@types/react-dom@19.3.0(@types/react@19.3.0)':
     dependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
 
   '@types/react@19.2.18':
+    dependencies:
+      csstype: 3.2.3
+    optional: true
+
+  '@types/react@19.3.0':
     dependencies:
       csstype: 3.2.3
 
@@ -7767,7 +7827,7 @@ snapshots:
       '@types/luxon': 3.7.5
       luxon: 3.7.2
 
-  cronstrue@3.25.0: {}
+  cronstrue@3.26.0: {}
 
   cross-spawn@7.0.6:
     dependencies:
@@ -8236,6 +8296,10 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.5):
     optionalDependencies:
       picomatch: 4.0.5
+
+  fdir@6.5.0(picomatch@4.0.7):
+    optionalDependencies:
+      picomatch: 4.0.7
 
   file-type@21.3.4(supports-color@10.2.2):
     dependencies:
@@ -8718,7 +8782,7 @@ snapshots:
       ms: 2.1.3
       semver: 7.7.2
 
-  jszip@3.10.1:
+  jszip@3.10.2:
     dependencies:
       lie: 3.3.0
       pako: 1.0.11
@@ -9099,16 +9163,16 @@ snapshots:
 
   minipass@7.1.3: {}
 
-  mobx-react-lite@5.0.3(mobx@7.0.3)(react@19.2.8):
+  mobx-react-lite@5.0.3(mobx@7.0.3)(react@19.3.0):
     dependencies:
       mobx: 7.0.3
-      react: 19.2.8
+      react: 19.3.0
 
-  mobx-react@10.0.2(mobx@7.0.3)(react@19.2.8):
+  mobx-react@10.0.2(mobx@7.0.3)(react@19.3.0):
     dependencies:
       mobx: 7.0.3
-      mobx-react-lite: 5.0.3(mobx@7.0.3)(react@19.2.8)
-      react: 19.2.8
+      mobx-react-lite: 5.0.3(mobx@7.0.3)(react@19.3.0)
+      react: 19.3.0
 
   mobx-utils@6.1.1(mobx@7.0.3):
     dependencies:
@@ -9491,53 +9555,58 @@ snapshots:
       iconv-lite: 0.7.2
       unpipe: 1.0.0
 
-  react-avatar@5.0.4(@babel/runtime@8.0.0)(core-js-pure@3.44.0)(prop-types@15.8.1)(react@19.2.8):
+  react-avatar@5.0.4(@babel/runtime@8.0.0)(core-js-pure@3.44.0)(prop-types@15.8.1)(react@19.3.0):
     dependencies:
       '@babel/runtime': 8.0.0
       core-js-pure: 3.44.0
       is-retina: 1.0.3
       md5: 2.3.0
       prop-types: 15.8.1
-      react: 19.2.8
+      react: 19.3.0
 
-  react-color@2.19.3(react@19.2.8):
+  react-color@2.19.3(react@19.3.0):
     dependencies:
-      '@icons/material': 0.2.4(react@19.2.8)
+      '@icons/material': 0.2.4(react@19.3.0)
       lodash: 4.18.1
       lodash-es: 4.17.21
       material-colors: 1.2.6
       prop-types: 15.8.1
-      react: 19.2.8
-      reactcss: 1.2.3(react@19.2.8)
+      react: 19.3.0
+      reactcss: 1.2.3(react@19.3.0)
       tinycolor2: 1.6.0
 
-  react-day-picker@10.0.1(@types/react@19.2.18)(react@19.2.8):
+  react-day-picker@10.0.1(@types/react@19.3.0)(react@19.3.0):
     dependencies:
       '@date-fns/tz': 1.4.1
       date-fns: 4.1.0
-      react: 19.2.8
+      react: 19.3.0
     optionalDependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
 
-  react-dom@19.2.8(react@19.2.8):
+  react-dom@19.2.8(react@19.3.0):
     dependencies:
-      react: 19.2.8
+      react: 19.3.0
       scheduler: 0.27.0
+
+  react-dom@19.3.0(react@19.3.0):
+    dependencies:
+      react: 19.3.0
+      scheduler: 0.28.0
 
   react-is@16.13.1: {}
 
   react-is@18.3.1: {}
 
-  react-markdown@10.1.0(@types/react@19.2.18)(react@19.2.8)(supports-color@10.2.2):
+  react-markdown@10.1.0(@types/react@19.3.0)(react@19.3.0)(supports-color@10.2.2):
     dependencies:
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
       devlop: 1.1.0
       hast-util-to-jsx-runtime: 2.3.6(supports-color@10.2.2)
       html-url-attributes: 3.0.1
       mdast-util-to-hast: 13.2.0
-      react: 19.2.8
+      react: 19.3.0
       remark-parse: 11.0.0(supports-color@10.2.2)
       remark-rehype: 11.1.2
       unified: 11.0.5
@@ -9546,47 +9615,47 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  react-monaco-editor@0.59.0(monaco-editor@0.56.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  react-monaco-editor@0.59.0(monaco-editor@0.56.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
       monaco-editor: 0.56.0
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
 
-  react-redux@9.2.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1):
+  react-redux@9.2.0(@types/react@19.3.0)(react@19.3.0)(redux@5.0.1):
     dependencies:
       '@types/use-sync-external-store': 0.0.6
-      react: 19.2.8
-      use-sync-external-store: 1.5.0(react@19.2.8)
+      react: 19.3.0
+      use-sync-external-store: 1.5.0(react@19.3.0)
     optionalDependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
       redux: 5.0.1
 
-  react-slick@0.31.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  react-slick@0.31.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
       classnames: 2.5.1
       json2mq: 0.2.0
       lodash.debounce: 4.0.8
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
       resize-observer-polyfill: 1.5.1
 
-  react-spinners@0.17.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  react-spinners@0.17.1(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
 
-  react-switch@7.1.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  react-switch@7.1.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
       prop-types: 15.8.1
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
 
-  react@19.2.8: {}
+  react@19.3.0: {}
 
-  reactcss@1.2.3(react@19.2.8):
+  reactcss@1.2.3(react@19.3.0):
     dependencies:
       lodash: 4.18.1
-      react: 19.2.8
+      react: 19.3.0
 
   readable-stream@2.3.8:
     dependencies:
@@ -9616,21 +9685,21 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  recharts@3.10.1(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react-is@18.3.1)(react@19.2.8)(redux@5.0.1):
+  recharts@3.10.1(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react-is@18.3.1)(react@19.3.0)(redux@5.0.1):
     dependencies:
-      '@reduxjs/toolkit': 2.8.2(react-redux@9.2.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1))(react@19.2.8)
+      '@reduxjs/toolkit': 2.8.2(react-redux@9.2.0(@types/react@19.3.0)(react@19.3.0)(redux@5.0.1))(react@19.3.0)
       clsx: 2.1.1
       decimal.js-light: 2.5.1
       es-toolkit: 1.39.8
       eventemitter3: 5.0.1
       immer: 11.1.8
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
       react-is: 18.3.1
-      react-redux: 9.2.0(@types/react@19.2.18)(react@19.2.8)(redux@5.0.1)
+      react-redux: 9.2.0(@types/react@19.3.0)(react@19.3.0)(redux@5.0.1)
       reselect: 5.2.0
       tiny-invariant: 1.3.3
-      use-sync-external-store: 1.5.0(react@19.2.8)
+      use-sync-external-store: 1.5.0(react@19.3.0)
       victory-vendor: 37.3.6
     transitivePeerDependencies:
       - '@types/react'
@@ -9795,6 +9864,8 @@ snapshots:
       xmlchars: 2.2.0
 
   scheduler@0.27.0: {}
+
+  scheduler@0.28.0: {}
 
   schema-utils@3.3.0:
     dependencies:
@@ -10226,9 +10297,9 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  use-sync-external-store@1.5.0(react@19.2.8):
+  use-sync-external-store@1.5.0(react@19.3.0):
     dependencies:
-      react: 19.2.8
+      react: 19.3.0
 
   utif2@4.1.0:
     dependencies:
@@ -10282,11 +10353,11 @@ snapshots:
   vite@7.0.6(@types/node@26.2.0)(terser@5.43.1)(yaml@2.9.0):
     dependencies:
       esbuild: 0.25.8
-      fdir: 6.5.0(picomatch@4.0.5)
-      picomatch: 4.0.5
+      fdir: 6.5.0(picomatch@4.0.7)
+      picomatch: 4.0.7
       postcss: 8.5.6
       rollup: 4.46.1
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.17
     optionalDependencies:
       '@types/node': 26.2.0
       fsevents: 2.3.3
@@ -10296,11 +10367,11 @@ snapshots:
   vite@7.0.6(@types/node@26.5.0)(terser@5.43.1)(yaml@2.9.0):
     dependencies:
       esbuild: 0.25.8
-      fdir: 6.5.0(picomatch@4.0.5)
-      picomatch: 4.0.5
+      fdir: 6.5.0(picomatch@4.0.7)
+      picomatch: 4.0.7
       postcss: 8.5.6
       rollup: 4.46.1
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.17
     optionalDependencies:
       '@types/node': 26.5.0
       fsevents: 2.3.3

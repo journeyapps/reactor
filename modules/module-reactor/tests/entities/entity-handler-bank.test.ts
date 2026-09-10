@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { EntityHandlerBank } from '../../src/entities/components/handler/EntityHandlerBank';
 import { EntityHandlerComponent, OpenEntityEvent } from '../../src/entities/components/handler/EntityHandlerComponent';
 
-class TestHandler extends EntityHandlerComponent {
-  async openEntity(_event: OpenEntityEvent): Promise<void> {}
+class TestHandler extends EntityHandlerComponent<unknown> {
+  async openEntity(_event: OpenEntityEvent<unknown>): Promise<void> {}
 
   getDescription() {
     return { title: 'Open' };

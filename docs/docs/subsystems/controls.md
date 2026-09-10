@@ -7,7 +7,7 @@ description: Adapt values and behavior to buttons, widgets, combo boxes, setting
 
 One control can appear as a button, inline widget, or combo-box item. [Actions](./actions-and-validation.md), [settings](./settings-and-persistence.md), and [forms](./forms.md) use controls so these representations share one value and behavior.
 
-:::note Mental model
+:::note[Mental model]
 A control owns the value or behavior. Its button, inline widget, and combo-box items are different views of the same control.
 :::
 
@@ -52,7 +52,7 @@ status.registerListener({
 
 The same instance can render as a selector in a panel, supply a button descriptor to another widget, or generate items for a combo box.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not create a separate control instance for every representation when those surfaces are meant to edit the same value. They will drift into independent state.
 :::
 
@@ -86,7 +86,7 @@ Implement all three representations even if one is the primary surface. `represe
 
 Keep state and callbacks in the control. Do not make each representation maintain its own selection state. For value controls, update `value` so registered listeners and every active representation observe the same change.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Accept `AbstractControl` in reusable components. Callers can supply a different control without changing the component.
 :::
 

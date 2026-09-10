@@ -85,7 +85,7 @@ export const DarkTheme = theme.addThemeValues({
       selectedBorder: '#00c0ff'
     },
     status: {
-      failed: '#862c00',
+      failed: '#ff8a72',
       failedForeground: 'black',
       loading: '#00b4ff',
       success: '#658600'

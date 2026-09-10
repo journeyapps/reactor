@@ -7,7 +7,7 @@ description: Resolve entities, search nested menus, and expose actions as comman
 
 Reactor has several search surfaces, but they share one idea: a result describes something the user can select or activate. [Entity search behaviors](./entity-definitions/search.md) own domain lookup, combo boxes own transient choices, and the command palette combines registered search engines.
 
-:::note Mental model
+:::note[Mental model]
 Search finds choices. The action or control decides what happens after the user picks one.
 :::
 
@@ -47,7 +47,7 @@ Search-backed combo boxes observe `SearchResult.loading`. Before the first resul
 
 Each candidate is added to a temporary action event and validated before the user selects it. A command can remain discoverable while unavailable targets are grayed out or omitted.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 The search engine does not need to know which action requested a value. The same search source can serve a form input, command parameter, control, or generated entity panel.
 :::
 
@@ -92,7 +92,7 @@ Selecting a parameterized command begins parameter resolution. Validation runs w
 
 Command-palette results participate in Reactor's entity drag system when their entity definition supports portable references. Users can drag those results into the header, left, or right toolbar. Actions support this because Reactor's built-in action definition provides the same entity capability.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 While an entity is being dragged, the command-palette layer becomes click-through so drop zones behind it can receive the native browser drag. The palette keeps the active result row interactive until the drag finishes.
 :::
 
@@ -108,7 +108,7 @@ See [Encoding](./entity-definitions/encoding.md) for the entity behavior that en
 
 The Playground **Dialogs + Comboboxes** panel demonstrates hierarchical browsing, flattened nested search, and token highlighting.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not fetch application data directly from a combo-box widget when the entity definition already provides search. The two searches will eventually disagree about filtering, loading, or validation.
 :::
 

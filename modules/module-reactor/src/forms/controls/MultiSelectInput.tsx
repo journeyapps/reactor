@@ -15,6 +15,10 @@ export class MultiSelectInput extends FormInput<
     OPTIONS: MultiSelectInputOptions;
   } & FormInputGenerics
 > {
+  protected override isEmpty(): boolean {
+    return (this.value?.length ?? 0) === 0;
+  }
+
   renderControl(options: FormInputRenderOptions): React.JSX.Element {
     return <MultiSelectInputWidget input={this} />;
   }

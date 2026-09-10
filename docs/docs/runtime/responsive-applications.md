@@ -7,7 +7,7 @@ description: Build interactions that work on desktop, tablet, and mobile.
 
 Reactor applications often begin on desktop with multiple [panels](../subsystems/workspaces-and-panels.md), context menus, shortcuts, drag-and-drop, and saved layouts. Reactor changes how those features appear on smaller screens.
 
-:::note Mental model
+:::note[Mental model]
 Keep the same task available, but change its layout and controls. Do not simply shrink a desktop workspace.
 :::
 
@@ -48,7 +48,7 @@ Some adaptations happen below application code:
 - overlays remain anchored as the viewport changes;
 - workspace layout engines can apply different placement policy.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 `WorkspaceStore.addModelInWindow()` opens a floating window on desktop and fullscreen content on mobile. The calling code does not need two implementations.
 :::
 
@@ -66,7 +66,7 @@ Dense interaction should have more than one route:
 
 [Actions](../subsystems/actions-and-validation.md) and [controls](../subsystems/controls.md) let these routes share one implementation.
 
-:::tip Pro tip
+:::tip[Pro tip]
 If a task exists only as a mouse gesture, make it an action first. Keep the fast desktop gesture, then expose the same action to mobile and keyboard users.
 :::
 

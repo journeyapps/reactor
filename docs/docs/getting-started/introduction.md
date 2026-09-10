@@ -18,7 +18,7 @@ Reactor is an application framework designed for web software that behaves more 
 
 Instead of independently assembling routing, commands, panels, persistence, settings, search, keyboard behavior, and mobile adaptations, a Reactor application installs **modules** into a shared runtime.
 
-:::note Mental model
+:::note[Mental model]
 Think of Reactor as an application operating system. Modules add features, stores provide state and services, and Reactor supplies the common UI.
 :::
 
@@ -65,7 +65,7 @@ Reactor is more than a component catalog. Its main building blocks are:
 
 These pieces work together. A command can ask an entity definition to find a todo, validate it, open a panel in the current workspace, and show progress in the Visor.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Put the operation in an action and the display rules in an entity definition. Reactor can then reuse them across the application.
 :::
 
@@ -87,6 +87,6 @@ This repository contains two main examples:
 
 The manual uses those examples as its source of truth. Product-specific policy belongs in product modules and case studies, not in Reactor's core explanations.
 
-:::warning Scope
+:::warning[Scope]
 Reactor has many abstractions because it is built for applications with lots of state and connected features. A small routed website may not need it.
 :::

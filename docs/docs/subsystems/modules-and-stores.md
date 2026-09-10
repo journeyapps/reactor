@@ -7,7 +7,7 @@ description: Define modules, register stores, and manage asynchronous or persist
 
 Modules are installation boundaries. Stores own state, services, and lifetimes within the [application boot model](./application-model.md).
 
-:::note Mental model
+:::note[Mental model]
 Registration answers “what does this module contribute?” Store initialization answers “what asynchronous state must be ready before modules finish booting?”
 :::
 
@@ -37,7 +37,7 @@ export class TodosModule extends AbstractReactorModule {
 
 Use `register()` to describe what the module contributes. Use `init()` only for work that must happen after every registered store is ready.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Keep `register()` readable as a table of contents. Move large groups of registrations into named setup functions or smaller modules.
 :::
 
@@ -68,7 +68,7 @@ Always register stores through the module event. Reactor then:
 
 Call `waitForReady()` when code can run both during and after boot and needs to wait for a particular store.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not call a store's `init()` manually after registering it with the module event. The kernel initializes registered stores exactly once.
 :::
 

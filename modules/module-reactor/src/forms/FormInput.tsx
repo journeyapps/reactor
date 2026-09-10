@@ -19,7 +19,9 @@ export interface FormInputOptions<T = any> {
   value?: T;
   visible?: boolean;
   disabled?: boolean;
-  /** Keep the input invalid while allowing a nested control to render the validation message. */
+  /**
+   * Keep the input invalid while allowing a nested control to render the validation message.
+   */
   hideError?: boolean;
   size?: Size;
 }
@@ -77,6 +79,20 @@ export abstract class FormInput<T extends FormInputGenerics = FormInputGenerics>
     return !this.error;
   }
 
+  /**
+   * Whether this field is valid. Hidden fields do not block the form.
+   */
+  isValid(): boolean {
+    if (!this.visible) {
+      return true;
+    }
+    return this.valid;
+  }
+
+  protected isEmpty(): boolean {
+    return this.value == null;
+  }
+
   protected setError(error?: string) {
     if (this._error == error) {
       return;
@@ -102,7 +118,7 @@ export abstract class FormInput<T extends FormInputGenerics = FormInputGenerics>
   }
 
   validate() {
-    if (this.options.required && this.value == null) {
+    if (this.options.required && this.isEmpty()) {
       this.setError('Required');
     } else {
       this.setError(null);

@@ -12,6 +12,10 @@ export class SelectInput<T extends string = string> extends ControlInput<
     OPTIONS: SelectInputOptions<T>;
   } & ControlInputGenerics<T>
 > {
+  protected override isEmpty(): boolean {
+    return (this.value?.trim().length ?? 0) === 0;
+  }
+
   constructor(options: SelectInputOptions<T>) {
     super(
       options,

@@ -7,7 +7,7 @@ description: Teach Reactor how to display, find, open, and save references to yo
 
 An entity definition teaches Reactor about one kind of data in your application. Your model stays unchanged; the definition tells Reactor how to display, find, open, and save references to it.
 
-:::note Mental model
+:::note[Mental model]
 Define an entity in one place, then reuse it in trees, cards, menus, search, panels, and action pickers.
 :::
 
@@ -136,7 +136,7 @@ The full demo also adds notes, sub-todos, alternate tree styles, encoding, docum
 
 Without a definition, every tree, picker, and panel would need its own code for names, icons, search, menus, and opening. The definition keeps those rules together.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not create a second definition just to change one view. Add another description, presenter, search, or open action to the existing definition.
 :::
 

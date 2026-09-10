@@ -45,7 +45,7 @@ describe('module store registration', () => {
   afterEach(() => {
     [TestStore, System].forEach((type) => {
       try {
-        ioc.unbind(type);
+        ioc.unbind<TestStore | System>(type);
       } catch {}
     });
   });

@@ -7,7 +7,7 @@ description: Brand Reactor, choose the root experience, and extend shared applic
 
 Reactor supplies the shared frame around installed [modules](../subsystems/modules-and-stores.md). Product modules can choose the root UI, branding, headers, favicons, shared toolbars, and settings-menu items without replacing [workspaces](../subsystems/workspaces-and-panels.md).
 
-:::note Mental model
+:::note[Mental model]
 The shell owns application-wide chrome. Panels own feature content. Keep domain workflows out of the shell so they remain usable from workspaces, windows, command palettes, and mobile layouts.
 :::
 
@@ -44,7 +44,7 @@ Modules can contribute:
 
 Run any cleanup callback returned by a registration when its module is removed.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Register each shell item from the module that provides the feature. This keeps the root application module from becoming a list of every product menu item.
 :::
 
@@ -54,7 +54,7 @@ Register each shell item from the module that provides the feature. This keeps t
 
 See [Actions and validation](../subsystems/actions-and-validation.md) for action locks and [Guided workflows](../advanced/guided-workflows.md) for multi-step guidance.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 A global lock is a strong instrument. Do not use it as a substitute for `PENDING`, `DISABLED`, or `BLOCKED` action validation.
 :::
 

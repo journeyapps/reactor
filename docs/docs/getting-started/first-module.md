@@ -18,7 +18,7 @@ Copy only the package scaffolding:
 
 Create a new `src` directory for the files below rather than copying the Todo implementation.
 
-:::note Mental model
+:::note[Mental model]
 The module installs the feature. The store owns its state. The panel model lets a workspace place it. The workspace gives the panel an initial home.
 :::
 
@@ -46,7 +46,7 @@ export class HelloStore extends AbstractStore {
 
 Constructors establish usable initial state. Override `_init()` only when the store has asynchronous boot work.
 
-:::warning Lifecycle note
+:::warning[Lifecycle note]
 The panel can discover this store during registration. Keep its constructor state safe to read before asynchronous initialization.
 :::
 
@@ -169,7 +169,7 @@ You now have the basic Reactor composition:
 
 Next, replace the inline callback with an [action](../subsystems/actions-and-validation.md), then add an [entity definition](../subsystems/entity-definitions.md) so generic Reactor surfaces understand the model.
 
-:::tip Next improvement
+:::tip[Next improvement]
 This first panel uses an inline callback to keep the walkthrough focused. Make “Visit” an action when it needs to appear in another place or gain validation, logging, or progress.
 :::
 

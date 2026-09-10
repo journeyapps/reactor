@@ -7,7 +7,7 @@ description: Run one entity action across many selected items.
 
 `BatchStore` runs ordinary [entity actions](../subsystems/actions-and-validation.md#entity-and-coupled-actions) for multiple selected items. It groups [encoded references](../subsystems/entity-definitions/encoding.md) by type, finds compatible actions, loads the entities, confirms once, and reports aggregate [progress](../runtime/operational-feedback.md).
 
-:::note Mental model
+:::note[Mental model]
 A batch action is an ordinary `EntityAction` executed repeatedly. The action still contains the behavior for one item.
 :::
 
@@ -48,7 +48,7 @@ For a selected action, Reactor:
 
 Rollback metadata changes the confirmation language. It does not implement rollback.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 Each invocation still uses the normal action lifecycle and validation.
 :::
 
@@ -61,7 +61,7 @@ Each invocation still uses the normal action lifecycle and validation.
 - ordering does not matter;
 - the application can explain partial failure.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 High concurrency is not free performance. It can amplify rate limits, stale validation, and partial updates. Start sequentially and increase from evidence.
 :::
 

@@ -125,11 +125,11 @@ Product modules should own product colors and names. Reactor core defines the fr
 
 The Playground **Cards**, **Surfaces**, **Forms**, **Buttons**, and **Trees** panels are useful for reviewing a theme across widgets and Reactor sizes.
 
-:::note Mental model
+:::note[Mental model]
 A theme is an identity. A fragment is one module's typed contribution to every supported identity.
 :::
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not add application-specific colors to Reactor's core fragment merely because a core widget displays them. Let the owning module define a fragment and pass its colors to the widget.
 :::
 

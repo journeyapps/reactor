@@ -35,10 +35,27 @@ this.registerComponent(
 
 ## Alternate descriptions
 
-There is no more advanced describer class to adopt. Instead, register more than one `EntityDescriberComponent` when the same entity needs genuinely different summaries, such as a compact name and a detailed operational view.
+Register multiple `EntityDescriberComponent` instances on one definition to offer different summaries of the same entity. For example, keep the `Simple` description above and add a `Detailed` description that includes child and note counts:
 
-Reactor keeps the components as a preference bank. UI that supports description selection can choose one, while generic UI can use the preferred description.
+```ts
+this.registerComponent(
+  new EntityDescriberComponent<TodoModel>({
+    label: 'Detailed',
+    describe: (todo) => ({
+      simpleName: todo.name,
+      complexName: `${todo.children.length} sub-todos · ${todo.notes.length} notes`,
+      tags: todo.tags
+    })
+  })
+);
+```
 
-:::warning Common pitfall
-Do not create another entity definition just to change how an entity is described. Add another describer to the existing definition.
+Give each describer a unique, stable `label`. Reactor uses that label in the description selector and to store the user's preference for the entity type. In the Todo sandbox, the **Info** selector switches between **Simple** and **Detailed**.
+
+`definition.describeEntity(entity)` uses the preferred describer. If there is no matching saved preference, it uses the first describer registered on the definition. A caller can also use a specific component's `describeEntity(entity)` method when it needs a particular summary.
+
+:::warning[Keep one definition per entity type]
+
+Add alternate describers to the existing entity definition. A different summary does not require a new entity type or a duplicate definition.
+
 :::

@@ -7,7 +7,7 @@ description: Build multi-step guidance around real application behavior.
 
 Reactor guides can walk a user through real work. A guide can find [controls](../subsystems/controls.md), focus attention, wait for [actions](../subsystems/actions-and-validation.md) or store events, pass typed values between steps, and clean up listeners and locks.
 
-:::note Mental model
+:::note[Mental model]
 A guide should observe the application's real actions and controls, not implement a second version of the task.
 :::
 
@@ -55,7 +55,7 @@ A selection describes a Reactor control rather than holding a DOM node:
 
 Visible Reactor components register themselves with `GuideStore`. A guide selection can therefore be pending before its target is mounted and resolve after the user opens the correct workspace or panel.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 Guide tooltips render through the anchored-overlay system. They remain attached as the selected component moves or resizes, and selections are disposed automatically when a step deactivates.
 :::
 
@@ -81,7 +81,7 @@ activated: (step) => {
 
 The cleanup callback runs when the step deactivates.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Complete a step when the application outcome occurs, not merely when the highlighted element receives a click. The action may be canceled, fail validation, or open another parameter interaction first.
 :::
 
@@ -112,7 +112,7 @@ Guides can constrain interaction, so design them as a safety system:
 - restart safely after partial completion;
 - do not conceal errors behind the guide layer.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not identify targets with CSS selectors. Use a Reactor component selection so markup changes do not silently break the guide.
 :::
 
