@@ -1,5 +1,14 @@
 # @journeyapps/reactor-mod-editor
 
+## 2.3.16
+
+### Patch Changes
+
+- 1c31a98: Update React and React DOM to 19.3.0 with matching TypeScript definitions. Update cronstrue in Reactor core and JSZip in the editor module.
+- Updated dependencies [ec60ac0]
+- Updated dependencies [1c31a98]
+  - @journeyapps/reactor-mod@8.2.0
+
 ## 2.3.15
 
 ### Patch Changes
