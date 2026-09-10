@@ -15,7 +15,8 @@
   "typings": "./dist/@types/index",
   "scripts": {
     "build:module": "reactor build .",
-    "test": "vitest run",
+    "test": "pnpm test:typecheck && vitest run",
+    "test:typecheck": "tsc --project tests/tsconfig.json",
     "watch:module": "pnpm build:module --watch"
   },
   "dependencies": {

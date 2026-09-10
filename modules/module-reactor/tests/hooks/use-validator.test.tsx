@@ -38,8 +38,12 @@ describe('useValidator', () => {
   });
 
   it('switches validator dependencies without recreating its subscription', async () => {
-    const first = observable.box(ActionValidationState.ALLOWED);
-    const second = observable.box(ActionValidationState.DISABLED);
+    const first = observable.box<ActionValidationState.ALLOWED | ActionValidationState.HIDDEN>(
+      ActionValidationState.ALLOWED
+    );
+    const second = observable.box<ActionValidationState.DISABLED | ActionValidationState.PENDING>(
+      ActionValidationState.DISABLED
+    );
     const rendered: ActionValidationState[] = [];
     const firstValidator: Validator = () => ({ type: first.get() });
     const secondValidator: Validator = () => ({ type: second.get() });
