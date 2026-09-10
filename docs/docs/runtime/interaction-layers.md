@@ -7,7 +7,7 @@ description: Add dialogs, combo boxes, overlays, and shortcuts.
 
 Dialogs, menus, overlays, [notifications](./operational-feedback.md#notifications), and [guide](../advanced/guided-workflows.md) callouts appear above the workspace. Reactor's layer system gives them shared stacking, dismissal, and positioning.
 
-:::note Mental model
+:::note[Mental model]
 A directive describes a temporary interaction. A store shows it, closes it, and resolves the result.
 :::
 
@@ -32,7 +32,7 @@ const result = await ioc.get(DialogStore2).showDialog(
 
 The promise resolves with the directive after successful disposal, or `null` when the interaction is canceled.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 The form directive observes validation changes, disables submission while invalid, exposes loading state during its handler, and owns disposal. The calling action does not need to reproduce that state machine.
 :::
 
@@ -63,7 +63,7 @@ Use anchored overlays for interface state that belongs to a visible source eleme
 
 `ShortcutStore` coordinates registered shortcut handlers, user-customizable chords, collision-free key capture, and shortcut import/export. Actions can declare default hotkeys, but handlers own persistence and the set of possible shortcut targets.
 
-:::tip Pro tip
+:::tip[Pro tip]
 A shortcut should activate an existing action or handler target. It should not become a second implementation of the behavior.
 :::
 
@@ -79,7 +79,7 @@ Layers should dispose when:
 
 The layer manager supports click-through layers, user-exit policy, animation, and always-on-top ordering.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not keep a dialog or overlay alive merely by leaving a React component mounted. Let its directive own completion and disposal so callers can await a reliable outcome.
 :::
 

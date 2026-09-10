@@ -33,11 +33,11 @@ prefsStore.registerPreference(
 
 Call `waitForReady()` before using a setting from code that may run during boot. A `serializeID` invalidates persisted data after an incompatible schema change.
 
-:::note Mental model
+:::note[Mental model]
 A setting saves one user choice. A persisted store saves a larger state model.
 :::
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not use settings as a general-purpose state store. Selection, loading, and domain data belong in application stores even when they eventually influence a setting.
 :::
 

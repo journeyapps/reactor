@@ -7,7 +7,7 @@ title: Exploring the sandbox
 
 The Reactor sandbox is a real application assembled from the demo modules in this repository. It is both a visual catalog and a source-code reference: each panel demonstrates a framework concept using the same APIs an application module uses.
 
-:::note Mental model
+:::note[Mental model]
 The Todo module demonstrates domain composition. The Playground demonstrates interaction primitives. Read them together: meaning on one side, representation on the other.
 :::
 
@@ -43,6 +43,18 @@ Open the Playground workspace and visit these panels in order:
 
 Open the Todos workspace to see the systems working together rather than in isolation. Todo models are owned by a store, described by entity definitions, manipulated by actions, and rendered through generated entity panels and workspaces.
 
+## Try form validation
+
+In **Forms**, use **Fill valid example** in the **Validation playground**. It deliberately includes `0` and `false` to show that both are supplied values. Then try:
+
+1. Clear the project slug or use uppercase letters to see required and custom text validation.
+2. Enter a budget outside 0–100, then clear it to show optional numeric validation.
+3. Turn on **Require approval** to reveal a required field; turn it off to remove that field from the submitted values.
+4. Clear the nested owner name, add an empty reference, or remove all milestones. Each change affects form validity.
+5. Submit the example to inspect the captured values, or open the dialog to see Save track nested validation.
+
+**Reset example** restores the empty starting state. The **Input catalog** below retains the broader selection of dates, entities, files, images, and other controls. These form examples do not persist submitted data.
+
 ## Follow the source
 
 The most useful entry points are:
@@ -50,13 +62,15 @@ The most useful entry points are:
 ```text
 demo/module-playground/src/ReactorPlaygroundModule.ts
 demo/module-playground/src/panels/PlaygroundActionsPanelWidget.tsx
+demo/module-playground/src/panels/PlaygroundFormsPanelWidget.tsx
+demo/module-playground/src/forms/ValidationDemoFormModel.ts
 demo/module-todos/src/ReactorTodosModule.ts
 demo/module-todos/src/entities/TodoDefinition.ts
 ```
 
 Start at a module's `register()` method. It acts as a table of contents for everything that module installs.
 
-:::tip Pro tip
+:::tip[Pro tip]
 When a Playground panel shows several versions, inspect the shared control, action, or model first. The useful lesson is usually how that object produces several UI representations—not the final JSX alone.
 :::
 

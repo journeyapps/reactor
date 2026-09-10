@@ -58,11 +58,11 @@ Configuration is applied immediately and persisted in browser local storage. Res
 
 The demo launcher lists Reactor Debug as an optional module and selects it by default.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Name loggers after stores, groups of actions, or subsystems rather than component instances. A developer can then isolate a useful part of the application.
 :::
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not log credentials, tokens, or private entity payloads. Browser logs and persisted diagnostic choices are user-accessible application state.
 :::
 

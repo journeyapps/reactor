@@ -41,9 +41,13 @@ export class FormModel<T = {}> extends BaseObserver<FormModelListener> {
           })
         );
       },
+      optionsUpdated: () => {
+        this.iterateListeners((cb) => cb.errorsChanged?.({ input }));
+      },
       removed: () => {
         this._inputs.delete(input);
         l1?.();
+        this.iterateListeners((cb) => cb.errorsChanged?.({ input }));
       }
     });
     return input;
@@ -70,7 +74,7 @@ export class FormModel<T = {}> extends BaseObserver<FormModelListener> {
   errors(): T {
     let r = {};
     for (let item of this.inputs.values()) {
-      if (item.error) {
+      if (!item.isValid()) {
         r[item.name] = item.value;
       }
     }
@@ -85,13 +89,8 @@ export class FormModel<T = {}> extends BaseObserver<FormModelListener> {
     return r as T;
   }
 
-  isValid() {
-    for (let item of this.getVisibleInputs().values()) {
-      if (!item.valid) {
-        return false;
-      }
-    }
-    return true;
+  isValid(): boolean {
+    return this.inputs.every((input) => input.isValid());
   }
 
   render(options?: RenderOptions) {

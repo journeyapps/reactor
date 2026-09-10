@@ -13,7 +13,7 @@ Encoding is the boundary between a live domain object and a portable Reactor ent
 
 Use a custom subclass when encoding needs shared services, migrations, or behavior beyond two callbacks.
 
-:::warning Lifecycle note
+:::warning[Lifecycle note]
 Decoding may happen after a page reload. Load the backing store before resolving the reference, and return only an entity that is valid in the current application state.
 :::
 

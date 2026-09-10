@@ -7,7 +7,7 @@ description: Reactor's kernel, boot lifecycle, modules, stores, and shared runti
 
 A Reactor application is a set of [modules](./modules-and-stores.md) installed into one kernel. The kernel coordinates registration and initialization; the `System` tracks shared stores and [entity definitions](./entity-definitions.md); the [workspace runtime](./workspaces-and-panels.md) renders the result.
 
-:::note Mental model
+:::note[Mental model]
 Construction sets defaults. Registration tells Reactor what the modules provide. Initialization loads saved or remote data.
 :::
 
@@ -23,7 +23,7 @@ This ordering is intentional. Store constructors establish initial state. Regist
 
 Reactor core renders the application during its module initialization. This means rendering happens after every store has initialized, while the root component itself is selected during registration.
 
-:::warning Lifecycle note
+:::warning[Lifecycle note]
 A store constructor must leave the store safe to inspect. Other modules can discover it during registration before asynchronous initialization has completed.
 :::
 
@@ -44,7 +44,7 @@ register({ ioc, registerStore }: ReactorModuleRegisterEvent) {
 
 Avoid treating the IOC container as application state. It locates long-lived services; observable state belongs in stores and models.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Ask the container for shared stores, engines, and registries. Pass request-specific values through method arguments and action events.
 :::
 

@@ -7,7 +7,7 @@ description: Find commands, arrange your workspace, and keep frequent actions cl
 
 Reactor applications are organized around workspaces, panels, and commands instead of a fixed sequence of pages. Each product chooses which features to install, so names and available actions will differ, but the main interactions are consistent.
 
-:::note This guide will grow
+:::note[This guide will grow]
 This is a practical starting point for people using Reactor-based applications. It covers the shared application shell and can be expanded as more user workflows settle.
 :::
 
@@ -28,7 +28,7 @@ Select **Search** in the header to open the command palette. The **Everything** 
 
 Start typing any part of a command's name or a related term. Use the arrow keys to change the highlighted result and Enter to select it, or select a result with the pointer. Some actions may ask for another value before they run. Unavailable actions can remain visible with an explanation of what is required.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Use the command palette when you know what you want to do but not where the application placed it. The same action can appear in a panel, menu, shortcut, and command palette.
 :::
 
@@ -58,7 +58,7 @@ Use the workspace choices in the header to move between task layouts. A product 
 
 With advanced workspace management enabled, workspace context menus can include actions such as rename, clone, group, import, export, or reset. Some workspaces are managed by the application and intentionally cannot be changed.
 
-:::warning Resetting a workspace
+:::warning[Resetting a workspace]
 Reset restores the generated workspace layout and discards your saved arrangement for that workspace. Export first if you may want the current layout again.
 :::
 

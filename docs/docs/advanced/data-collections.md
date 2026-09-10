@@ -7,7 +7,7 @@ description: Model asynchronous, paginated, and lifecycle-aware data for Reactor
 
 `@journeyapps/reactor-lib-data-layer` provides observable primitives for remote and long-lived collections. They are independent of Reactor [panels](../subsystems/workspaces-and-panels.md) and [entities](../subsystems/entity-definitions.md), making them useful inside [stores](../subsystems/modules-and-stores.md) and domain models.
 
-:::note Mental model
+:::note[Mental model]
 Collections own asynchronous list state. Entity definitions explain what the resulting models mean. Presenters decide how those entities appear.
 :::
 
@@ -26,7 +26,7 @@ await todos.load(async (event) => {
 
 Concurrent calls share the in-flight promise. Clearing a collection marks its current load event aborted, preventing a late result from replacing newer state.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 The abort flag protects collection state from a stale completion. It does not cancel the underlying network request; use an `AbortController` in the client when transport cancellation matters.
 :::
 
@@ -67,7 +67,7 @@ const models = new LifecycleCollection({
 
 This is valuable when models own listeners, nested collections, cached state, or other resources that should survive a refresh.
 
-:::warning Lifecycle note
+:::warning[Lifecycle note]
 Every lifecycle model must implement meaningful `dispose()` behavior. A collection can remove the model from its map, but only the model knows which subscriptions and resources it owns.
 :::
 

@@ -38,6 +38,13 @@ export class GroupInput<T = {}> extends FormInput<GroupInputGenerics<T>> {
   private setValueLock: boolean;
   inputs: FormInput[];
 
+  override get valid(): boolean {
+    if (!super.valid) {
+      return false;
+    }
+    return this.inputs.every((input) => input.isValid());
+  }
+
   constructor(options: GroupInputOptions<T>) {
     super({
       ...options,
@@ -56,6 +63,12 @@ export class GroupInput<T = {}> extends FormInput<GroupInputGenerics<T>> {
     this.setValue(calculateValue(inputs) as T);
     const listeners = inputs.map((i) => {
       return i.registerListener({
+        errorChanged: () => {
+          this.iterateListeners((cb) => cb.errorChanged?.({ error: this.error }));
+        },
+        optionsUpdated: () => {
+          this.iterateListeners((cb) => cb.errorChanged?.({ error: this.error }));
+        },
         valueChanged: () => {
           this.setValueLock = true;
           this.setValue(calculateValue(inputs) as T);

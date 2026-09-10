@@ -8,9 +8,11 @@ import { ComboBoxStore2 } from '../stores/combo2/ComboBoxStore2';
 import { v4 } from 'uuid';
 import { Btn } from '../definitions/common';
 import { ThemeStore } from '../stores/themes/ThemeStore';
-import { theme } from '../stores/themes/reactor-theme-fragment';
+import { styled, theme } from '../stores/themes/reactor-theme-fragment';
 import { AbstractValueControl, AbstractValueControlOptions } from './AbstractValueControl';
-import { ReactorIcon } from '../widgets/icons/IconWidget';
+import { IconWidget, ReactorIcon } from '../widgets/icons/IconWidget';
+import { ReactorTooltipWidget } from '../widgets/info/tooltips';
+import { getReactorControlBorderRadius, size, Size, useReactorSize } from '../hooks/useReactorSize';
 import { MousePosition } from '../layers/combo/SmartPositionWidget';
 import { PanelButtonWidget } from '../widgets/forms/PanelButtonWidget';
 import { SimpleComboBoxDirective } from '../stores/combo2/directives/simple/SimpleComboBoxDirective';
@@ -41,6 +43,10 @@ export class SetControl<T extends string = string> extends AbstractValueControl<
 
   get disabled() {
     return this.options.disabled;
+  }
+
+  get hasOptions() {
+    return this.options.options.length > 0;
   }
 
   representAsComboBoxItems(options: RepresentAsComboBoxItemsEvent = {}): ComboBoxItem[] {
@@ -89,12 +95,39 @@ export class SetControl<T extends string = string> extends AbstractValueControl<
   }
 }
 
+namespace S {
+  export const Placeholder = styled.em`
+    color: ${(p) => p.theme.text.secondary};
+  `;
+
+  export const Empty = styled.button<{ $size: Size }>`
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: ${(p) => size(p, ['4px 10px', '6px 14px', '8px 18px'])};
+    height: ${(p) => size(p, ['28px', '34px', '42px'])};
+    border: 1px solid ${(p) => p.theme.button.border};
+    border-radius: ${(p) => getReactorControlBorderRadius(p.$size)}px;
+    background: ${(p) => p.theme.button.background};
+    color: ${(p) => p.theme.text.secondary};
+    font-family: inherit;
+    font-size: ${(p) => size(p, ['14px', '15px', '17px'])};
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  `;
+}
+
 export interface SetControlWidgetProps {
   control: SetControl;
 }
 
 export const SetControlWidget: React.FC<SetControlWidgetProps> = (props) => {
   const forceUpdate = useForceUpdate();
+  const controlSize = useReactorSize();
   useEffect(() => {
     return props.control.registerListener({
       valueChanged: () => {
@@ -106,9 +139,29 @@ export const SetControlWidget: React.FC<SetControlWidgetProps> = (props) => {
     });
   }, []);
 
+  if (!props.control.hasOptions) {
+    return <S.Placeholder>(No values)</S.Placeholder>;
+  }
+
+  const label = props.control.getSelectedOption()?.label;
+  if (!label) {
+    return (
+      <ReactorTooltipWidget tooltip={props.control.tooltip}>
+        <S.Empty
+          type="button"
+          $size={controlSize}
+          disabled={props.control.disabled}
+          onClick={(event) => props.control.select(event)}
+        >
+          <em>Select a value</em>
+          <IconWidget icon="sort" />
+        </S.Empty>
+      </ReactorTooltipWidget>
+    );
+  }
   return (
     <PanelButtonWidget
-      label={props.control.getSelectedOption()?.label || 'na'}
+      label={label}
       tooltip={props.control.tooltip}
       disabled={props.control.disabled}
       icon="sort"

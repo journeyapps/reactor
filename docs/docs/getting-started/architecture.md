@@ -8,7 +8,7 @@ description: Understand how Reactor starts modules and turns their features into
 
 Reactor has three layers. Knowing what belongs in each one makes a large application easier to change.
 
-:::note Mental model
+:::note[Mental model]
 The kernel starts the application. Modules register features. Runtime services turn those features into UI.
 :::
 
@@ -38,7 +38,7 @@ This layer describes the important things in your application:
 
 These objects are not tied to one screen. A single entity definition can provide names, search, trees, cards, saved references, child objects, open actions, documentation, and generated panels.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Add behavior to the existing definition or action instead of teaching another widget about your model. Other Reactor UI can then reuse it.
 :::
 
@@ -74,7 +74,7 @@ Suppose a user runs an entity action from the command palette:
 
 The command palette does not need to know where entities are stored. The search does not need to know who asked for the value. The action does not need to know how panels are arranged.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 This is why the same action works from a tree menu, toolbar, shortcut, guide, or command palette.
 :::
 
@@ -96,7 +96,7 @@ Use these boundaries when deciding where new behavior belongs:
 | Dialogs, menus, and overlays                 | Layer/directive system      |
 | Long-running operation feedback              | Action status or Visor      |
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not put application behavior in a React widget only because that widget needs it first. If it may later appear in a menu, shortcut, guide, or command palette, make it an action.
 :::
 

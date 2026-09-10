@@ -22,7 +22,7 @@ A [module](../subsystems/modules-and-stores.md) should install one related set o
 
 Avoid a single product module that knows every entity and action. A small top-level module may select branding and product defaults, while feature modules register their own behavior.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Treat a module's `register()` method as its table of contents. If it is difficult to scan, move groups of registrations into clearly named functions or smaller modules.
 :::
 
@@ -52,7 +52,7 @@ When the user, account, document, or app changes:
 4. generate defaults only when no saved state exists;
 5. ignore late responses for the previous selection.
 
-:::warning Hidden complexity
+:::warning[Hidden complexity]
 Loading can finish out of order. Record which user, account, document, or app each request belongs to, and check it again before applying the result.
 :::
 
@@ -108,7 +108,7 @@ For every listener, reaction, request, loader, or layer, identify:
 
 Stores and models are natural lifetime boundaries. Widgets should own only subscriptions that exist because that widget is mounted.
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 MobX makes observation easy; it does not make observation free. An autorun created by a long-lived store or entity component is effectively application-global until explicitly disposed.
 :::
 

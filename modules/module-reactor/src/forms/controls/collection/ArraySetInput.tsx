@@ -41,6 +41,18 @@ export class ArraySetInput<T> extends FormInput<ArraySetInputGenerics<T>> {
   entryListeners: Map<string, () => any>;
 
   loading: boolean;
+  private settingValues = false;
+
+  protected override isEmpty(): boolean {
+    return Object.keys(this.value || {}).length === 0;
+  }
+
+  override get valid(): boolean {
+    if (!super.valid) {
+      return false;
+    }
+    return Array.from(this.entries.values()).every((input) => input.isValid());
+  }
 
   constructor(options: ArraySetInputOptions<T>) {
     super({
@@ -69,12 +81,18 @@ export class ArraySetInput<T> extends FormInput<ArraySetInputGenerics<T>> {
     // to generate
     _.difference(Object.keys(value), Array.from(this.entries.keys())).forEach((key) => {
       const item = this.options.generate(key);
-      if (value[key]) {
-        item.setValue(value[key]);
-      }
+      item.setValue(value[key]);
       const listener = item.registerListener({
+        errorChanged: () => {
+          this.iterateListeners((cb) => cb.errorChanged?.({ error: this.error }));
+        },
+        optionsUpdated: () => {
+          this.iterateListeners((cb) => cb.errorChanged?.({ error: this.error }));
+        },
         valueChanged: () => {
-          this.updateValue();
+          if (!this.settingValues) {
+            this.updateValue();
+          }
         }
       });
       this.entryListeners.set(key, listener);
@@ -88,7 +106,14 @@ export class ArraySetInput<T> extends FormInput<ArraySetInputGenerics<T>> {
       this.entries.delete(r);
     });
 
+    this.settingValues = true;
+    try {
+      this.entries.forEach((item, key) => item.setValue(value[key]));
+    } finally {
+      this.settingValues = false;
+    }
     super.setValue(value);
+    this.iterateListeners((cb) => cb.errorChanged?.({ error: this.error }));
   }
 
   protected updateValue() {
@@ -178,7 +203,7 @@ export const ArraySetInputEntryWidget: React.FC<
         <S.EntryLabel>{props.label}</S.EntryLabel>
         <PanelButtonWidget icon="close" mode={PanelButtonMode.LINK} action={props.remove} />
       </ArraySetEntryTop>
-      <S.Display>{props.input.renderControl({ inline: true })}</S.Display>
+      <S.Display>{props.input.renderInputWidget({ inline: true })}</S.Display>
     </S.Entry>
   );
 };

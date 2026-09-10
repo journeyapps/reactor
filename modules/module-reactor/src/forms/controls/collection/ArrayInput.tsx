@@ -46,6 +46,17 @@ export class ArrayInput<T> extends FormInput<ArrayInputGenerics<T>> {
     this.setValue(this.value || []);
   }
 
+  protected override isEmpty(): boolean {
+    return (this.value?.length ?? 0) === 0;
+  }
+
+  override get valid(): boolean {
+    if (!super.valid) {
+      return false;
+    }
+    return Array.from(this.entries.values()).every((input) => input.isValid());
+  }
+
   setLoading(loading = this.loading) {
     if (this.loading === loading) {
       return;
@@ -65,6 +76,12 @@ export class ArrayInput<T> extends FormInput<ArrayInputGenerics<T>> {
       values.map((value) => {
         const item = this.options.generate();
         const listener = item.registerListener({
+          errorChanged: () => {
+            this.iterateListeners((cb) => cb.errorChanged?.({ error: this.error }));
+          },
+          optionsUpdated: () => {
+            this.iterateListeners((cb) => cb.errorChanged?.({ error: this.error }));
+          },
           valueChanged: () => {
             super.setValue(Array.from(this.entries.values()).map((v) => v.value));
           }
@@ -79,6 +96,7 @@ export class ArrayInput<T> extends FormInput<ArrayInputGenerics<T>> {
     });
 
     super.setValue(values);
+    this.iterateListeners((cb) => cb.errorChanged?.({ error: this.error }));
   }
 
   protected updateValue() {
@@ -119,7 +137,7 @@ export const ArrayInputWidget: React.FC<ArrayInputWidgetProps> = (props) => {
         {Array.from(input.entries.keys()).map((key, index) => {
           return (
             <S.Entry key={key}>
-              <S.Display>{input.entries.get(key).renderControl({ inline: true })}</S.Display>
+              <S.Display>{input.entries.get(key).renderInputWidget({ inline: true })}</S.Display>
               <FloatingPanelButtonWidget
                 btn={{
                   icon: 'close',

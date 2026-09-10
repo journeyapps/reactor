@@ -7,7 +7,7 @@ description: Define an action once and use it across the application.
 
 An action describes something a user can do. The same action can appear in a button, menu, [command palette](./search-selection-and-command-palette.md#command-palette-discovery), shortcut, [batch operation](../advanced/batch-actions.md), or [guide](../advanced/guided-workflows.md).
 
-:::note Mental model
+:::note[Mental model]
 An action keeps the operation, its validation, and its progress in one place.
 :::
 
@@ -66,7 +66,7 @@ super({
 
 Macro behavior contributes conventional tags. `DELETE` adds `delete`, `remove`, and `destroy`; `COPY` adds `copy`, `clone`, and `duplicate`.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Name the operation, not the control. Prefer “Create todo” to “Create button clicked.” The action may later run without a button.
 :::
 
@@ -117,7 +117,7 @@ class TodoLockedValidator extends ActionValidator<EntityActionEvent<TodoModel>> 
 }
 ```
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Use `PENDING` only when a validator has started asynchronous work and will notify its listeners when the answer changes. If the missing information is an unresolved action parameter, return `DEFERRED`.
 :::
 
@@ -158,7 +158,7 @@ export class DuplicateTodoAction extends EntityAction<TodoModel> {
 
 An action opened from an entity menu already has its target. From the [command palette](./search-selection-and-command-palette.md#action-parameter-resolution), its entity definition resolves one through a registered [search behavior](./entity-definitions/search.md).
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 Candidate entities are placed into partial action events and validated before selection. The picker can therefore hide or disable candidates that would make the final action unavailable.
 :::
 

@@ -23,7 +23,7 @@ pnpm build
 
 `pnpm build` compiles TypeScript and builds every Reactor module bundle.
 
-:::tip Pro tip
+:::tip[Pro tip]
 Run `pnpm build:ts` while iterating on framework types. Run the complete build before handing off changes that affect module bundling or the server.
 :::
 
@@ -70,6 +70,6 @@ pnpm --dir docs start
 
 The static documentation build also regenerates API Markdown from package declarations.
 
-:::warning Generated content
+:::warning[Generated content]
 Do not edit `docs/docs/generated` directly. Improve exported TSDoc in the owning package and rebuild the site.
 :::

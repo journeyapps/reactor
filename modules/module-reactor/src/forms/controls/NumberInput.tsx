@@ -28,16 +28,21 @@ export class NumberInput extends FormInput<
   }
 
   validate() {
-    if (this.options.required) {
-      if (isNaN(this.value)) {
-        return this.setError('Not valid');
-      }
-      if (this.options.min != null && this.value < this.options.min) {
-        return this.setError(`Value must be greater than ${this.options.min}`);
-      }
-      if (this.options.max != null && this.value > this.options.max) {
-        return this.setError(`Value must be less than ${this.options.max}`);
-      }
+    if (this.value == null) {
+      super.validate();
+      return;
+    }
+    if (!Number.isFinite(this.value)) {
+      this.setError('Not valid');
+      return;
+    }
+    if (this.options.min != null && this.value < this.options.min) {
+      this.setError(`Value must be greater than or equal to ${this.options.min}`);
+      return;
+    }
+    if (this.options.max != null && this.value > this.options.max) {
+      this.setError(`Value must be less than or equal to ${this.options.max}`);
+      return;
     }
     super.validate();
   }

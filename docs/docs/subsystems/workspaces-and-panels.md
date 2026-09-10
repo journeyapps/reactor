@@ -7,7 +7,7 @@ description: Create panels, place them in workspaces, and save the layout.
 
 Panels contain application UI. Workspaces arrange panel models into tabs, splits, trays, and floating windows, then save that layout through the [persistence system](./settings-and-persistence.md).
 
-:::note Mental model
+:::note[Mental model]
 A feature creates panel state. A panel factory renders it. The active layout engine decides where it belongs.
 :::
 
@@ -51,7 +51,7 @@ Register factories during module registration:
 event.ioc.get(WorkspaceStore).registerFactory(new TodoPanelFactory());
 ```
 
-:::warning Common pitfall
+:::warning[Common pitfall]
 Do not put class instances or other non-serializable objects in panel state. Save an ID, or use [entity encoding](./entity-definitions/encoding.md) so the panel can find the object after a reload.
 :::
 
@@ -110,7 +110,7 @@ return new WorkspaceGroup({
 
 The same entity can therefore open differently by workspace without changing its [handlers](./entity-definitions/handlers-and-opening.md).
 
-:::tip Pro tip
+:::tip[Pro tip]
 Use preferred open actions when an entity should open differently in one workspace. Use the entity handler's ordering for the application-wide default.
 :::
 
@@ -125,7 +125,7 @@ Workspace generators can provide separate simple and advanced defaults. `Advance
 
 The advanced layout accepts hints such as `COUPLED`, which places related models into coordinated tab groups, and `ISOLATED_TRAY`, which opens a model in its own collapsed tray.
 
-:::note Hidden complexity
+:::note[Hidden complexity]
 Opening content is policy-driven. The layout engine can activate an existing match, select an appropriate tab group, create a tray, move to an affiliated workspace, or fall back to a floating window.
 :::
 
@@ -149,7 +149,7 @@ Layout and dimension changes trigger a trailing debounced save. Deserialization 
 
 Applications can replace the serializer to save a separate layout for each user or selected application.
 
-:::warning Lifecycle note
+:::warning[Lifecycle note]
 When the user or selected application changes, check that loaded workspace data still belongs to the current selection before applying it. An old request must not replace the new layout.
 :::
 
