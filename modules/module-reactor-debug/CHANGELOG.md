@@ -1,5 +1,13 @@
 # @journeyapps/reactor-mod-debug
 
+## 0.2.10
+
+### Patch Changes
+
+- Updated dependencies [ce12daa]
+  - @journeyapps/reactor-mod@8.3.0
+  - @journeyapps/reactor-lib-search@1.0.19
+
 ## 0.2.9
 
 ### Patch Changes
