@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { useLayoutEffect, useState } from 'react';
 
+export enum SizeMeasurement {
+  CLIENT = 'client',
+  BOUNDS = 'bounds'
+}
+
 export interface ObservedSize {
   width: number;
   height: number;
@@ -12,7 +17,7 @@ export interface ObservedSize {
  */
 export const useSizeObserver = (
   forwardRef?: React.RefObject<HTMLElement>,
-  measurement: 'client' | 'bounds' = 'client'
+  measurement: SizeMeasurement = SizeMeasurement.CLIENT
 ): ObservedSize => {
   const [size, setSize] = useState<ObservedSize>({ width: 0, height: 0 });
 
@@ -20,7 +25,7 @@ export const useSizeObserver = (
     const element = forwardRef?.current;
     if (!element) return;
     const update = () => {
-      const bounds = measurement === 'bounds' ? element.getBoundingClientRect() : null;
+      const bounds = measurement === SizeMeasurement.BOUNDS ? element.getBoundingClientRect() : null;
       const next = { width: bounds?.width ?? element.clientWidth, height: bounds?.height ?? element.clientHeight };
       setSize((current) => (current.width === next.width && current.height === next.height ? current : next));
     };

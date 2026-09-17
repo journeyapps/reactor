@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from '@emotion/styled';
 import { ImageMedia, ImageMediaURL } from './ImageMedia';
 import { LoadingPanelWidget } from '../../../widgets/panel/panel/LoadingPanelWidget';
@@ -42,7 +42,8 @@ namespace S {
 
 const ImageViewer: React.FC<{ asset: ImageMedia; url: string }> = ({ asset, url }) => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const zoom = usePanZoom(dimensions);
+  const viewerRef = useRef<HTMLDivElement>(null);
+  const zoom = usePanZoom({ forwardRef: viewerRef, ...dimensions });
   const options = asset.getOptions();
   return (
     <S.Container>
@@ -62,7 +63,7 @@ const ImageViewer: React.FC<{ asset: ImageMedia; url: string }> = ({ asset, url 
           { label: 'Size', value: `${asset.getMB().toFixed(2)} MB` }
         ]}
       />
-      <S.Viewer ref={zoom.ref} $dragging={zoom.dragging}>
+      <S.Viewer ref={viewerRef} $dragging={zoom.dragging}>
         <S.Image
           src={url}
           alt={options.name}

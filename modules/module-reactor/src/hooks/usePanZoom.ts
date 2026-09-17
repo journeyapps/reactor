@@ -1,8 +1,9 @@
-import { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import { RefObject, useCallback, useLayoutEffect, useState } from 'react';
 import { useSizeObserver } from './useSizeObserver';
 import { PanZoomGesture, PanZoomPoint, usePanZoomGestures } from './usePanZoomGestures';
 
 export interface UsePanZoomOptions {
+  forwardRef: RefObject<HTMLElement>;
   width: number;
   height: number;
   minScale?: number;
@@ -21,9 +22,8 @@ interface PanZoomView {
  * and gesture handling. Apply transform to content with a centered transform
  * origin inside a viewport using touch-action: none and overflow: hidden.
  */
-export const usePanZoom = ({ width, height, minScale = 0.05, maxScale = 16 }: UsePanZoomOptions) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const viewport = useSizeObserver(ref);
+export const usePanZoom = ({ forwardRef, width, height, minScale = 0.05, maxScale = 16 }: UsePanZoomOptions) => {
+  const viewport = useSizeObserver(forwardRef);
   const [view, setView] = useState<PanZoomView>({ x: 0, y: 0, scale: 1, fitting: true });
   const ready = width > 0 && height > 0 && viewport.width > 0 && viewport.height > 0;
   const fitScale = ready ? Math.min(1, viewport.width / width, viewport.height / height) : 1;
@@ -65,7 +65,7 @@ export const usePanZoom = ({ width, height, minScale = 0.05, maxScale = 16 }: Us
     },
     [constrain]
   );
-  const { dragging } = usePanZoomGestures({ forwardRef: ref, enabled: ready, pan, zoom });
+  const { dragging } = usePanZoomGestures({ forwardRef, enabled: ready, pan, zoom });
 
   // New content starts fitted; viewport and limit changes preserve manual zoom.
   useLayoutEffect(() => {
@@ -101,7 +101,6 @@ export const usePanZoom = ({ width, height, minScale = 0.05, maxScale = 16 }: Us
   const zoomBy = (factor: number) => zoom({ factor, from: { x: 0, y: 0 }, to: { x: 0, y: 0 } });
 
   return {
-    ref,
     scale: view.scale,
     fitting: view.fitting,
     dragging,

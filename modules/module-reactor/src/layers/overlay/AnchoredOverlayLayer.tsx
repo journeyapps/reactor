@@ -11,7 +11,7 @@ import {
 import { SmartPositionWidget } from '../combo/SmartPositionWidget';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
 import { useRef } from 'react';
-import { useSizeObserver } from '../../hooks/useSizeObserver';
+import { SizeMeasurement, useSizeObserver } from '../../hooks/useSizeObserver';
 
 namespace S {
   export const Container = styled.div<{ $clickThrough: boolean }>`
@@ -29,7 +29,7 @@ const getBounds = (bounds: AnchoredOverlayRecord['bounds']) => ({
 
 const AnchoredOverlayWidget: React.FC<{ overlay: AnchoredOverlayRecord }> = observer(({ overlay }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const dimensions = useSizeObserver(ref, 'bounds');
+  const dimensions = useSizeObserver(ref, SizeMeasurement.BOUNDS);
   const bounds = getBounds(overlay.bounds);
   const viewportWidth = typeof document === 'undefined' ? 0 : document.documentElement.clientWidth;
   const viewportHeight = typeof document === 'undefined' ? 0 : document.documentElement.clientHeight;
