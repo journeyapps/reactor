@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
+import { useDelay } from '../../hooks/useDelay';
 import { ioc } from '../../inversify.config';
 import { DNDStore } from '../../stores/dnd/DNDStore';
 
@@ -16,20 +17,17 @@ export const useDroppableRaw = <T extends { [key: string]: string } = {}>(
   props: UseDroppableRawOptions<T>,
   deps = []
 ) => {
-  const timerHandle = useRef<any>(null);
+  const delay = useDelay();
   useEffect(() => {
     const dragOver = (event: DragEvent) => {
       if (props.accepts(event.dataTransfer.types)) {
         event.preventDefault();
         event.dataTransfer.dropEffect = 'link';
-        if (timerHandle.current) {
-          clearTimeout(timerHandle.current);
-        } else {
+        if (!delay.isPending()) {
           props.dragover?.();
         }
-        timerHandle.current = setTimeout(() => {
+        delay.schedule(() => {
           props.dragexit?.();
-          timerHandle.current = null;
         }, 50);
       }
     };
@@ -61,8 +59,9 @@ export const useDroppableRaw = <T extends { [key: string]: string } = {}>(
     props.forwardRef.current.addEventListener('drop', drop);
 
     return () => {
+      delay.cancel();
       props.forwardRef.current?.removeEventListener('dragover', dragOver);
       props.forwardRef.current?.removeEventListener('drop', drop);
     };
-  }, [props.forwardRef, ...deps]);
+  }, [props.forwardRef, delay, ...deps]);
 };

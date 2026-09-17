@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useDelay } from './useDelay';
 import { MousePosition } from '../layers/combo/SmartPositionWidget';
 import { getReactorViewportMode, ReactorViewportMode } from './useReactorViewportMode';
 
@@ -37,21 +38,15 @@ export const useLongPressContextMenu = <T extends HTMLElement>(
   handler?: LongPressContextMenuHandler,
   disabled?: boolean
 ) => {
-  const timeoutRef = React.useRef<number | null>(null);
-  const animationTimeoutRef = React.useRef<number | null>(null);
+  const pressDelay = useDelay();
+  const animationDelay = useDelay();
   const triggeredRef = React.useRef(false);
   const suppressNextClickRef = React.useRef(false);
 
   const clearLongPress = React.useCallback(() => {
-    if (timeoutRef.current) {
-      window.clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-    if (animationTimeoutRef.current) {
-      window.clearTimeout(animationTimeoutRef.current);
-      animationTimeoutRef.current = null;
-    }
-  }, []);
+    pressDelay.cancel();
+    animationDelay.cancel();
+  }, [pressDelay, animationDelay]);
 
   React.useEffect(() => {
     const element = ref.current;
@@ -108,10 +103,10 @@ export const useLongPressContextMenu = <T extends HTMLElement>(
       startPosition = position;
       triggeredRef.current = false;
       cancelPendingPress();
-      animationTimeoutRef.current = window.setTimeout(() => {
+      animationDelay.schedule(() => {
         element.classList.add(LONG_PRESS_PENDING_CLASS);
       }, LONG_PRESS_ANIMATION_DELAY);
-      timeoutRef.current = window.setTimeout(() => {
+      pressDelay.schedule(() => {
         triggeredRef.current = true;
         suppressNextClickRef.current = true;
         element.classList.remove(LONG_PRESS_PENDING_CLASS);
@@ -161,5 +156,5 @@ export const useLongPressContextMenu = <T extends HTMLElement>(
       element.removeEventListener('touchend', onTouchEnd);
       element.removeEventListener('touchcancel', onTouchCancel);
     };
-  }, [clearLongPress, disabled, handler, ref]);
+  }, [clearLongPress, disabled, handler, ref, pressDelay, animationDelay]);
 };

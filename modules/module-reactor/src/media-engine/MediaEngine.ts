@@ -1,4 +1,4 @@
-import { AbstractMediaType } from './AbstractMediaType';
+import { AbstractMediaType, MediaTypeMatcher } from './AbstractMediaType';
 import { WorkspaceStore } from '../stores/workspace/WorkspaceStore';
 import { AbstractMedia } from './AbstractMedia';
 import * as _ from 'lodash';
@@ -33,7 +33,11 @@ export class MediaEngine {
     return this.types;
   }
 
-  getMediaType(matcher: { path: string }): AbstractMediaType | null {
+  getMediaType(matcher: MediaTypeMatcher): AbstractMediaType | null {
+    const mimeType = Object.values(this.types).find((type) => type.matchesMime(matcher.mime));
+    if (mimeType) {
+      return mimeType;
+    }
     for (let mime in this.types) {
       const type = this.types[mime];
       if (type.matches(matcher)) {

@@ -117,6 +117,7 @@ export const useButton = (props: UseButtonProps) => {
     loading: loading,
     disabled: disabled,
     tooltip: tooltip,
+    tooltipDelay: props.btn.tooltipDelay ?? 500,
     icon,
     ref,
     validationResult

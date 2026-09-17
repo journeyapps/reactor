@@ -6,6 +6,7 @@ import { Layer, LayerManager } from '../../stores/layer/LayerManager';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
 import { FloatingPanelWidget } from '../floating/FloatingPanelWidget';
 import { useAnchoredOverlay } from '../../hooks/useAnchoredOverlay';
+import { useDelay } from '../../hooks/useDelay';
 import { AnchoredOverlayPlacement } from '../../stores/overlay/AnchoredOverlayStore';
 
 export enum TooltipPosition {
@@ -24,6 +25,10 @@ export interface TooltipProps {
   tooltip?: string;
   tooltipPos?: TooltipPosition;
   tooltipState?: TooltipState;
+  /**
+   * Hover delay in milliseconds before showing the tooltip. Defaults to zero.
+   */
+  tooltipDelay?: number;
 }
 
 export const setupTooltipProps = (props: Partial<TooltipProps>) => {
@@ -64,7 +69,18 @@ export interface ReactorTooltipWidgetProps extends TooltipProps {
 
 export const ReactorTooltipWidget: React.FC<ReactorTooltipWidgetProps> = (props) => {
   const [hovered, setHovered] = useState(false);
-  const active = hovered || props.tooltipState === TooltipState.SHOW;
+  const [hoverReady, setHoverReady] = useState(false);
+  const delay = props.tooltipDelay ?? 0;
+  const hoverDelay = useDelay();
+  useEffect(() => {
+    setHoverReady(false);
+    if (!hovered || !props.tooltip || delay <= 0) {
+      return;
+    }
+    hoverDelay.schedule(() => setHoverReady(true), delay);
+    return hoverDelay.cancel;
+  }, [hovered, props.tooltip, delay, hoverDelay]);
+  const active = (hovered && (delay <= 0 || hoverReady)) || props.tooltipState === TooltipState.SHOW;
   const position = props.tooltipPos || TooltipPosition.TOP;
   const render = React.useCallback(() => <S.Content>{props.tooltip}</S.Content>, [props.tooltip]);
   const overlay = useAnchoredOverlay({
@@ -80,7 +96,15 @@ export const ReactorTooltipWidget: React.FC<ReactorTooltipWidgetProps> = (props)
   }
 
   return (
-    <S.Anchor ref={overlay.ref} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+    <S.Anchor
+      ref={overlay.ref}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => {
+        hoverDelay.cancel();
+        setHovered(false);
+        setHoverReady(false);
+      }}
+    >
       {props.children}
     </S.Anchor>
   );

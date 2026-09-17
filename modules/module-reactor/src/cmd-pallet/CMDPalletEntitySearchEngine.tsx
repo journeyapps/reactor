@@ -13,6 +13,7 @@ import {
 } from '../entities/components/search/EntitySearchEngineComponent';
 import { EntityDefinition } from '../entities/EntityDefinition';
 import { ActionSource } from '../actions/Action';
+import { MousePosition } from '../layers/combo/SmartPositionWidget';
 import { useDraggableEntity } from '../widgets/dnd3/entities/useDraggableEntity';
 import { SearchEvent } from '@journeyapps/reactor-lib-search';
 import { CommandPalletEntryWidget } from '../layers/command-pallet/CommandPalletEntryWidget';
@@ -63,10 +64,10 @@ export class CMDPalletEntitySearchEngine<E> extends CMDPalletSearchEngine<CMDPal
     return transformed;
   }
 
-  async handleSelection(entry: CMDPalletEntitySearchEngineEntry<E>) {
+  async handleSelection(entry: CMDPalletEntitySearchEngineEntry<E>, position: MousePosition) {
     return this.options2.component.definition.selectEntity({
       entity: entry.entity,
-      position: null,
+      position,
       source: ActionSource.COMMAND_PALLET
     });
   }

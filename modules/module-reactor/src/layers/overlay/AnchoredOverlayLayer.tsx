@@ -10,7 +10,8 @@ import {
 } from '../../stores/overlay/AnchoredOverlayStore';
 import { SmartPositionWidget } from '../combo/SmartPositionWidget';
 import { styled } from '../../stores/themes/reactor-theme-fragment';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
+import { SizeMeasurement, useSizeObserver } from '../../hooks/useSizeObserver';
 
 namespace S {
   export const Container = styled.div<{ $clickThrough: boolean }>`
@@ -28,7 +29,7 @@ const getBounds = (bounds: AnchoredOverlayRecord['bounds']) => ({
 
 const AnchoredOverlayWidget: React.FC<{ overlay: AnchoredOverlayRecord }> = observer(({ overlay }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const dimensions = useSizeObserver(ref, SizeMeasurement.BOUNDS);
   const bounds = getBounds(overlay.bounds);
   const viewportWidth = typeof document === 'undefined' ? 0 : document.documentElement.clientWidth;
   const viewportHeight = typeof document === 'undefined' ? 0 : document.documentElement.clientHeight;
@@ -40,20 +41,6 @@ const AnchoredOverlayWidget: React.FC<{ overlay: AnchoredOverlayRecord }> = obse
         ? AnchoredOverlayPlacement.BOTTOM
         : AnchoredOverlayPlacement.TOP
       : overlay.placement;
-
-  useLayoutEffect(() => {
-    if (!ref.current) {
-      return;
-    }
-    const update = () => {
-      const next = ref.current.getBoundingClientRect();
-      setDimensions({ width: next.width, height: next.height });
-    };
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [overlay.id, placement]);
 
   const position = (() => {
     let clientX: number;

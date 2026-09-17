@@ -86,7 +86,10 @@ export const PanelButtonWidget: React.FC<
 > = observer((props) => {
   const size = useReactorSize(props.size);
   const ref = props.forwardRef || useRef(null);
-  const { onClick, icon, attention, disabled, tooltip, validationResult } = useButton({ btn: props, forwardRef: ref });
+  const { onClick, icon, attention, disabled, tooltip, tooltipDelay, validationResult } = useButton({
+    btn: props,
+    forwardRef: ref
+  });
   const _theme = ioc.get(ThemeStore).getCurrentTheme(theme);
 
   if (validationResult.type === ActionValidationState.HIDDEN) {
@@ -103,7 +106,11 @@ export const PanelButtonWidget: React.FC<
   }
 
   return (
-    <ReactorTooltipWidget tooltip={tooltip} tooltipPos={props.tooltipPos || TooltipPosition.BOTTOM}>
+    <ReactorTooltipWidget
+      tooltip={tooltip}
+      tooltipDelay={tooltipDelay}
+      tooltipPos={props.tooltipPos || TooltipPosition.BOTTOM}
+    >
       <S.ButtonContainer
         ref={ref}
         selected={!!attention}

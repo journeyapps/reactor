@@ -1,19 +1,13 @@
 import * as React from 'react';
-import * as _ from 'lodash';
+import { useEffect, useRef, useState } from 'react';
 import styled from '@emotion/styled';
 import { ImageMedia, ImageMediaURL } from './ImageMedia';
 import { LoadingPanelWidget } from '../../../widgets/panel/panel/LoadingPanelWidget';
 import { PanelToolbarWidget } from '../../../widgets/panel/toolbar/PanelToolbarWidget';
+import { usePanZoom } from '../../../hooks/usePanZoom';
 
 export interface ImageMediaPanelWidgetProps {
   asset: ImageMedia;
-}
-
-export interface ImageMediaPanelWidgetState {
-  handler: ImageMediaURL;
-  width: number;
-  height: number;
-  scale: number;
 }
 
 namespace S {
@@ -22,131 +16,97 @@ namespace S {
     width: 100%;
     display: flex;
     flex-direction: column;
-    max-height: 100%;
     position: absolute;
   `;
 
-  export const Viewer = styled.div`
-    flex-grow: 1;
-    display: flex;
+  export const Viewer = styled.div<{ $dragging: boolean }>`
+    flex: 1;
+    min-height: 0;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    touch-action: none;
+    user-select: none;
+    cursor: ${(p) => (p.$dragging ? 'grabbing' : 'grab')};
   `;
 
-  export const Image = styled.img<{ scale: number }>`
-    transform: scale(${(p) => p.scale});
+  export const Image = styled.img`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: none;
+    max-height: none;
+    pointer-events: none;
+    transform-origin: center;
   `;
 }
 
-export class ImageMediaPanelWidget extends React.Component<ImageMediaPanelWidgetProps, ImageMediaPanelWidgetState> {
-  forwardRef: React.RefObject<HTMLImageElement>;
-  containerRef: React.RefObject<HTMLDivElement>;
-
-  constructor(props: ImageMediaPanelWidgetProps) {
-    super(props);
-    this.state = {
-      handler: null,
-      width: null,
-      height: null,
-      scale: 1
-    };
-    this.forwardRef = React.createRef();
-    this.containerRef = React.createRef();
-  }
-
-  async componentDidMount() {
-    const url = await this.props.asset.getImageURL();
-    this.setState({
-      handler: url
-    });
-  }
-
-  componentWillUnmount(): void {
-    if (this.state.handler) {
-      // release URL memory
-      this.state.handler.dispose();
-    }
-  }
-
-  componentDidUpdate(
-    prevProps: Readonly<ImageMediaPanelWidgetProps>,
-    prevState: Readonly<ImageMediaPanelWidgetState>,
-    snapshot?: any
-  ) {
-    // size has not been computed yet, compute it so we can
-    // figure out how we need to scale it
-    if (this.forwardRef.current && this.state.width === null) {
-      _.defer(() => {
-        const width = this.forwardRef.current.naturalWidth;
-        const height = this.forwardRef.current.naturalHeight;
-
-        const containerWidth = this.containerRef.current.offsetWidth;
-        const containerHeight = this.containerRef.current.offsetHeight;
-
-        // handle oversize
-        let scale = 1;
-        if (height > containerHeight) {
-          scale = containerHeight / height;
-        }
-        if (width > containerWidth) {
-          const scale2 = containerWidth / width;
-          scale = Math.min(scale, scale2);
-        }
-
-        this.setState({
-          width: width,
-          height: height,
-          scale: scale
-        });
-      });
-    }
-  }
-
-  render() {
-    return (
-      <LoadingPanelWidget
-        loading={!this.state.handler}
-        children={() => {
-          return (
-            <S.Container>
-              <PanelToolbarWidget
-                meta={[
-                  {
-                    label: 'Name',
-                    value: this.props.asset.getOptions().name
-                  },
-                  {
-                    label: 'Current Scale',
-                    value: `${this.state.scale * 100}%`
-                  },
-                  {
-                    label: 'Type',
-                    value: `${this.props.asset.getOptions().type.options.displayName} (${
-                      this.props.asset.getOptions().type.options.mime
-                    })`
-                  },
-                  {
-                    label: 'Width',
-                    value: `${this.state.width}px`
-                  },
-                  {
-                    label: 'Height',
-                    value: `${this.state.height}px`
-                  },
-                  {
-                    label: 'Size',
-                    value: `${this.props.asset.getMB()} mb`
-                  }
-                ]}
-              />
-              <S.Viewer ref={this.containerRef}>
-                <S.Image scale={this.state.scale} src={this.state.handler.url} ref={this.forwardRef} />
-              </S.Viewer>
-            </S.Container>
-          );
-        }}
+const ImageViewer: React.FC<{ asset: ImageMedia; url: string }> = ({ asset, url }) => {
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const viewerRef = useRef<HTMLDivElement>(null);
+  const zoom = usePanZoom({ forwardRef: viewerRef, ...dimensions });
+  const options = asset.getOptions();
+  return (
+    <S.Container>
+      <PanelToolbarWidget
+        btns={[
+          { label: '−', tooltip: 'Zoom out', action: zoom.zoomOut },
+          { label: `Zoom ${Math.round(zoom.scale * 100)}%`, tooltip: 'Show at actual size', action: zoom.actualSize },
+          { label: '+', tooltip: 'Zoom in', action: zoom.zoomIn },
+          { label: 'Fit', tooltip: 'Fit image to window', action: zoom.fit, highlight: zoom.fitting },
+          { label: '100%', tooltip: 'Show at actual size', action: zoom.actualSize }
+        ]}
+        meta={[
+          { label: 'Name', value: options.name },
+          { label: 'Type', value: `${options.type.options.displayName} (${options.type.options.mime})` },
+          { label: 'Width', value: `${dimensions.width}px` },
+          { label: 'Height', value: `${dimensions.height}px` },
+          { label: 'Size', value: `${asset.getMB().toFixed(2)} MB` }
+        ]}
       />
-    );
-  }
-}
+      <S.Viewer ref={viewerRef} $dragging={zoom.dragging}>
+        <S.Image
+          src={url}
+          alt={options.name}
+          draggable={false}
+          onLoad={(event) =>
+            setDimensions({ width: event.currentTarget.naturalWidth, height: event.currentTarget.naturalHeight })
+          }
+          style={{
+            width: dimensions.width || undefined,
+            height: dimensions.height || undefined,
+            visibility: dimensions.width ? 'visible' : 'hidden',
+            marginLeft: -dimensions.width / 2,
+            marginTop: -dimensions.height / 2,
+            transform: zoom.transform
+          }}
+        />
+      </S.Viewer>
+    </S.Container>
+  );
+};
+
+export const ImageMediaPanelWidget: React.FC<ImageMediaPanelWidgetProps> = ({ asset }) => {
+  const [loaded, setLoaded] = useState<{ asset: ImageMedia; handler: ImageMediaURL }>(null);
+  useEffect(() => {
+    let disposed = false;
+    let handler: ImageMediaURL;
+    asset.getImageURL().then((url) => {
+      if (disposed) {
+        url.dispose();
+      } else {
+        handler = url;
+        setLoaded({ asset, handler });
+      }
+    });
+    return () => {
+      disposed = true;
+      handler?.dispose();
+    };
+  }, [asset]);
+  return (
+    <LoadingPanelWidget
+      loading={loaded?.asset !== asset}
+      children={() => <ImageViewer key={loaded.handler.url} asset={asset} url={loaded.handler.url} />}
+    />
+  );
+};

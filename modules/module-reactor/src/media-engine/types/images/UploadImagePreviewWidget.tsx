@@ -8,6 +8,7 @@ import { ImagePreviewWidget } from './ImagePreviewWidget';
 import { styled } from '../../../stores/themes/reactor-theme-fragment';
 import { PanelButtonWidget } from '../../../widgets/forms/PanelButtonWidget';
 import { Fonts } from '../../../fonts';
+import { WorkspaceStore } from '../../../stores/workspace/WorkspaceStore';
 
 export interface UploadImagePreviewWidgetProps {
   onUpload: (media: ImageMedia) => Promise<void> | void;
@@ -23,12 +24,16 @@ export const UploadImagePreviewWidget: React.FC<UploadImagePreviewWidgetProps> =
       className={props.className}
       onClick={async () => {
         const file = await selectFile({ mimeTypes: props.mimeTypes });
+        if (!file) {
+          return;
+        }
 
         const type = ioc.get(MediaEngine).getMediaType({
-          path: file.name
+          path: file.name,
+          mime: file.type
         });
 
-        if (!type) {
+        if (!type || !type.options.mime.startsWith('image/')) {
           return;
         }
         const media = type.generateMedia({
@@ -49,6 +54,16 @@ export const UploadImagePreviewWidget: React.FC<UploadImagePreviewWidgetProps> =
               event.stopPropagation();
             }}
           >
+            <PanelButtonWidget
+              icon="eye"
+              tooltip="Preview image"
+              action={() => {
+                ioc.get(WorkspaceStore).addModelInWindow(props.media.getType().generateModel(props.media), {
+                  width: 800,
+                  height: 600
+                });
+              }}
+            />
             <PanelButtonWidget
               icon="trash"
               tooltip="Clear image"
@@ -89,6 +104,8 @@ namespace S {
   `;
 
   export const ButtonContainer = styled.div`
+    display: flex;
+    gap: 5px;
     position: absolute;
     top: 10px;
     right: 10px;

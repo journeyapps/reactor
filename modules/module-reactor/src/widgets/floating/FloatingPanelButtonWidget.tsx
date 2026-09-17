@@ -67,7 +67,7 @@ namespace S {
 
 export const FloatingPanelButtonWidget: React.FC<FloatingPanelButtonWidgetProps> = (props) => {
   const ref = useRef<HTMLDivElement>(null);
-  const { icon, attention, onClick, tooltip, disabled, validationResult } = useButton({
+  const { icon, attention, onClick, tooltip, tooltipDelay, disabled, validationResult } = useButton({
     btn: props.btn,
     forwardRef: ref
   });
@@ -76,7 +76,7 @@ export const FloatingPanelButtonWidget: React.FC<FloatingPanelButtonWidgetProps>
   }
   const label = props.btn.label || props.btn.tooltip;
   return (
-    <ReactorTooltipWidget tooltip={tooltip} tooltipPos={TooltipPosition.BOTTOM}>
+    <ReactorTooltipWidget tooltip={tooltip} tooltipDelay={tooltipDelay} tooltipPos={TooltipPosition.BOTTOM}>
       <S.Button
         highlight={!!attention}
         primary={props.btn.submitButton}
