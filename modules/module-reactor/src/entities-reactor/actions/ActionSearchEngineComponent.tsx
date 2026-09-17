@@ -69,10 +69,6 @@ export class CmdPaletteActionSearchEngine extends CMDPalletEntitySearchEngine<Ac
     super(options);
   }
 
-  async handleSelection(entry: CMDPalletEntitySearchEngineEntry<Action>): Promise<any> {
-    return super.handleSelection(entry);
-  }
-
   doSearch(event: SearchEvent): CMDPalletSearchEngineResult<CMDPalletEntitySearchEngineEntry<Action>> {
     const result = new CMDPalletSearchEngineResult<CMDPalletEntitySearchEngineEntry<Action>>(this);
     result.setValues(

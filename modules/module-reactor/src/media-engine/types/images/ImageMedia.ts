@@ -17,14 +17,15 @@ export class ImageMedia extends AbstractMedia {
     this.listeners = {};
   }
 
-  getPreview = _.memoize(async (options: { maxWidth: number; maxHeight: number }): Promise<string> => {
-    const image = await Jimp.read((await this.getImageURL()).url);
-    image.scaleToFit({
-      w: options.maxHeight,
-      h: options.maxHeight
-    });
-    return await image.getBase64('image/jpeg');
-  });
+  getPreview = _.memoize(
+    async (options: { maxWidth: number; maxHeight: number }): Promise<string> => {
+      const contents = await this.toArrayBuffer();
+      const image = await Jimp.fromBuffer(contents.slice().buffer);
+      image.scaleToFit({ w: options.maxWidth, h: options.maxHeight });
+      return image.getBase64('image/png');
+    },
+    (options) => `${options.maxWidth}x${options.maxHeight}`
+  );
 
   /**
    * Like `getImageURL` except this also tests the url

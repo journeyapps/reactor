@@ -117,10 +117,10 @@ export class ControlledCommandPalletWidget extends React.Component<
     this.keyboardContext.handle({
       key: CommonKeys.ENTER,
       action: () => {
-        this.props.enter(this.getHighlighted(), {
-          clientX: window.innerWidth / 2,
-          clientY: window.innerHeight / 2
-        });
+        const entry = this.getHighlighted();
+        if (entry) {
+          this.props.enter(entry, null);
+        }
       }
     });
     this.keyboardContext.handle({

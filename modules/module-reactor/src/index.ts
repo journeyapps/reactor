@@ -65,6 +65,8 @@ export * from './hooks/useForceUpdate';
 export * from './hooks/useButton';
 export * from './hooks/useValidator';
 export * from './hooks/useCopyButton';
+export * from './hooks/useDelay';
+export * from './hooks/usePanZoom';
 export * from './hooks/useDisplayDateOptions';
 export * from './hooks/useDimensionObserver';
 export * from './hooks/useWidthObserver';

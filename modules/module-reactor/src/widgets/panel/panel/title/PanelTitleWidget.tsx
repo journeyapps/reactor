@@ -101,7 +101,7 @@ namespace S {
 }
 
 const PanelIconButton: React.FC<{ btn: Btn; highlight: boolean }> = ({ btn, highlight }) => {
-  const { onClick, disabled, ref, validationResult } = useButton({ btn });
+  const { onClick, disabled, ref, validationResult, tooltipDelay } = useButton({ btn });
 
   if (validationResult?.type === ActionValidationState.HIDDEN) {
     return null;
@@ -116,7 +116,11 @@ const PanelIconButton: React.FC<{ btn: Btn; highlight: boolean }> = ({ btn, high
       type={ReactorComponentType.PANEL_MICRO_BUTTON}
       activated={(selected) => {
         return (
-          <ReactorTooltipWidget tooltip={btn.tooltip || btn.label} tooltipPos={btn.tooltipPos || TooltipPosition.TOP}>
+          <ReactorTooltipWidget
+            tooltip={btn.tooltip || btn.label}
+            tooltipDelay={tooltipDelay}
+            tooltipPos={btn.tooltipPos || TooltipPosition.TOP}
+          >
             <S.Button
               ref={ref}
               highlight={highlight && !disabled}

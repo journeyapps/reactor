@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Btn } from '../definitions/common';
 import { copyTextToClipboard } from '@journeyapps/reactor-lib-utils';
 import { TooltipState } from '../widgets/info/tooltips';
+import { useDelay } from './useDelay';
 
 export interface UseCopyButtonProps {
   value: string;
@@ -9,16 +10,15 @@ export interface UseCopyButtonProps {
 
 export const useCopyButton = (props: UseCopyButtonProps): Partial<Btn> => {
   const [copied, setCopied] = useState(false);
+  const delay = useDelay();
   useEffect(() => {
     if (copied) {
-      const res = setTimeout(() => {
+      delay.schedule(() => {
         setCopied(false);
       }, 1000);
-      return () => {
-        clearTimeout(res);
-      };
+      return delay.cancel;
     }
-  }, [copied]);
+  }, [copied, delay]);
 
   return {
     action: () => {

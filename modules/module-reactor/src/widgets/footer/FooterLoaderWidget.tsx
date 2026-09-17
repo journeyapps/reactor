@@ -6,6 +6,7 @@ import { LoadingDirectiveState } from '../../stores/visor/VisorLoadingDirective'
 import { ioc } from '../../inversify.config';
 import { ThemeStore } from '../../stores/themes/ThemeStore';
 import { theme } from '../../stores/themes/reactor-theme-fragment';
+import { useDelay } from '../../hooks/useDelay';
 
 const loader = require('../../../media/loader.png');
 
@@ -20,6 +21,7 @@ export interface FooterLoaderWidgetProps {
 export const FooterLoaderWidget: React.FC<FooterLoaderWidgetProps> = (props) => {
   const currentTheme = ioc.get(ThemeStore).getCurrentTheme(theme);
   const [show, setShow] = useState(false);
+  const delay = useDelay();
 
   let color = props.color || null;
   if (props.mode === LoadingDirectiveState.ERROR) {
@@ -30,17 +32,15 @@ export const FooterLoaderWidget: React.FC<FooterLoaderWidgetProps> = (props) => 
   }
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    delay.schedule(() => {
       if (props.mode !== LoadingDirectiveState.LOADING) {
         setShow(false);
       } else {
         setShow(true);
       }
     }, 500);
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [props.mode]);
+    return delay.cancel;
+  }, [props.mode, delay]);
 
   return (
     <S.Container className={props.className} show={show}>

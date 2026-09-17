@@ -15,6 +15,11 @@ export interface AbstractMediaTypeOptions {
 
 export type GenerateMediaOptions = Omit<AbstractMediaOptions, 'type'>;
 
+export interface MediaTypeMatcher {
+  path?: string;
+  mime?: string;
+}
+
 export abstract class AbstractMediaType<T extends AbstractMedia = AbstractMedia> {
   readonly options: AbstractMediaTypeOptions;
 
@@ -25,9 +30,25 @@ export abstract class AbstractMediaType<T extends AbstractMedia = AbstractMedia>
     this.options = options;
   }
 
-  matches(options: { path: string }): boolean {
+  matchesMime(mime?: string): boolean {
+    return !!mime && mime.split(';')[0].trim().toLowerCase() === this.options.mime.trim().toLowerCase();
+  }
+
+  matches(options: MediaTypeMatcher): boolean {
+    if (this.matchesMime(options.mime)) {
+      return true;
+    }
+    const name = (options.path || '').split(/[\\/]/).pop();
+    const dot = name.lastIndexOf('.');
+    if (dot === -1) {
+      return false;
+    }
+    const suffix = `.${name
+      .slice(dot + 1)
+      .trim()
+      .toLowerCase()}`;
     return _.some(this.options.extensions, (extension) => {
-      return options.path.endsWith(extension);
+      return suffix === extension.trim().toLowerCase();
     });
   }
 
