@@ -43,5 +43,6 @@ export * from './utils/paths';
 export * from './utils/json/monacoJsonPath';
 export * from './utils/useEditorStickyHeader';
 export * from './utils/monacoSuggestRendererPatches';
+export { OnigRegExp } from 'onigasm';
 
 export default EditorModule;
