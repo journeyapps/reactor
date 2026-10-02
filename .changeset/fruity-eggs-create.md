@@ -1,5 +1,6 @@
 ---
-'@journeyapps/reactor-mod-editor': patch
+'@journeyapps/reactor-lib-builder': patch
+'@journeyapps/reactor-mod': patch
 ---
 
-- Export OnigRegExp so other modules can use the onigasm instance loaded by the editor.
+Share onigasm from the core bundle so every module uses the instance loaded by the editor.

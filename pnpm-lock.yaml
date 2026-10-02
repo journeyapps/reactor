@@ -804,6 +804,9 @@ importers:
       mobx-utils:
         specifier: ^6.1.1
         version: 6.1.1(mobx@7.0.3)
+      onigasm:
+        specifier: ^2.2.5
+        version: 2.2.5
       platform-detect:
         specifier: ^3.0.1
         version: 3.0.1
