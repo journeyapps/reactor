@@ -29,7 +29,6 @@ export const generateCommonWebpack = (dir: string): Configuration => {
     { lib: '@emotion/react', aliased: true },
     { lib: '@emotion/styled', aliased: true },
     { lib: 'lodash' },
-    { lib: 'onigasm', aliased: true },
     { lib: 'mobx', aliased: true },
     { lib: 'mobx-react', aliased: true },
     { lib: 'luxon' },

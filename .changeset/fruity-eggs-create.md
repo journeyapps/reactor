@@ -1,6 +1,5 @@
 ---
-'@journeyapps/reactor-lib-builder': patch
-'@journeyapps/reactor-mod': patch
+'@journeyapps/reactor-mod-editor': patch
 ---
 
-Share onigasm from the core bundle so every module uses the instance loaded by the editor.
+Expose the editor's onigasm instance so other modules use that copy instead of bundling their own.

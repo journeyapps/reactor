@@ -27,6 +27,12 @@ module.exports = (webpack) => {
     dir: __dirname
   });
 
+  webpack = patchExportedLibrary({
+    w: webpack,
+    module: 'onigasm',
+    dir: __dirname
+  });
+
   let r = webpack.module.rules.find((v) => !!v['oneOf']);
   r.oneOf = [
     {

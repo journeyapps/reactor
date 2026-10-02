@@ -1,5 +1,4 @@
 import { ReactorModule } from './ReactorModule';
-import 'onigasm';
 
 export * from './env';
 
