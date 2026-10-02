@@ -1,5 +1,11 @@
 # @journeyapps/reactor-mod-editor
 
+## 2.3.18
+
+### Patch Changes
+
+- 89bc469: Expose the editor's onigasm instance so other modules use that copy instead of bundling their own.
+
 ## 2.3.17
 
 ### Patch Changes
