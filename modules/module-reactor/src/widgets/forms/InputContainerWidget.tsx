@@ -1,9 +1,9 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getDarkenedColor } from '@journeyapps/reactor-lib-utils';
 import * as React from 'react';
-import { styled } from '../../stores/themes/reactor-theme-fragment';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { HoverWidget } from '../info/tooltips';
 import ReactMarkdown from 'react-markdown';
+import { styled } from '../../stores/themes/reactor-theme-fragment';
+import { HoverWidget } from '../info/tooltips';
 
 export enum InputContainerContentAlignment {
   LEFT = 'start',
@@ -11,7 +11,7 @@ export enum InputContainerContentAlignment {
   RIGHT = 'end'
 }
 export interface InputContainerWidgetProps {
-  label: string;
+  label?: string;
   error?: string;
   warning?: string;
   className?: any;
@@ -79,8 +79,6 @@ namespace S {
     column-gap: 5px;
   `;
 
-  export const Icon = styled.div``;
-
   export const Markdown = styled.div`
     color: white;
     padding: 10px;
@@ -105,36 +103,53 @@ namespace S {
   `;
 }
 
-export class InputContainerWidget extends React.Component<React.PropsWithChildren<InputContainerWidgetProps>> {
-  render() {
-    return (
-      <S.Container inline={this.props.inline} className={this.props.className}>
-        <S.Label inlineWidth={this.props.inlineWidth} inline={this.props.inline}>
+export const InputContainerWidget: React.FC<React.PropsWithChildren<InputContainerWidgetProps>> = (props) => {
+  const {
+    label,
+    tooltip,
+    desc,
+    inlineWidth,
+    inline,
+    className,
+    alignContent,
+    children,
+    warning,
+    error,
+    suggestionWidget
+  } = props;
+
+  const labelEl =
+    !label && !tooltip && !desc ? null : (
+      <S.Label inlineWidth={inlineWidth} inline={inline}>
+        {!label && !tooltip ? null : (
           <S.Top>
-            <S.LabelInner>{this.props.label}</S.LabelInner>
-            {this.props.tooltip ? (
+            {!label ? null : <S.LabelInner>{label}</S.LabelInner>}
+            {!tooltip ? null : (
               <HoverWidget
-                getOverlay={() => {
-                  return (
-                    <S.Markdown>
-                      <ReactMarkdown children={this.props.tooltip} />
-                    </S.Markdown>
-                  );
-                }}
+                getOverlay={() => (
+                  <S.Markdown>
+                    <ReactMarkdown children={tooltip} />
+                  </S.Markdown>
+                )}
               >
                 <FontAwesomeIcon icon="info-circle" />
               </HoverWidget>
-            ) : null}
+            )}
           </S.Top>
-          {this.props.desc ? <S.Desc>{this.props.desc}</S.Desc> : null}
-        </S.Label>
-        <S.Content inline={this.props.inline} alignment={this.props.alignContent}>
-          {this.props.children}
-        </S.Content>
-        {this.props.warning ? <S.Warning>{this.props.warning}</S.Warning> : null}
-        {this.props.error ? <S.Error>{this.props.error}</S.Error> : null}
-        {this.props.error ? this.props.suggestionWidget : null}
-      </S.Container>
+        )}
+        {desc ? <S.Desc>{desc}</S.Desc> : null}
+      </S.Label>
     );
-  }
-}
+
+  return (
+    <S.Container inline={inline} className={className}>
+      {labelEl}
+      <S.Content inline={inline} alignment={alignContent}>
+        {children}
+      </S.Content>
+      {warning ? <S.Warning>{warning}</S.Warning> : null}
+      {error ? <S.Error>{error}</S.Error> : null}
+      {error ? suggestionWidget : null}
+    </S.Container>
+  );
+};
