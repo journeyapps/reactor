@@ -121,20 +121,22 @@ export const InputContainerWidget: React.FC<React.PropsWithChildren<InputContain
   const labelEl =
     !label && !tooltip && !desc ? null : (
       <S.Label inlineWidth={inlineWidth} inline={inline}>
-        <S.Top>
-          <S.LabelInner>{label}</S.LabelInner>
-          {!tooltip ? null : (
-            <HoverWidget
-              getOverlay={() => (
-                <S.Markdown>
-                  <ReactMarkdown children={tooltip} />
-                </S.Markdown>
-              )}
-            >
-              <FontAwesomeIcon icon="info-circle" />
-            </HoverWidget>
-          )}
-        </S.Top>
+        {!label && !tooltip ? null : (
+          <S.Top>
+            {!label ? null : <S.LabelInner>{label}</S.LabelInner>}
+            {!tooltip ? null : (
+              <HoverWidget
+                getOverlay={() => (
+                  <S.Markdown>
+                    <ReactMarkdown children={tooltip} />
+                  </S.Markdown>
+                )}
+              >
+                <FontAwesomeIcon icon="info-circle" />
+              </HoverWidget>
+            )}
+          </S.Top>
+        )}
         {desc ? <S.Desc>{desc}</S.Desc> : null}
       </S.Label>
     );
