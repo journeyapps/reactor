@@ -1,5 +1,11 @@
 # @journeyapps/reactor-mod
 
+## 8.3.1
+
+### Patch Changes
+
+- 4a82e16: Made the label prop and rendering optional for InputContainerWidget and FormInput.
+
 ## 8.3.0
 
 ### Minor Changes
