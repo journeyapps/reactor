@@ -1,6 +1,6 @@
 {
   "name": "@journeyapps/reactor-mod-debug",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
