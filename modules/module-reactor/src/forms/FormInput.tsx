@@ -7,7 +7,7 @@ import { BaseObserver } from '@journeyapps/common-utils';
 import { Size } from '../hooks/useReactorSize';
 
 export interface FormInputOptions<T = any> {
-  label: string;
+  label?: string;
   name?: string;
   required?: boolean;
   desc?: string;

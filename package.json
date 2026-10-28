@@ -2,7 +2,7 @@
   "name": "reactor",
   "main": "index.js",
   "private": true,
-  "packageManager": "pnpm@12.4.2",
+  "packageManager": "pnpm@12.6.0",
   "scripts": {
     "build": "pnpm build:builder && pnpm build:ts && pnpm build:modules",
     "build:builder": "pnpm run --filter '@journeyapps/reactor-lib-builder' build",
