@@ -77,7 +77,10 @@ export class ArraySetInput<T> extends FormInput<ArraySetInputGenerics<T>> {
     this.loading = loading;
   }
 
-  setValue(value: ArraySetInputGenerics<T>['VALUE']) {
+  setValue(value: ArraySetInputGenerics<T>['VALUE'] | null | undefined) {
+    // The dropdown initializes new entries with null, including nested sets.
+    value = value ?? {};
+
     // to generate
     _.difference(Object.keys(value), Array.from(this.entries.keys())).forEach((key) => {
       const item = this.options.generate(key);
