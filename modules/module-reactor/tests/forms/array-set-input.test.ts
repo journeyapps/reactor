@@ -4,7 +4,7 @@ import { ArraySetInput } from '../../src/forms/controls/collection/ArraySetInput
 const requiredName = () => new TextInput({ name: 'name', label: 'Name', required: true });
 
 describe('ArraySetInput', () => {
-  it('checks keyed collection entries and handles removal', () => {
+  it.each([{}, null, undefined])('checks keyed collection entries and handles removal with %s', (emptyValue) => {
     const array = new ArraySetInput<string>({
       label: 'Names',
       required: true,
@@ -18,7 +18,9 @@ describe('ArraySetInput', () => {
     array.entries.get('first')!.setValue('First');
     expect(array.value).toEqual({ first: 'First' });
     expect(array.isValid()).toBe(true);
-    array.setValue({});
+    array.setValue(emptyValue);
+    expect(array.value).toEqual({});
+    expect(array.entries.size).toBe(0);
     expect(array.isValid()).toBe(false);
   });
 
